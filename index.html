@@ -3,9 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Obsequio Vallarta - Flores Exclusivas</title>
+  <title>Obsequio Vallarta - Flores Elegantes para Bodas y Eventos en Puerto Vallarta</title>
+  <!-- Meta Tags SEO -->
+  <meta name="description" content="Florería premium en Puerto Vallarta especializada en arreglos florales para bodas, propuestas de matrimonio y eventos. Diseños elegantes y minimalistas para ocasiones especiales.">
+  <meta name="keywords" content="flores para bodas, bodas, weddings, floral shop in puerto vallarta, flowers for weddings, wedding proposal, pedidas de matrimonio, propuestas de matrimonio, flores puerto vallarta, floristería elegante">
+  <meta name="author" content="Obsequio Vallarta">
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Obsequio Vallarta - Flores Elegantes para Bodas y Eventos">
+  <meta property="og:description" content="Florería premium en Puerto Vallarta especializada en arreglos florales para bodas y eventos especiales.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.obsequiovallarta.com">
+  <meta property="og:image" content="https://www.obsequiovallarta.com/images/social-share.jpg">
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.obsequiovallarta.com">
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Florist",
+    "name": "Obsequio Vallarta",
+    "image": "https://www.obsequiovallarta.com/images/logo.jpg",
+    "@id": "https://www.obsequiovallarta.com",
+    "url": "https://www.obsequiovallarta.com",
+    "telephone": "+523221234567",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Vallarta 123",
+      "addressLocality": "Puerto Vallarta",
+      "addressRegion": "Jalisco",
+      "postalCode": "48300",
+      "addressCountry": "MX"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 20.6534,
+      "longitude": -105.2253
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "09:00",
+      "closes": "19:00"
+    },
+    "sameAs": [
+      "https://www.facebook.com/obsequiovallarta",
+      "https://www.instagram.com/obsequiovallarta"
+    ]
+  }
+  </script>
   <!-- Fuentes -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
   <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Swiper CSS -->
@@ -16,16 +70,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <style>
     :root {
-      --black: #1a1a1a;
+      --black: #000000;
       --white: #ffffff;
-      --primary: #e83e8c;
-      --primary-light: #ff70b2;
-      --primary-dark: #d62d7a;
-      --secondary: #6f42c1;
-      --secondary-light: #9d6dee;
-      --light-bg: #f8f9fa;
-      --dark-bg: #212529;
-      --text-muted: #6c757d;
+      --gray-light: #f8f8f8;
+      --gray-medium: #e0e0e0;
+      --gray-dark: #333333;
+      --accent: #e8e8e8;
       --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
     
@@ -37,70 +87,66 @@
     
     body { 
       font-family:'Montserrat', sans-serif; 
-      color:var(--black); 
-      background:var(--white); 
+      color: var(--black); 
+      background: var(--white); 
       overflow-x:hidden;
       line-height: 1.6;
     }
     
     h1,h2,h3,h4 { 
       font-family:'Playfair Display', serif; 
-      font-weight: 700;
+      font-weight: 500;
       line-height: 1.3;
+      letter-spacing: 0.5px;
     }
     
     /* SVG Logo */
     #logo path, #logo circle {
-      stroke-dasharray:300;
-      stroke-dashoffset:300;
-      fill: none;
-      stroke: var(--primary);
-      stroke-width:2;
-      animation: drawLogo 2s ease-out forwards;
-    }
-    
-    @keyframes drawLogo {
-      to { stroke-dashoffset:0; }
+      fill: var(--black);
+      stroke: var(--black);
+      stroke-width: 1;
     }
 
     /* Navbar */
     .navbar { 
-      background:rgba(255,255,255,0.98); 
+      background: var(--white); 
       transition: var(--transition);
-      backdrop-filter: blur(10px);
-      padding: 1rem 0;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
     }
     
     .navbar.scrolled { 
-      box-shadow:0 5px 30px rgba(0,0,0,0.1); 
-      padding: 0.75rem 0;
+      padding: 1rem 0;
+      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.9);
+      box-shadow: 0 5px 30px rgba(0,0,0,0.05);
     }
     
     .navbar-brand { 
       display:flex; 
       align-items:center; 
-      font-size:1.8rem; 
-      font-weight:700; 
-      color: var(--primary);
-      transition: var(--transition);
-    }
-    
-    .navbar-brand:hover {
-      color: var(--primary-dark);
+      font-size:1.4rem; 
+      font-weight:400; 
+      color: var(--black);
+      letter-spacing: 1px;
+      font-style: italic;
+      font-family: 'Playfair Display', serif;
     }
     
     .navbar-brand svg { 
-      margin-right:.5rem; 
-      transition: var(--transition);
+      margin-right:.8rem; 
     }
     
     .nav-link { 
-      color:var(--black)!important; 
-      margin-left:1rem; 
-      font-weight:500;
+      color: var(--gray-dark)!important; 
+      margin-left:1.5rem; 
+      font-weight:400;
+      font-size: 0.85rem;
+      letter-spacing: 1.5px;
       position: relative;
       padding: 0.5rem 0;
       transition: var(--transition);
+      text-transform: uppercase;
     }
     
     .nav-link::after {
@@ -109,8 +155,8 @@
       bottom: 0;
       left: 0;
       width: 0;
-      height: 2px;
-      background: var(--primary);
+      height: 1px;
+      background: var(--black);
       transition: var(--transition);
     }
     
@@ -126,7 +172,7 @@
       border: none;
       padding: 0.5rem;
       font-size: 1.25rem;
-      color: var(--primary);
+      color: var(--black);
     }
     
     .navbar-toggler:focus {
@@ -150,7 +196,7 @@
     .hero-overlay { 
       position:absolute; 
       inset:0; 
-      background:rgba(0,0,0,0.3); 
+      background: rgba(0,0,0,0.2); 
       z-index: 1;
     }
     
@@ -160,110 +206,67 @@
       left:50%;
       transform:translate(-50%,-50%);
       text-align:center; 
-      color:var(--white); 
+      color: var(--white); 
       z-index:2;
       opacity:0;
       width: 90%;
       max-width: 800px;
-      padding: 2rem;
+      padding: 3rem;
       background: rgba(0,0,0,0.4);
-      backdrop-filter: blur(5px);
-      border-radius: 15px;
-      border: 1px solid rgba(255,255,255,0.1);
+      backdrop-filter: blur(3px);
     }
     
     .hero-content h1 { 
-      font-size:4rem; 
-      letter-spacing:.05em; 
+      font-size:3.5rem; 
       margin-bottom: 1.5rem;
-      text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 3px;
     }
     
     .hero-content p { 
-      font-size:1.4rem; 
+      font-size:1.2rem; 
       margin-bottom: 2rem;
-      text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
-    }
-    
-    .btn-primary {
-      background: var(--primary);
-      border: none;
-      padding: 0.8rem 2.5rem;
-      font-weight: 600;
+      font-weight: 300;
       letter-spacing: 1px;
-      text-transform: uppercase;
-      transition: var(--transition);
-      position: relative;
-      overflow: hidden;
-      border-radius: 50px;
-      box-shadow: 0 5px 15px rgba(232, 62, 140, 0.3);
     }
     
-    .btn-primary:hover {
-      background: var(--primary-dark);
-      transform: translateY(-3px);
-      box-shadow: 0 10px 25px rgba(232, 62, 140, 0.4);
-    }
-    
-    .btn-primary:active {
-      transform: translateY(1px);
-    }
-    
-    .btn-primary::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-      transition: 0.5s;
-    }
-    
-    .btn-primary:hover::before {
-      left: 100%;
-    }
-    
-    .btn-outline-primary {
-      border: 2px solid var(--primary);
-      color: var(--primary);
+    .btn-outline-light {
+      border: 1px solid var(--white);
+      color: var(--white);
       background: transparent;
-      padding: 0.8rem 2rem;
-      font-weight: 600;
+      padding: 0.8rem 2.5rem;
+      font-weight: 400;
       letter-spacing: 1px;
       text-transform: uppercase;
       transition: var(--transition);
-      border-radius: 50px;
+      border-radius: 0;
+      font-size: 0.9rem;
     }
     
-    .btn-outline-primary:hover {
-      background: var(--primary);
-      color: white;
-      box-shadow: 0 5px 15px rgba(232, 62, 140, 0.3);
-    }
-
-    /* Petal container */
-    #petal-container { 
-      position:fixed; 
-      inset:0; 
-      pointer-events:none; 
-      z-index: 100;
+    .btn-outline-light:hover {
+      background: var(--white);
+      color: var(--black);
     }
 
     /* Sections */
     section { 
-      padding:8rem 0; 
+      padding:6rem 0; 
       position:relative; 
       overflow: hidden;
     }
     
     .section-dark { 
-      background:var(--dark-bg); 
-      color:var(--white); 
+      background: var(--black); 
+      color: var(--white); 
     }
     
     .section-light {
-      background: var(--light-bg);
+      background: var(--white);
+    }
+    
+    .section-gray {
+      background: var(--gray-light);
     }
     
     .section-title { 
@@ -273,9 +276,10 @@
     }
     
     .section-title h2 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       position: relative;
       display: inline-block;
+      font-weight: 400;
     }
     
     .section-title h2::after {
@@ -284,192 +288,69 @@
       bottom: -15px;
       left: 50%;
       transform: translateX(-50%);
-      width: 80px; 
-      height:4px;
-      background:var(--primary); 
+      width: 60px; 
+      height:1px;
+      background: var(--black); 
       display:block; 
-      margin: 1rem auto 0;
     }
     
     .section-dark .section-title h2::after { 
-      background:var(--white); 
+      background: var(--white); 
     }
     
     .section-subtitle {
       max-width: 700px;
       margin: 0 auto 3rem;
       text-align: center;
-      color: var(--text-muted);
-      font-size: 1.1rem;
+      color: var(--gray-dark);
+      font-size: 1rem;
+      font-weight: 300;
+      letter-spacing: 1px;
     }
     
     /* Servicios */
-    #services {
-      background: var(--light-bg);
-    }
-    
     .service-card {
       background: var(--white);
-      border-radius: 15px;
       padding: 2.5rem 2rem;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
       text-align: center;
       transition: var(--transition);
       height: 100%;
-      border: 1px solid rgba(0,0,0,0.05);
+      border: 1px solid var(--gray-medium);
     }
     
     .service-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-      border-color: rgba(232, 62, 140, 0.2);
+      border-color: var(--black);
     }
     
     .service-icon {
-      width: 90px; 
-      height: 90px;
+      width: 70px; 
+      height: 70px;
       margin: 0 auto 1.5rem;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2.5rem;
-      color: var(--white);
+      font-size: 1.8rem;
+      color: var(--black);
       transition: var(--transition);
-      box-shadow: 0 5px 15px rgba(111, 66, 193, 0.3);
-    }
-    
-    .service-card:hover .service-icon {
-      transform: scale(1.1) rotate(5deg);
-      box-shadow: 0 10px 25px rgba(111, 66, 193, 0.4);
     }
     
     .service-title {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       margin-bottom: 1rem;
-      font-weight: 700;
-      color: var(--black);
+      font-weight: 400;
     }
     
     .service-desc {
-      color: var(--text-muted);
-      font-size: 1rem;
+      color: var(--gray-dark);
+      font-size: 0.9rem;
       line-height: 1.6;
-    }
-    
-    /* Feature Cards */
-    .feature-card {
-      background: white;
-      border-radius: 15px;
-      padding: 2.5rem;
-      box-shadow: 0 15px 30px rgba(0,0,0,0.05);
-      transition: var(--transition);
-      height: 100%;
-      position: relative;
-      overflow: hidden;
-      z-index: 1;
-      border: 1px solid rgba(0,0,0,0.05);
-    }
-    
-    .feature-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      opacity: 0;
-      z-index: -1;
-      transition: var(--transition);
-    }
-    
-    .feature-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-      color: white;
-      border-color: transparent;
-    }
-    
-    .feature-card:hover::before {
-      opacity: 1;
-    }
-    
-    .feature-card:hover .feature-icon {
-      color: white;
-      transform: scale(1.1);
-    }
-    
-    .feature-card:hover h3,
-    .feature-card:hover p {
-      color: white;
-    }
-    
-    .feature-icon {
-      font-size: 3rem;
-      color: var(--primary);
-      margin-bottom: 1.5rem;
-      transition: var(--transition);
-    }
-    
-    .feature-card h3 {
-      margin-bottom: 1rem;
-      color: var(--black);
-    }
-    
-    .feature-card p {
-      color: var(--text-muted);
-      transition: var(--transition);
+      font-weight: 300;
     }
 
-    /* Parallax image */
-    .parallax {
-      background-attachment:fixed; 
-      background-size:cover;
-      background-position:center; 
-      height:60vh;
-      border-radius: 15px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.2);
-      position: relative;
-      overflow: hidden;
-      margin: 4rem 0;
-    }
-    
-    .parallax::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.7));
-    }
-    
-    .parallax-content {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      padding: 3rem;
-      color: white;
-      z-index: 2;
-    }
-    
-    .parallax-content h3 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    
-    .parallax-content p {
-      font-size: 1.2rem;
-      max-width: 600px;
-    }
-
-    /* Gallery hover */
+    /* Gallery */
     .gallery-item {
       position: relative;
-      border-radius: 15px;
       overflow: hidden;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-      transition: var(--transition);
       margin-bottom: 1.5rem;
     }
     
@@ -480,22 +361,17 @@
       transition: var(--transition);
     }
     
-    .gallery-item:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-    }
-    
     .gallery-item:hover img {
-      transform: scale(1.1);
+      transform: scale(1.05);
     }
     
     .gallery-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+      background: rgba(0,0,0,0.5);
       display: flex;
-      align-items: flex-end;
-      padding: 1.5rem;
+      align-items: center;
+      justify-content: center;
       opacity: 0;
       transition: var(--transition);
     }
@@ -507,161 +383,65 @@
     .gallery-overlay h4 {
       color: white;
       font-size: 1.2rem;
-      transform: translateY(20px);
-      transition: var(--transition);
-    }
-    
-    .gallery-item:hover .gallery-overlay h4 {
-      transform: translateY(0);
+      letter-spacing: 1px;
     }
 
-    /* Testimonials */
-    .testimonial-card {
-      background: white;
-      border-radius: 15px;
-      padding: 2.5rem;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    /* Parallax image */
+    .parallax {
+      background-attachment:fixed; 
+      background-size:cover;
+      background-position:center; 
+      height:50vh;
       position: relative;
-      margin: 1rem;
-      border: 1px solid rgba(0,0,0,0.05);
+      overflow: hidden;
     }
     
-    .testimonial-card::before {
-      content: '\201C';
+    .parallax::after {
+      content: '';
       position: absolute;
-      top: 20px;
-      left: 20px;
-      font-size: 5rem;
-      color: rgba(0,0,0,0.05);
-      font-family: serif;
-      line-height: 1;
+      inset: 0;
+      background: rgba(0,0,0,0.3);
     }
     
-    .testimonial-text {
-      font-style: italic;
-      margin-bottom: 1.5rem;
-      position: relative;
-      z-index: 1;
-      color: var(--text-muted);
+    .parallax-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      padding: 2rem;
+      color: white;
+      z-index: 2;
+      text-align: center;
     }
     
-    .testimonial-author {
-      display: flex;
-      align-items: center;
+    .parallax-content h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 400;
+      letter-spacing: 2px;
     }
     
-    .testimonial-author img {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-right: 1rem;
-      border: 3px solid var(--primary);
-    }
-    
-    .author-info h5 {
-      margin-bottom: 0.2rem;
-      font-weight: 600;
-      color: var(--black);
-    }
-    
-    .author-info p {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      margin-bottom: 0;
-    }
-    
-    .testimonial-rating {
-      color: #ffc107;
-      margin-top: 0.3rem;
-    }
-
-    /* Contact Form */
-    .contact-form {
-      background: white;
-      border-radius: 15px;
-      padding: 3rem;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.1);
-      border: 1px solid rgba(0,0,0,0.05);
-    }
-    
-    .form-control {
-      border: none;
-      border-bottom: 2px solid #e9ecef;
-      border-radius: 0;
-      padding-left: 0;
-      padding-right: 0;
-      background: transparent;
-      transition: var(--transition);
+    .parallax-content p {
       font-size: 1rem;
-    }
-    
-    .form-control:focus {
-      box-shadow: none;
-      border-bottom-color: var(--primary);
-    }
-    
-    .form-floating label {
-      padding-left: 0;
-      color: var(--text-muted);
-    }
-    
-    .form-floating>.form-control:focus~label {
-      color: var(--primary);
-    }
-    
-    .form-floating>.form-control:not(:placeholder-shown)~label {
-      color: var(--primary);
-    }
-
-    /* Floating elements */
-    .floating-element {
-      position: absolute;
-      opacity: 0.1;
-      z-index: 0;
-    }
-    
-    .floating-1 {
-      top: 10%;
-      left: 5%;
-      animation: float 8s ease-in-out infinite;
-    }
-    
-    .floating-2 {
-      bottom: 15%;
-      right: 8%;
-      animation: float 10s ease-in-out infinite 2s;
-    }
-    
-    .floating-3 {
-      top: 30%;
-      right: 10%;
-      animation: float 12s ease-in-out infinite 1s;
-    }
-    
-    @keyframes float {
-      0% { transform: translateY(0) rotate(0deg); }
-      50% { transform: translateY(-20px) rotate(5deg); }
-      100% { transform: translateY(0) rotate(0deg); }
+      max-width: 600px;
+      margin: 0 auto;
+      font-weight: 300;
     }
 
     /* Product Cards */
     .product-card {
-      background: white;
-      border-radius: 15px;
+      background: var(--white);
       overflow: hidden;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
       transition: var(--transition);
       height: 100%;
       display: flex;
       flex-direction: column;
-      border: 1px solid rgba(0,0,0,0.05);
+      border: 1px solid var(--gray-medium);
     }
 
     .product-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-      border-color: rgba(232, 62, 140, 0.2);
+      border-color: var(--black);
     }
 
     .product-img {
@@ -678,24 +458,23 @@
     }
 
     .product-card:hover .product-img img {
-      transform: scale(1.1);
+      transform: scale(1.05);
     }
 
     .product-badge {
       position: absolute;
       top: 15px;
       right: 15px;
-      background: var(--primary);
+      background: var(--black);
       color: white;
       padding: 0.25rem 0.75rem;
-      border-radius: 50px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      z-index: 2;
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 1px;
     }
 
     .product-info {
-      padding: 1.75rem;
+      padding: 1.5rem;
       flex-grow: 1;
       display: flex;
       flex-direction: column;
@@ -703,15 +482,16 @@
 
     .product-info h3 {
       margin-bottom: 0.75rem;
-      font-size: 1.3rem;
-      color: var(--black);
+      font-size: 1.1rem;
+      font-weight: 400;
     }
 
     .product-desc {
-      color: var(--text-muted);
+      color: var(--gray-dark);
       margin-bottom: 1.25rem;
       flex-grow: 1;
-      font-size: 0.95rem;
+      font-size: 0.85rem;
+      font-weight: 300;
     }
 
     .product-footer {
@@ -722,480 +502,71 @@
     }
 
     .price {
-      font-weight: 700;
-      font-size: 1.3rem;
-      color: var(--primary);
-    }
-
-    .price del {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      margin-left: 0.5rem;
+      font-weight: 400;
+      font-size: 1.1rem;
     }
 
     .add-to-cart {
-      background: var(--primary);
+      background: var(--black);
       color: white;
       border: none;
-      padding: 0.5rem 1.25rem;
-      border-radius: 50px;
-      font-weight: 600;
-      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+      font-weight: 400;
+      font-size: 0.8rem;
       transition: var(--transition);
+      letter-spacing: 1px;
     }
 
     .add-to-cart:hover {
-      background: var(--primary-dark);
-      transform: translateY(-2px);
+      background: var(--gray-dark);
     }
 
-    .add-to-cart:active {
-      transform: translateY(0);
+    /* Wedding Section */
+    .wedding-feature {
+      margin-bottom: 2rem;
     }
 
-    /* Cart Sidebar */
-    .cart-sidebar {
-      position: fixed;
-      top: 0;
-      right: -400px;
-      width: 400px;
-      height: 100vh;
-      background: white;
-      box-shadow: -5px 0 30px rgba(0,0,0,0.1);
-      z-index: 1000;
-      transition: right 0.3s ease;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .cart-sidebar.open {
-      right: 0;
-    }
-
-    .cart-header {
-      padding: 1.5rem;
-      border-bottom: 1px solid #eee;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: var(--primary);
-      color: white;
-    }
-
-    .cart-header h3 {
-      margin-bottom: 0;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 600;
-    }
-
-    .close-cart {
-      background: none;
-      border: none;
+    .wedding-feature i {
       font-size: 1.5rem;
-      cursor: pointer;
-      color: white;
-      transition: var(--transition);
-    }
-
-    .close-cart:hover {
-      transform: rotate(90deg);
-    }
-
-    .cart-body {
-      padding: 1.5rem;
-      flex-grow: 1;
-      overflow-y: auto;
-    }
-
-    .cart-item {
-      display: flex;
-      margin-bottom: 1.5rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px solid #eee;
-    }
-
-    .cart-item-img {
-      width: 80px;
-      height: 80px;
-      border-radius: 10px;
-      overflow: hidden;
-      margin-right: 1rem;
-      flex-shrink: 0;
-    }
-
-    .cart-item-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .cart-item-info {
-      flex-grow: 1;
-    }
-
-    .cart-item-title {
-      font-weight: 600;
-      margin-bottom: 0.5rem;
       color: var(--black);
-    }
-
-    .cart-item-price {
-      color: var(--primary);
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      display: block;
-    }
-
-    .cart-item-quantity {
-      display: flex;
-      align-items: center;
-      margin-top: 0.5rem;
-    }
-
-    .quantity-btn {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      background: #f8f9fa;
-      border: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: var(--transition);
-    }
-
-    .quantity-btn:hover {
-      background: var(--primary);
-      color: white;
-    }
-
-    .quantity-value {
-      margin: 0 0.75rem;
-      font-weight: 600;
-    }
-
-    .remove-item {
-      background: none;
-      border: none;
-      color: #dc3545;
-      cursor: pointer;
-      align-self: flex-start;
-      transition: var(--transition);
-    }
-
-    .remove-item:hover {
-      transform: scale(1.1);
-    }
-
-    .cart-footer {
-      padding: 1.5rem;
-      border-top: 1px solid #eee;
-    }
-
-    .cart-total {
-      display: flex;
-      justify-content: space-between;
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin-bottom: 1.5rem;
-      color: var(--black);
-    }
-
-    .cart-total .total-price {
-      color: var(--primary);
-    }
-
-    .cart-actions {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
-    .btn-checkout {
-      background: var(--primary);
-      color: white;
-      border: none;
-      padding: 0.75rem;
-      border-radius: 50px;
-      font-weight: 600;
-      transition: var(--transition);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .btn-checkout:hover {
-      background: var(--primary-dark);
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(232, 62, 140, 0.3);
-    }
-
-    .btn-checkout i {
-      margin-right: 0.5rem;
-    }
-
-    .btn-clear {
-      background: #f8f9fa;
-      color: #dc3545;
-      border: none;
-      padding: 0.75rem;
-      border-radius: 50px;
-      font-weight: 600;
-      transition: var(--transition);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .btn-clear:hover {
-      background: #f1f1f1;
-      transform: translateY(-2px);
-    }
-
-    .btn-clear i {
-      margin-right: 0.5rem;
-    }
-
-    /* Cart Toggle Button */
-    .cart-toggle {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
-      background: var(--primary);
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 5px 20px rgba(232,62,140,0.3);
-      z-index: 999;
-      cursor: pointer;
-      border: none;
-      transition: var(--transition);
-    }
-
-    .cart-toggle:hover {
-      transform: translateY(-5px) scale(1.1);
-      box-shadow: 0 10px 25px rgba(232,62,140,0.4);
-    }
-
-    .cart-toggle i {
-      font-size: 1.5rem;
-    }
-
-    .cart-badge {
-      position: absolute;
-      top: -5px;
-      right: -5px;
-      background: #dc3545;
-      color: white;
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.9rem;
-      font-weight: 600;
-      transition: var(--transition);
-    }
-
-    .cart-toggle:hover .cart-badge {
-      transform: scale(1.1);
-    }
-
-    /* Overlay */
-    .cart-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.5);
-      z-index: 998;
-      opacity: 0;
-      visibility: hidden;
-      transition: var(--transition);
-      backdrop-filter: blur(5px);
-    }
-
-    .cart-overlay.active {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    .empty-cart-message {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      padding: 2rem;
-      text-align: center;
-      color: var(--text-muted);
-    }
-
-    .empty-cart-message i {
-      font-size: 3rem;
       margin-bottom: 1rem;
-      color: #e9ecef;
-    }
-
-    /* Social Media Section */
-    .social-media-section {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: white;
-      padding: 6rem 0;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .social-media-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=1000') center/cover no-repeat;
-      opacity: 0.1;
-      z-index: 0;
-    }
-    
-    .social-media-title {
-      font-size: 2.5rem;
-      margin-bottom: 1.5rem;
-      position: relative;
-      z-index: 1;
-    }
-    
-    .social-media-desc {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0 auto 3rem;
-      position: relative;
-      z-index: 1;
-      opacity: 0.9;
-    }
-    
-    .social-media-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-      position: relative;
-      z-index: 1;
-    }
-    
-    .social-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 1rem 2rem;
-      border-radius: 50px;
-      font-weight: 600;
-      text-decoration: none;
-      color: white;
-      transition: var(--transition);
-      min-width: 220px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      border: 2px solid rgba(255,255,255,0.2);
-    }
-    
-    .social-btn i {
-      margin-right: 0.8rem;
-      font-size: 1.3rem;
-    }
-    
-    .social-btn:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-      border-color: white;
-    }
-    
-    .btn-facebook {
-      background: #1877f2;
-    }
-    
-    .btn-instagram {
-      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-    }
-    
-    .btn-whatsapp {
-      background: #25d366;
+      display: inline-block;
     }
 
     /* Footer */
     footer { 
-      background:var(--dark-bg); 
-      color:var(--white); 
+      background: var(--black); 
+      color: var(--white); 
       padding:5rem 0 2rem; 
       position: relative;
-      overflow: hidden;
-    }
-    
-    footer::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=1000') center/cover no-repeat;
-      opacity: 0.05;
-      z-index: 0;
     }
     
     .footer-logo {
-      font-size: 2rem;
-      font-weight: 700;
+      font-size: 1.5rem;
+      font-weight: 400;
       color: white;
       margin-bottom: 1.5rem;
       display: inline-block;
-      position: relative;
-      z-index: 1;
-    }
-    
-    .footer-about {
-      position: relative;
-      z-index: 1;
+      letter-spacing: 1px;
     }
     
     .footer-about p {
-      opacity: 0.8;
+      opacity: 0.7;
       margin-bottom: 1.5rem;
+      font-weight: 300;
+      font-size: 0.9rem;
     }
     
     .footer-links h4 {
-      font-size: 1.3rem;
+      font-size: 1.1rem;
       margin-bottom: 1.5rem;
-      position: relative;
-      display: inline-block;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 600;
-      position: relative;
-      z-index: 1;
-    }
-    
-    .footer-links h4::after {
-      content: '';
-      position: absolute;
-      bottom: -8px;
-      left: 0;
-      width: 40px;
-      height: 2px;
-      background: var(--primary);
+      font-weight: 400;
+      letter-spacing: 1px;
     }
     
     .footer-links ul {
       list-style: none;
       padding-left: 0;
-      position: relative;
-      z-index: 1;
     }
     
     .footer-links li {
@@ -1206,29 +577,27 @@
       color: rgba(255,255,255,0.7);
       text-decoration: none;
       transition: var(--transition);
-      display: inline-block;
+      font-size: 0.9rem;
+      font-weight: 300;
     }
     
     .footer-links a:hover {
       color: white;
-      padding-left: 5px;
-    }
-    
-    .footer-contact-info {
-      position: relative;
-      z-index: 1;
     }
     
     .footer-contact-info li {
       margin-bottom: 1rem;
       display: flex;
       align-items: flex-start;
+      font-size: 0.9rem;
+      font-weight: 300;
     }
     
     .footer-contact-info i {
       margin-right: 0.75rem;
-      color: var(--primary);
+      color: white;
       margin-top: 0.2rem;
+      opacity: 0.7;
     }
     
     .social-icons {
@@ -1241,19 +610,17 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 45px;
-      height: 45px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
       background: rgba(255,255,255,0.1);
       color: white;
       transition: var(--transition);
-      position: relative;
-      z-index: 1;
     }
     
     .social-icons a:hover {
-      background: var(--primary);
-      transform: translateY(-3px);
+      background: white;
+      color: var(--black);
     }
     
     .copyright {
@@ -1261,158 +628,52 @@
       padding-top: 1.5rem;
       border-top: 1px solid rgba(255,255,255,0.1);
       color: rgba(255,255,255,0.5);
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       text-align: center;
-      position: relative;
-      z-index: 1;
-    }
-    
-    .copyright a {
-      color: var(--primary);
-      text-decoration: none;
-      transition: var(--transition);
-    }
-    
-    .copyright a:hover {
-      color: white;
-    }
-
-    /* Back to Top Button */
-    .back-to-top {
-      position: fixed;
-      bottom: 110px;
-      right: 30px;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background: var(--secondary);
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 5px 15px rgba(111, 66, 193, 0.3);
-      z-index: 999;
-      cursor: pointer;
-      border: none;
-      transition: var(--transition);
-      opacity: 0;
-      visibility: hidden;
-    }
-    
-    .back-to-top.active {
-      opacity: 1;
-      visibility: visible;
-    }
-    
-    .back-to-top:hover {
-      background: var(--secondary-light);
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(111, 66, 193, 0.4);
-    }
-
-    /* Loading Animation */
-    .loading-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-      transition: opacity 0.5s ease;
-    }
-    
-    .loading-spinner {
-      width: 80px;
-      height: 80px;
-      border: 8px solid rgba(232, 62, 140, 0.1);
-      border-top-color: var(--primary);
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-    }
-    
-    @keyframes spin {
-      to { transform: rotate(360deg); }
     }
 
     /* Responsive adjustments */
     @media (max-width: 1200px) {
       .hero-content h1 {
-        font-size: 3.5rem;
+        font-size: 3rem;
       }
     }
     
     @media (max-width: 992px) {
       .hero-content h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
       }
       
       .hero-content p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
       }
       
       section {
-        padding: 6rem 0;
+        padding: 5rem 0;
       }
       
       .section-title h2 {
-        font-size: 2.7rem;
-      }
-      
-      .service-icon {
-        width: 80px;
-        height: 80px;
         font-size: 2.2rem;
-      }
-      
-      .service-title {
-        font-size: 1.4rem;
       }
     }
     
     @media (max-width: 768px) {
       .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
       }
       
       .section-title h2 {
-        font-size: 2.4rem;
+        font-size: 2rem;
       }
       
       .parallax {
         height: 400px;
-        margin-bottom: 2rem;
-      }
-      
-      .cart-sidebar {
-        width: 350px;
-      }
-      
-      .social-media-buttons {
-        flex-direction: column;
-        align-items: center;
-      }
-      
-      .social-btn {
-        width: 100%;
-        max-width: 300px;
-      }
-      
-      .footer-logo {
-        font-size: 1.8rem;
-      }
-      
-      .footer-links h4 {
-        font-size: 1.2rem;
       }
     }
     
     @media (max-width: 576px) {
       .navbar-brand {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
       }
       
       .hero-content {
@@ -1420,83 +681,43 @@
       }
       
       .hero-content h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
       
       .hero-content p {
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
       
       .section-title h2 {
-        font-size: 2rem;
-      }
-      
-      .section-subtitle {
-        font-size: 1rem;
-      }
-      
-      .product-img {
-        height: 200px;
-      }
-      
-      .social-media-title {
-        font-size: 2rem;
-      }
-      
-      .social-media-desc {
-        font-size: 1rem;
-      }
-      
-      .cart-toggle {
-        width: 60px;
-        height: 60px;
-        bottom: 20px;
-        right: 20px;
-      }
-      
-      .back-to-top {
-        bottom: 90px;
-        right: 20px;
-        width: 45px;
-        height: 45px;
-      }
-    }
-    
-    @media (max-width: 400px) {
-      .cart-sidebar {
-        width: 100%;
+        font-size: 1.8rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Loading Overlay -->
-  <div class="loading-overlay">
-    <div class="loading-spinner"></div>
-  </div>
-
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg fixed-top py-3">
     <div class="container">
       <a class="navbar-brand" href="#">
-        <svg id="logo" width="40" height="40" viewBox="0 0 100 100">
+        <svg id="logo" width="30" height="30" viewBox="0 0 100 100" class="me-2">
           <circle cx="50" cy="50" r="35"/>
           <path d="M50 15 L58 40 L85 40 L62 58 L70 85 L50 68 L30 85 L38 58 L15 40 L42 40 Z"/>
         </svg>
-        Obsequio Vallarta
+        OBSEQUIO VALLARTA
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-expanded="false">
         <i class="fas fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="#home">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">Nosotros</a></li>
-          <li class="nav-item"><a class="nav-link" href="#services">Servicios</a></li>
-          <li class="nav-item"><a class="nav-link" href="#products">Productos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#gallery">Galería</a></li>
-          <li class="nav-item"><a class="nav-link" href="#social">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#home">INICIO</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">NOSOTROS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#weddings">BODAS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">SERVICIOS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#products">PRODUCTOS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">GALERÍA</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">CONTACTO</a></li>
         </ul>
       </div>
     </div>
@@ -1508,69 +729,104 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide" style="background-image:url('https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=1000')">
           <div class="hero-overlay"></div>
-          <div class="hero-content animate__animated animate__fadeIn">
-            <h1>Flores que inspiran</h1>
-            <p>Descubre la magia en cada pétalo con nuestros arreglos florales exclusivos</p>
-            <a href="#products" class="btn btn-primary">Ver Colección</a>
+          <div class="hero-content">
+            <h1>FLORES PARA BODAS EN PUERTO VALLARTA</h1>
+            <p>Diseños exclusivos para tu wedding day. Bouquets, centros de mesa y decoración floral para bodas.</p>
+            <a href="#weddings" class="btn btn-outline-light">VER BODAS</a>
           </div>
         </div>
         <div class="swiper-slide" style="background-image:url('https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c?q=80&w=1000')">
           <div class="hero-overlay"></div>
-          <div class="hero-content animate__animated animate__fadeIn">
-            <h1>Diseños exclusivos</h1>
-            <p>Personaliza tu ramo ideal para esa ocasión especial</p>
-            <a href="#gallery" class="btn btn-primary">Ver Galería</a>
+          <div class="hero-content">
+            <h1>PROPUESTAS DE MATRIMONIO</h1>
+            <p>Arreglos florales especiales para pedidas de matrimonio inolvidables</p>
+            <a href="#products" class="btn btn-outline-light">VER DISEÑOS</a>
           </div>
         </div>
         <div class="swiper-slide" style="background-image:url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=1000')">
           <div class="hero-overlay"></div>
-          <div class="hero-content animate__animated animate__fadeIn">
-            <h1>Entrega especial</h1>
-            <p>Sorprende a tus seres queridos con nuestros servicios de entrega</p>
-            <a href="#social" class="btn btn-primary">Contáctanos</a>
+          <div class="hero-content">
+            <h1>FLORISTERÍA EN PUERTO VALLARTA</h1>
+            <p>Presentación impecable en cada entrega. Flores frescas para ocasiones especiales.</p>
+            <a href="#contact" class="btn btn-outline-light">CONTÁCTANOS</a>
           </div>
         </div>
       </div>
       <div class="swiper-pagination"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
     </div>
   </section>
 
-  <!-- PETALS -->
- 
-
   <!-- ABOUT -->
   <section id="about" class="section-light">
-    <div class="floating-element floating-1">
-      <img src="https://www.svgrepo.com/show/530129/flower.svg" width="80" alt="">
-    </div>
-    <div class="floating-element floating-2">
-      <img src="https://www.svgrepo.com/show/530129/flower.svg" width="60" alt="">
-    </div>
-    <div class="container position-relative">
+    <div class="container">
       <div class="section-title">
         <h2>Sobre Nosotros</h2>
-        <p class="section-subtitle">Conoce la historia detrás de nuestra pasión por las flores</p>
+        <p class="section-subtitle">Florería especializada en bodas y eventos en Puerto Vallarta</p>
       </div>
       <div class="row align-items-center g-5">
         <div class="col-lg-6">
           <div class="pe-lg-5">
-            <p class="lead mb-4">Todo comenzó en Puerto Vallarta en el año 2017, cuando nuestra pasión por las flores y el deseo de hacer que los demás se sintieran especiales nos llevó a crear arreglos florales exclusivos.</p>
-            <p>Inicialmente nos enfocamos en dos de las fechas más románticas y significativas del año: San Valentín y Día de las Madres. Con el tiempo, nuestro amor por el diseño floral nos impulsó a expandirnos y ofrecer nuestros servicios durante todo el año, para todo tipo de ocasiones especiales.</p>
-           
-            <div class="mt-5">
-
-            </div>
+            <p class="mb-4">Fundada en 2017 en Puerto Vallarta, nuestra floristería nació del deseo de crear diseños florales con un enfoque minimalista y elegante, especialmente para bodas y eventos especiales.</p>
+            <p class="mb-4">Nos hemos convertido en la opción preferida para parejas que buscan flores para su boda en Puerto Vallarta, ofreciendo desde bouquets para novias hasta decoración floral completa para recepciones.</p>
+            <p>Nuestro equipo de diseñadores florales especializados en weddings crea piezas únicas que reflejan el estilo y personalidad de cada pareja, haciendo de su día especial una experiencia inolvidable.</p>
           </div>
         </div>
         <div class="col-lg-6">
           <div class="parallax" style="background-image: url('https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?q=80&w=1000');">
             <div class="parallax-content">
-              <h3>Nuestra Filosofía</h3>
-              <p>Creemos que cada flor cuenta una historia y cada arreglo es una obra de arte que expresa emociones únicas.</p>
+              <h3>NUESTRA FILOSOFÍA</h3>
+              <p>Creemos que las flores para bodas deben ser tan únicas como el amor que celebran</p>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WEDDING SECTION -->
+  <section id="weddings" class="section-gray">
+    <div class="container">
+      <div class="section-title">
+        <h2>Flores para Bodas en Puerto Vallarta</h2>
+        <p class="section-subtitle">Hacemos de tu wedding day algo inolvidable</p>
+      </div>
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <h3>Diseño Floral para tu Boda</h3>
+          <p>En Obsequio Vallarta nos especializamos en crear arreglos florales únicos para bodas en Puerto Vallarta. Desde el bouquet de la novia hasta los centros de mesa, cada pieza es diseñada para complementar la estética de tu wedding day.</p>
+          <div class="row mt-4">
+            <div class="col-md-6">
+              <div class="wedding-feature">
+                <i class="fas fa-birthday-cake"></i>
+                <h4>Bouquets para Novia</h4>
+                <p>Diseños personalizados que complementan tu vestido y estilo.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="wedding-feature">
+                <i class="fas fa-archway"></i>
+                <h4>Arcos Florales</h4>
+                <p>Para ceremonias inolvidables en playas y jardines de Puerto Vallarta.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="wedding-feature">
+                <i class="fas fa-wine-glass-alt"></i>
+                <h4>Centros de Mesa</h4>
+                <p>Diseños elegantes para tu recepción de boda.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="wedding-feature">
+                <i class="fas fa-ring"></i>
+                <h4>Propuestas de Matrimonio</h4>
+                <p>Arreglos especiales para pedidas de matrimonio memorables.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1000" alt="Decoración floral para bodas en Puerto Vallarta" class="img-fluid rounded">
         </div>
       </div>
     </div>
@@ -1581,16 +837,16 @@
     <div class="container">
       <div class="section-title">
         <h2>Nuestros Servicios</h2>
-        <p class="section-subtitle">Ofrecemos soluciones florales para cada ocasión especial en tu vida</p>
+        <p class="section-subtitle">Soluciones florales para cada ocasión</p>
       </div>
       <div class="row g-4">
         <div class="col-md-4">
           <div class="service-card">
             <div class="service-icon">
-              <i class="fas fa-gift"></i>
+              <i class="fas fa-pen-fancy"></i>
             </div>
-            <h3 class="service-title">Arreglos Personalizados</h3>
-            <p class="service-desc">Creamos diseños únicos adaptados a tus necesidades y preferencias, para que cada detalle sea perfecto y refleje exactamente lo que deseas expresar.</p>
+            <h3 class="service-title">Diseño para Bodas</h3>
+            <p class="service-desc">Servicio completo de diseño floral para weddings en Puerto Vallarta. Desde la consultoría inicial hasta la instalación el día del evento.</p>
           </div>
         </div>
         <div class="col-md-4">
@@ -1599,7 +855,7 @@
               <i class="fas fa-calendar-alt"></i>
             </div>
             <h3 class="service-title">Eventos Especiales</h3>
-            <p class="service-desc">Decoración floral para bodas, aniversarios y eventos corporativos que harán memorable cualquier ocasión con nuestro toque único y elegante.</p>
+            <p class="service-desc">Decoración floral para bodas, aniversarios y propuestas de matrimonio con un estilo contemporáneo que complementa cualquier espacio.</p>
           </div>
         </div>
         <div class="col-md-4">
@@ -1607,35 +863,8 @@
             <div class="service-icon">
               <i class="fas fa-truck"></i>
             </div>
-            <h3 class="service-title">Entrega Express</h3>
-            <p class="service-desc">Servicio de entrega rápida y segura en Puerto Vallarta y áreas cercanas, garantizando frescura y puntualidad en cada entrega.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="service-card">
-            <div class="service-icon">
-              <i class="fas fa-home"></i>
-            </div>
-            <h3 class="service-title">Decoración de Interiores</h3>
-            <p class="service-desc">Transformamos tus espacios con arreglos florales y plantas que armonizan con tu decoración y crean ambientes acogedores.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="service-card">
-            <div class="service-icon">
-              <i class="fas fa-heart"></i>
-            </div>
-            <h3 class="service-title">Ocasiones Especiales</h3>
-            <p class="service-desc">Desde cumpleaños hasta aniversarios, creamos el arreglo perfecto para celebrar esos momentos importantes en la vida.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="service-card">
-            <div class="service-icon">
-              <i class="fas fa-lightbulb"></i>
-            </div>
-            <h3 class="service-title">Asesoría Personalizada</h3>
-            <p class="service-desc">Nuestros expertos te guiarán en la selección de flores y diseños ideales para cada ocasión y presupuesto.</p>
+            <h3 class="service-title">Entrega Premium</h3>
+            <p class="service-desc">Servicio de entrega con presentación impecable en Puerto Vallarta, perfecto para propuestas de matrimonio sorpresa y regalos especiales.</p>
           </div>
         </div>
       </div>
@@ -1643,27 +872,27 @@
   </section>
 
   <!-- PRODUCTOS -->
-  <section id="products" class="section-light">
+  <section id="products" class="section-gray">
     <div class="container">
       <div class="section-title">
-        <h2>Nuestros Productos</h2>
-        <p class="section-subtitle">Descubre nuestra exclusiva colección de arreglos florales</p>
+        <h2>Nuestra Colección</h2>
+        <p class="section-subtitle">Selección de arreglos florales para bodas y eventos</p>
       </div>
       <div class="row g-4">
         <!-- Producto 1 -->
         <div class="col-md-4 col-sm-6">
           <div class="product-card">
             <div class="product-img">
-              <img src="https://images.unsplash.com/photo-1560743641-3914f2c45636?q=80&w=1000" alt="Ramo de rosas clásico">
-              <div class="product-badge">Popular</div>
+              <img src="https://images.unsplash.com/photo-1560743641-3914f2c45636?q=80&w=1000" alt="Bouquet para novias en Puerto Vallarta - Obsequio Vallarta">
+              <div class="product-badge">PARA BODAS</div>
             </div>
             <div class="product-info">
-              <h3>Ramo Clásico</h3>
-              <p class="product-desc">Hermoso ramo con 24 rosas frescas de temporada, acompañadas de verde ornamental y presentado en elegante empaque.</p>
+              <h3>Bouquet para Novia</h3>
+              <p class="product-desc">Composición de rosas blancas y verdes estructurales perfecta para tu wedding day en Puerto Vallarta.</p>
               <div class="product-footer">
-                <span class="price">$850 <del>$950</del></span>
-                <button class="add-to-cart" data-name="Ramo Clásico" data-price="850" data-img="https://images.unsplash.com/photo-1560743641-3914f2c45636?q=80&w=1000">
-                  <i class="fas fa-plus me-1"></i> Agregar
+                <span class="price">$1,450</span>
+                <button class="add-to-cart">
+                  <i class="fas fa-plus me-1"></i> COTIZAR
                 </button>
               </div>
             </div>
@@ -1674,15 +903,16 @@
         <div class="col-md-4 col-sm-6">
           <div class="product-card">
             <div class="product-img">
-              <img src="https://images.unsplash.com/photo-1455659817273-f96807779a8a?q=80&w=1000" alt="Centro de mesa floral">
+              <img src="https://images.unsplash.com/photo-1455659817273-f96807779a8a?q=80&w=1000" alt="Centro de mesa para bodas en Puerto Vallarta">
+              <div class="product-badge">RECOMENDADO</div>
             </div>
             <div class="product-info">
-              <h3>Centro de Mesa</h3>
-              <p class="product-desc">Elegante centro de mesa con flores de temporada en base de cristal, ideal para eventos especiales y decoración de interiores.</p>
+              <h3>Centro de Mesa para Bodas</h3>
+              <p class="product-desc">Selección de flores en tonos crema y beige en recipiente de vidrio transparente para recepciones.</p>
               <div class="product-footer">
                 <span class="price">$1,200</span>
-                <button class="add-to-cart" data-name="Centro de Mesa" data-price="1200" data-img="https://images.unsplash.com/photo-1455659817273-f96807779a8a?q=80&w=1000">
-                  <i class="fas fa-plus me-1"></i> Agregar
+                <button class="add-to-cart">
+                  <i class="fas fa-plus me-1"></i> COTIZAR
                 </button>
               </div>
             </div>
@@ -1693,74 +923,16 @@
         <div class="col-md-4 col-sm-6">
           <div class="product-card">
             <div class="product-img">
-              <img src="https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?q=80&w=1000" alt="Arreglo floral moderno">
-              <div class="product-badge">Nuevo</div>
+              <img src="https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?q=80&w=1000" alt="Arreglo para propuestas de matrimonio en Puerto Vallarta">
+              <div class="product-badge">PROPUESTAS</div>
             </div>
             <div class="product-info">
-              <h3>Arreglo Moderno</h3>
-              <p class="product-desc">Diseño contemporáneo con flores exóticas y follaje tropical en base de cerámica artesanal, perfecto para regalos ejecutivos.</p>
+              <h3>Arreglo para Propuesta</h3>
+              <p class="product-desc">Diseño especial para pedidas de matrimonio con flores frescas y presentación premium.</p>
               <div class="product-footer">
-                <span class="price">$980</span>
-                <button class="add-to-cart" data-name="Arreglo Moderno" data-price="980" data-img="https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?q=80&w=1000">
-                  <i class="fas fa-plus me-1"></i> Agregar
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Producto 4 -->
-        <div class="col-md-4 col-sm-6">
-          <div class="product-card">
-            <div class="product-img">
-              <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1000" alt="Decoración para bodas">
-            </div>
-            <div class="product-info">
-              <h3>Paquete Bodas</h3>
-              <p class="product-desc">Decoración completa para bodas incluyendo ramos, centros de mesa y arcos florales. Personalizable según tus necesidades.</p>
-              <div class="product-footer">
-                <span class="price">$5,500</span>
-                <button class="add-to-cart" data-name="Paquete Bodas" data-price="5500" data-img="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1000">
-                  <i class="fas fa-plus me-1"></i> Agregar
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Producto 5 -->
-        <div class="col-md-4 col-sm-6">
-          <div class="product-card">
-            <div class="product-img">
-              <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=1000" alt="Ramo de girasoles">
-              <div class="product-badge">Oferta</div>
-            </div>
-            <div class="product-info">
-              <h3>Ramo Girasoles</h3>
-              <p class="product-desc">Alegre ramo con 12 girasoles frescos acompañados de flores complementarias y follaje verde, perfecto para animar cualquier día.</p>
-              <div class="product-footer">
-                <span class="price">$750 <del>$850</del></span>
-                <button class="add-to-cart" data-name="Ramo Girasoles" data-price="750" data-img="https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=1000">
-                  <i class="fas fa-plus me-1"></i> Agregar
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Producto 6 -->
-        <div class="col-md-4 col-sm-6">
-          <div class="product-card">
-            <div class="product-img">
-              <img src="https://images.unsplash.com/photo-1526397751294-331021109fbd?q=80&w=1000" alt="Plantas de interior">
-            </div>
-            <div class="product-info">
-              <h3>Plantas de Interior</h3>
-              <p class="product-desc">Selección de plantas de interior en macetas decorativas, perfectas para regalo o para dar vida a tus espacios interiores.</p>
-              <div class="product-footer">
-                <span class="price">$650</span>
-                <button class="add-to-cart" data-name="Plantas de Interior" data-price="650" data-img="https://images.unsplash.com/photo-1526397751294-331021109fbd?q=80&w=1000">
-                  <i class="fas fa-plus me-1"></i> Agregar
+                <span class="price">$1,650</span>
+                <button class="add-to-cart">
+                  <i class="fas fa-plus me-1"></i> COTIZAR
                 </button>
               </div>
             </div>
@@ -1768,86 +940,51 @@
         </div>
       </div>
       <div class="text-center mt-5">
-        <a href="#gallery" class="btn btn-primary">Ver Más Diseños</a>
+        <a href="#gallery" class="btn btn-outline-dark">VER MÁS DISEÑOS PARA BODAS</a>
       </div>
     </div>
   </section>
 
   <!-- GALLERY -->
-  <section id="gallery">
+  <section id="gallery" class="section-light">
     <div class="container">
       <div class="section-title">
-        <h2>Nuestra Galería</h2>
-        <p class="section-subtitle">Un vistazo a nuestros trabajos más recientes</p>
+        <h2>Galería de Bodas</h2>
+        <p class="section-subtitle">Nuestros trabajos para weddings en Puerto Vallarta</p>
       </div>
       <div class="row g-4">
         <div class="col-sm-6 col-lg-3">
           <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1560743641-3914f2c45636?q=80&w=1000" alt="Ramo de rosas">
+            <img src="https://images.unsplash.com/photo-1560743641-3914f2c45636?q=80&w=1000" alt="Bouquet de novia en Puerto Vallarta - Obsequio Vallarta">
             <div class="gallery-overlay">
-              <h4>Ramo Clásico</h4>
+              <h4>BOUQUETS</h4>
             </div>
           </div>
         </div>
         <div class="col-sm-6 col-lg-3">
           <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1455659817273-f96807779a8a?q=80&w=1000" alt="Centro de mesa">
+            <img src="https://images.unsplash.com/photo-1455659817273-f96807779a8a?q=80&w=1000" alt="Centros de mesa para bodas en Puerto Vallarta">
             <div class="gallery-overlay">
-              <h4>Centros de Mesa</h4>
+              <h4>CENTROS DE MESA</h4>
             </div>
           </div>
         </div>
         <div class="col-sm-6 col-lg-3">
           <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?q=80&w=1000" alt="Arreglo moderno">
+            <img src="https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?q=80&w=1000" alt="Arreglos florales para bodas en Puerto Vallarta">
             <div class="gallery-overlay">
-              <h4>Diseño Moderno</h4>
+              <h4>DECORACIÓN</h4>
             </div>
           </div>
         </div>
         <div class="col-sm-6 col-lg-3">
           <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1000" alt="Decoración para bodas">
+            <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1000" alt="Propuestas de matrimonio con flores en Puerto Vallarta">
             <div class="gallery-overlay">
-              <h4>Bodas</h4>
+              <h4>PROPUESTAS</h4>
             </div>
           </div>
         </div>
-        <div class="col-sm-6 col-lg-3">
-          <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=1000" alt="Ramo de girasoles">
-            <div class="gallery-overlay">
-              <h4>Girasoles</h4>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-lg-3">
-          <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?q=80&w=1000" alt="Arreglo tropical">
-            <div class="gallery-overlay">
-              <h4>Estilo Tropical</h4>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-lg-3">
-          <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1495231916356-a86217efff12?q=80&w=1000" alt="Rosas rojas">
-            <div class="gallery-overlay">
-              <h4>Rosas Rojas</h4>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-lg-3">
-          <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1526397751294-331021109fbd?q=80&w=1000" alt="Plantas de interior">
-            <div class="gallery-overlay">
-              <h4>Plantas de Interior</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="text-center mt-5">
-        <a href="#social" class="btn btn-primary">Contáctanos para más información</a>
       </div>
     </div>
   </section>
@@ -1855,52 +992,50 @@
   <!-- PARALLAX SECTION -->
   <div class="parallax" style="background-image: url('https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1000');">
     <div class="parallax-content">
-      <h3>¿Listo para sorprender a alguien especial?</h3>
-      <p>Déjanos crear el arreglo perfecto para esa persona especial en tu vida. Cada detalle cuenta.</p>
-      <a href="#products" class="btn btn-primary mt-3">Ver Colección</a>
+      <h3>BODAS EN PUERTO VALLARTA</h3>
+      <p>Diseños florales exclusivos para hacer de tu wedding day una experiencia inolvidable.</p>
+      <a href="#contact" class="btn btn-outline-light mt-3">CONSULTA PARA TU BODA</a>
     </div>
   </div>
 
-  <!-- SOCIAL MEDIA CONTACT -->
-  <section id="social" class="social-media-section">
+  <!-- CONTACT -->
+  <section id="contact" class="section-light">
     <div class="container">
-      <h2 class="social-media-title">Contáctanos</h2>
-      <p class="social-media-desc">Estamos disponibles en nuestras redes sociales para atender tus pedidos y responder cualquier pregunta que tengas sobre nuestros productos y servicios.</p>
-      
-      <div class="social-media-buttons">
-        <a href="https://facebook.com/obsequiovallarta" class="social-btn btn-facebook" target="_blank">
-          <i class="fab fa-facebook-f"></i> Facebook
-        </a>
-        <a href="https://instagram.com/obsequiovallarta" class="social-btn btn-instagram" target="_blank">
-          <i class="fab fa-instagram"></i> Instagram
-        </a>
-        <a href="https://wa.me/5213312345678" class="social-btn btn-whatsapp" target="_blank">
-          <i class="fab fa-whatsapp"></i> WhatsApp
-        </a>
+      <div class="section-title">
+        <h2>Contacto</h2>
+        <p class="section-subtitle">Estamos para ayudarte con tu boda o evento especial</p>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 mx-auto text-center">
+          <p class="mb-5">Av. Vallarta 123, Puerto Vallarta, Jalisco<br>
+          Lunes a Sábado: 9am - 7pm<br>
+          Tel: (322) 123 4567<br>
+          hola@obsequiovallarta.com</p>
+          
+          <div class="social-icons justify-content-center">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer>
+  <footer class="section-dark">
     <div class="container">
       <div class="row g-5">
         <div class="col-lg-4">
           <div class="footer-about">
             <a href="#" class="footer-logo d-flex align-items-center">
-              <svg width="40" height="40" viewBox="0 0 100 100" fill="white" class="me-2">
+              <svg width="30" height="30" viewBox="0 0 100 100" fill="white" class="me-2">
                 <circle cx="50" cy="50" r="35"/>
                 <path d="M50 15 L58 40 L85 40 L62 58 L70 85 L50 68 L30 85 L38 58 L15 40 L42 40 Z"/>
               </svg>
-              Obsequio Vallarta
+              OBSEQUIO VALLARTA
             </a>
-            <p>Creando momentos memorables a través del arte floral desde 2017. Nuestra pasión por las flores se refleja en cada diseño que creamos.</p>
-            <div class="social-icons">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-pinterest"></i></a>
-              <a href="#"><i class="fab fa-whatsapp"></i></a>
-            </div>
+            <p>Florería especializada en bodas y eventos en Puerto Vallarta. Creando diseños florales únicos para weddings desde 2017.</p>
           </div>
         </div>
         <div class="col-lg-2 col-md-4">
@@ -1909,23 +1044,20 @@
             <ul>
               <li><a href="#home">Inicio</a></li>
               <li><a href="#about">Nosotros</a></li>
+              <li><a href="#weddings">Bodas</a></li>
               <li><a href="#services">Servicios</a></li>
-              <li><a href="#products">Productos</a></li>
-              <li><a href="#gallery">Galería</a></li>
-              <li><a href="#social">Contacto</a></li>
+              <li><a href="#contact">Contacto</a></li>
             </ul>
           </div>
         </div>
         <div class="col-lg-3 col-md-4">
           <div class="footer-links">
-            <h4>Servicios</h4>
+            <h4>Servicios para Bodas</h4>
             <ul>
-              <li><a href="#">Arreglos Florales</a></li>
-              <li><a href="#">Decoración de Eventos</a></li>
-              <li><a href="#">Entrega a Domicilio</a></li>
-              <li><a href="#">Plantas de Interior</a></li>
-              <li><a href="#">Asesoría Personalizada</a></li>
-              <li><a href="#">Regalos Corporativos</a></li>
+              <li><a href="#weddings">Bouquets para Novia</a></li>
+              <li><a href="#weddings">Centros de Mesa</a></li>
+              <li><a href="#weddings">Arcos Florales</a></li>
+              <li><a href="#weddings">Propuestas de Matrimonio</a></li>
             </ul>
           </div>
         </div>
@@ -1933,64 +1065,19 @@
           <div class="footer-contact-info">
             <h4>Contacto</h4>
             <ul>
-              <li><i class="fas fa-map-marker-alt"></i> Av. Vallarta 123, Puerto Vallarta, Jalisco</li>
+              <li><i class="fas fa-map-marker-alt"></i> Av. Vallarta 123, Puerto Vallarta</li>
               <li><i class="fas fa-phone"></i> (322) 123 4567</li>
               <li><i class="fas fa-envelope"></i> hola@obsequiovallarta.com</li>
               <li><i class="fas fa-clock"></i> Lunes a Sábado: 9am - 7pm</li>
-              <li><i class="fas fa-calendar-alt"></i> Domingo: Cerrado</li>
             </ul>
           </div>
         </div>
       </div>
       <div class="copyright">
-        <p>&copy; 2025 Obsequio Vallarta. Todos los derechos reservados.</p>
-        <p>Desarrollado por <a href="#" target="_blank">Alejandra Camacho</a></p>
+        <p>&copy; 2025 OBSEQUIO VALLARTA. Florería especializada en bodas en Puerto Vallarta. Todos los derechos reservados.</p>
       </div>
     </div>
   </footer>
-
-  <!-- Cart Sidebar -->
-  <div class="cart-overlay"></div>
-  <div class="cart-sidebar">
-    <div class="cart-header">
-      <h3>Tu Pedido</h3>
-      <button class="close-cart"><i class="fas fa-times"></i></button>
-    </div>
-    <div class="cart-body">
-      <div class="empty-cart-message">
-        <i class="fas fa-shopping-cart"></i>
-        <h5>Tu pedido está vacío</h5>
-        <p>Agrega productos desde nuestra tienda</p>
-        <button class="btn btn-primary mt-3 close-cart">Seguir Comprando</button>
-      </div>
-      <div class="cart-items-container"></div>
-    </div>
-    <div class="cart-footer">
-      <div class="cart-total">
-        <span>Total:</span>
-        <span class="total-price">$0</span>
-      </div>
-      <div class="cart-actions">
-        <button class="btn btn-checkout" id="send-whatsapp">
-          <i class="fab fa-whatsapp me-2"></i> Enviar por WhatsApp
-        </button>
-        <button class="btn btn-clear" id="clear-cart">
-          <i class="fas fa-trash-alt me-2"></i> Limpiar pedido
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Cart Toggle Button -->
-  <button class="cart-toggle">
-    <i class="fas fa-shopping-cart"></i>
-    <span class="cart-badge">0</span>
-  </button>
-
-  <!-- Back to Top Button -->
-  <button class="back-to-top">
-    <i class="fas fa-arrow-up"></i>
-  </button>
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -1998,30 +1085,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
   <script>
-    // Loading animation
-    window.addEventListener('load', function() {
-      const loadingOverlay = document.querySelector('.loading-overlay');
-      gsap.to(loadingOverlay, {
-        opacity: 0,
-        duration: 0.5,
-        onComplete: function() {
-          loadingOverlay.style.display = 'none';
-        }
-      });
-    });
-
     // Navbar shadow and color change
     window.addEventListener('scroll', () => {
       const navbar = document.querySelector('.navbar');
       navbar.classList.toggle('scrolled', window.scrollY > 50);
-      
-      // Back to top button
-      const backToTop = document.querySelector('.back-to-top');
-      if (window.scrollY > 300) {
-        backToTop.classList.add('active');
-      } else {
-        backToTop.classList.remove('active');
-      }
       
       // Active nav link based on scroll position
       document.querySelectorAll('section').forEach(section => {
@@ -2040,15 +1107,6 @@
       });
     });
 
-    // Back to top button functionality
-    document.querySelector('.back-to-top').addEventListener('click', () => {
-      gsap.to(window, {
-        scrollTo: 0,
-        duration: 1,
-        ease: 'power3.inOut'
-      });
-    });
-
     // Hero content animation
     gsap.utils.toArray('.hero-content').forEach((content, i) => {
       gsap.from(content, {
@@ -2060,19 +1118,11 @@
       });
     });
 
-    // Scroll reveals with different animations
+    // Scroll reveals
     gsap.utils.toArray('section').forEach((sec, i) => {
-      let animationFrom = { opacity: 0, y: 50 };
-      
-      // Alternate animation directions
-      if (i % 2 === 0) {
-        animationFrom = { opacity: 0, x: -50 };
-      } else {
-        animationFrom = { opacity: 0, x: 50 };
-      }
-      
       gsap.from(sec, {
-        ...animationFrom,
+        opacity: 0,
+        y: 50,
         duration: 1,
         scrollTrigger: {
           trigger: sec,
@@ -2082,58 +1132,23 @@
       });
     });
 
-    // Feature cards animation
-    gsap.utils.toArray('.feature-card').forEach((card, i) => {
-      gsap.from(card, {
-        opacity: 0,
-        y: 30,
-        duration: 0.8,
-        delay: i * 0.1,
-        scrollTrigger: {
-          trigger: card,
-          start: 'top 90%',
-          toggleActions: 'play none none none'
-        }
-      });
-    });
-
     // Gallery hover effect
     document.querySelectorAll('.gallery-item').forEach(item => {
       item.addEventListener('mouseenter', () => {
-        gsap.to(item, { 
-          y: -10,
-          boxShadow: '0 20px 40px rgba(0,0,0,0.2)',
-          duration: 0.5 
-        });
         gsap.to(item.querySelector('img'), {
-          scale: 1.1,
-          duration: 0.5
-        });
-        gsap.to(item.querySelector('.gallery-overlay h4'), {
-          y: 0,
+          scale: 1.05,
           duration: 0.5
         });
       });
       
       item.addEventListener('mouseleave', () => {
-        gsap.to(item, { 
-          y: 0,
-          boxShadow: '0 10px 20px rgba(0,0,0,0.1)',
-          duration: 0.5 
-        });
         gsap.to(item.querySelector('img'), {
           scale: 1,
-          duration: 0.5
-        });
-        gsap.to(item.querySelector('.gallery-overlay h4'), {
-          y: 20,
           duration: 0.5
         });
       });
     });
 
-    // Petals animation
-   
     // Main Swiper
     const mainSwiper = new Swiper('.swiper', {
       loop: true,
@@ -2144,12 +1159,7 @@
       },
       pagination: { 
         el: '.swiper-pagination', 
-        clickable: true,
-        dynamicBullets: true
-      },
-      navigation: { 
-        nextEl: '.swiper-button-next', 
-        prevEl: '.swiper-button-prev',
+        clickable: true
       },
       autoplay: { 
         delay: 5000,
@@ -2157,41 +1167,23 @@
       },
       on: {
         init: function() {
-          // Animate in new slide
           gsap.fromTo(this.slides[this.activeIndex].querySelector('.hero-content'), 
             { opacity: 0, y: 50 },
             { opacity: 1, y: 0, duration: 1, ease: 'power3.out' }
           );
         },
         slideChangeTransitionStart: function() {
-          // Animate out current slide
           gsap.to(this.slides[this.previousIndex].querySelector('.hero-content'), 
             { opacity: 0, y: -50, duration: 0.5, ease: 'power3.in' }
           );
         },
         slideChangeTransitionEnd: function() {
-          // Animate in new slide
           gsap.fromTo(this.slides[this.activeIndex].querySelector('.hero-content'), 
             { opacity: 0, y: 50 },
             { opacity: 1, y: 0, duration: 1, ease: 'power3.out' }
           );
         }
       }
-    });
-
-    // Testimonial Swiper
-    const testimonialSwiper = new Swiper('.testimonialSwiper', {
-      loop: true,
-      slidesPerView: 1,
-      spaceBetween: 30,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      autoplay: {
-        delay: 6000,
-        disableOnInteraction: false,
-      },
     });
 
     // Smooth scrolling for anchor links
@@ -2220,287 +1212,6 @@
           this.classList.add('active');
         }
       });
-    });
-
-    // Carrito de compras
-    let cart = [];
-    const cartToggle = document.querySelector('.cart-toggle');
-    const cartSidebar = document.querySelector('.cart-sidebar');
-    const cartOverlay = document.querySelector('.cart-overlay');
-    const closeCartBtn = document.querySelector('.close-cart');
-    const cartItemsContainer = document.querySelector('.cart-items-container');
-    const emptyCartMessage = document.querySelector('.empty-cart-message');
-    const totalPriceElement = document.querySelector('.total-price');
-    const cartBadge = document.querySelector('.cart-badge');
-    const clearCartBtn = document.querySelector('#clear-cart');
-    const sendWhatsappBtn = document.querySelector('#send-whatsapp');
-
-    // Abrir/cerrar carrito
-    cartToggle.addEventListener('click', () => {
-      cartSidebar.classList.add('open');
-      cartOverlay.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    });
-
-    closeCartBtn.addEventListener('click', () => {
-      cartSidebar.classList.remove('open');
-      cartOverlay.classList.remove('active');
-      document.body.style.overflow = '';
-    });
-
-    cartOverlay.addEventListener('click', () => {
-      cartSidebar.classList.remove('open');
-      cartOverlay.classList.remove('active');
-      document.body.style.overflow = '';
-    });
-
-    // Agregar productos al carrito
-    document.querySelectorAll('.add-to-cart').forEach(button => {
-      button.addEventListener('click', () => {
-        const product = {
-          name: button.dataset.name,
-          price: parseFloat(button.dataset.price),
-          img: button.dataset.img,
-          quantity: 1
-        };
-        
-        // Verificar si el producto ya está en el carrito
-        const existingItem = cart.find(item => item.name === product.name);
-        
-        if (existingItem) {
-          existingItem.quantity += 1;
-        } else {
-          cart.push(product);
-        }
-        
-        updateCart();
-        
-        // Animación de confirmación
-        const confirmation = document.createElement('div');
-        confirmation.innerHTML = `<i class="fas fa-check-circle me-2"></i> Agregado al pedido`;
-        confirmation.style.position = 'fixed';
-        confirmation.style.bottom = '100px';
-        confirmation.style.right = '30px';
-        confirmation.style.backgroundColor = 'var(--primary)';
-        confirmation.style.color = 'white';
-        confirmation.style.padding = '12px 24px';
-        confirmation.style.borderRadius = '50px';
-        confirmation.style.zIndex = '1001';
-        confirmation.style.boxShadow = '0 5px 15px rgba(0,0,0,0.2)';
-        confirmation.style.display = 'flex';
-        confirmation.style.alignItems = 'center';
-        document.body.appendChild(confirmation);
-        
-        // Animación de entrada
-        gsap.from(confirmation, {
-          y: 50,
-          opacity: 0,
-          duration: 0.5,
-          ease: 'back.out(1)'
-        });
-        
-        setTimeout(() => {
-          // Animación de salida
-          gsap.to(confirmation, {
-            y: 30,
-            opacity: 0,
-            duration: 0.5,
-            onComplete: () => confirmation.remove()
-          });
-        }, 2000);
-      });
-    });
-
-    // Actualizar carrito
-    function updateCart() {
-      // Actualizar badge
-      const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
-      cartBadge.textContent = totalItems;
-      
-      // Animación del badge cuando se agrega un producto
-      if (totalItems > 0) {
-        gsap.to(cartBadge, {
-          scale: 1.3,
-          duration: 0.3,
-          yoyo: true,
-          repeat: 1
-        });
-      }
-      
-      // Mostrar/ocultar mensaje de carrito vacío
-      if (cart.length === 0) {
-        emptyCartMessage.style.display = 'flex';
-        cartItemsContainer.style.display = 'none';
-      } else {
-        emptyCartMessage.style.display = 'none';
-        cartItemsContainer.style.display = 'block';
-      }
-      
-      // Renderizar productos en el carrito
-      cartItemsContainer.innerHTML = '';
-      
-      cart.forEach((item, index) => {
-        const cartItem = document.createElement('div');
-        cartItem.className = 'cart-item';
-        cartItem.innerHTML = `
-          <div class="cart-item-img">
-            <img src="${item.img}" alt="${item.name}">
-          </div>
-          <div class="cart-item-info">
-            <h4 class="cart-item-title">${item.name}</h4>
-            <div class="cart-item-price">$${(item.price * item.quantity).toFixed(2)}</div>
-            <div class="cart-item-quantity">
-              <button class="quantity-btn decrease-quantity" data-index="${index}">-</button>
-              <span class="quantity-value">${item.quantity}</span>
-              <button class="quantity-btn increase-quantity" data-index="${index}">+</button>
-            </div>
-          </div>
-          <button class="remove-item" data-index="${index}">
-            <i class="fas fa-times"></i>
-          </button>
-        `;
-        cartItemsContainer.appendChild(cartItem);
-      });
-      
-      // Actualizar total
-      const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-      totalPriceElement.textContent = `$${total.toFixed(2)}`;
-      
-      // Agregar eventos a los botones de cantidad
-      document.querySelectorAll('.increase-quantity').forEach(button => {
-        button.addEventListener('click', () => {
-          const index = button.dataset.index;
-          cart[index].quantity += 1;
-          updateCart();
-          
-          // Animación de aumento
-          gsap.from(button, {
-            scale: 1.5,
-            duration: 0.3
-          });
-        });
-      });
-      
-      document.querySelectorAll('.decrease-quantity').forEach(button => {
-        button.addEventListener('click', () => {
-          const index = button.dataset.index;
-          if (cart[index].quantity > 1) {
-            cart[index].quantity -= 1;
-            updateCart();
-            
-            // Animación de disminución
-            gsap.from(button, {
-              scale: 0.8,
-              duration: 0.3
-            });
-          } else {
-            removeItem(index);
-          }
-        });
-      });
-      
-      document.querySelectorAll('.remove-item').forEach(button => {
-        button.addEventListener('click', () => {
-          const index = button.dataset.index;
-          removeItem(index);
-        });
-      });
-    }
-
-    // Función para eliminar item con animación
-    function removeItem(index) {
-      const itemToRemove = document.querySelector(`.cart-item[data-index="${index}"]`);
-      if (itemToRemove) {
-        gsap.to(itemToRemove, {
-          opacity: 0,
-          x: 100,
-          height: 0,
-          marginBottom: 0,
-          paddingBottom: 0,
-          duration: 0.3,
-          onComplete: () => {
-            cart.splice(index, 1);
-            updateCart();
-          }
-        });
-      } else {
-        cart.splice(index, 1);
-        updateCart();
-      }
-    }
-
-    // Limpiar carrito
-    clearCartBtn.addEventListener('click', () => {
-      if (cart.length === 0) return;
-      
-      // Animación al limpiar el carrito
-      gsap.to(cartItemsContainer.children, {
-        opacity: 0,
-        x: 100,
-        height: 0,
-        marginBottom: 0,
-        paddingBottom: 0,
-        stagger: 0.1,
-        duration: 0.3,
-        onComplete: () => {
-          cart = [];
-          updateCart();
-        }
-      });
-    });
-
-    // Enviar pedido por WhatsApp
-    sendWhatsappBtn.addEventListener('click', () => {
-      if (cart.length === 0) {
-        // Animación de error
-        gsap.to(sendWhatsappBtn, {
-          x: [-5, 5, -5, 5, 0],
-          duration: 0.5,
-          ease: 'power1.out'
-        });
-        return;
-      }
-      
-      // Crear mensaje
-      let message = '¡Hola! Quiero hacer un pedido en Obsequio Vallarta:\n\n';
-      
-      cart.forEach(item => {
-        message += `- ${item.name} (${item.quantity} x $${item.price.toFixed(2)}) = $${(item.quantity * item.price).toFixed(2)}\n`;
-      });
-      
-      const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-      message += `\n*Total: $${total.toFixed(2)}*`;
-      message += '\n\nPor favor, indíquenme los siguientes datos:\n- Nombre completo\n- Dirección de entrega\n- Fecha y hora deseada\n- Teléfono de contacto\n- Alguna nota especial';
-      
-      // Codificar mensaje para URL
-      const encodedMessage = encodeURIComponent(message);
-      
-      // Número de WhatsApp (cambiar por el número real)
-      const whatsappNumber = '3312345678';
-      
-      // Abrir WhatsApp
-      window.open(`https://wa.me/52${whatsappNumber}?text=${encodedMessage}`, '_blank');
-      
-      // Animación de éxito
-      gsap.to(sendWhatsappBtn, {
-        backgroundColor: '#25d366',
-        duration: 0.3,
-        onComplete: function() {
-          setTimeout(() => {
-            gsap.to(sendWhatsappBtn, {
-              backgroundColor: 'var(--primary)',
-              duration: 0.5
-            });
-          }, 1000);
-        }
-      });
-      
-      // Opcional: limpiar el carrito después de enviar
-      cart = [];
-      updateCart();
-      cartSidebar.classList.remove('open');
-      cartOverlay.classList.remove('active');
-      document.body.style.overflow = '';
     });
   </script>
 </body>
