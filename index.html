@@ -697,6 +697,7 @@
 <body>
 
   <!-- NAVBAR -->
+   
   <nav class="navbar navbar-expand-lg fixed-top py-3">
     <div class="container">
       <a class="navbar-brand" href="#">
@@ -706,18 +707,28 @@
         </svg>
         OBSEQUIO VALLARTA
       </a>
+      <div class="ms-3 dropdown">
+  <button class="btn btn-sm btn-outline-dark dropdown-toggle" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="fas fa-language me-1"></i> ES
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+    <li><a class="dropdown-item language-option" href="#" data-lang="es">Español</a></li>
+    <li><a class="dropdown-item language-option" href="#" data-lang="en">English</a></li>
+  </ul>
+</div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-expanded="false">
         <i class="fas fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="#home">INICIO</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">NOSOTROS</a></li>
-          <li class="nav-item"><a class="nav-link" href="#weddings">BODAS</a></li>
-          <li class="nav-item"><a class="nav-link" href="#services">SERVICIOS</a></li>
-          <li class="nav-item"><a class="nav-link" href="#products">PRODUCTOS</a></li>
-          <li class="nav-item"><a class="nav-link" href="#gallery">GALERÍA</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">CONTACTO</a></li>
+<li class="nav-item"><a class="nav-link active" href="#home" data-i18n="nav-inicio">INICIO</a></li>
+<li class="nav-item"><a class="nav-link" href="#about" data-i18n="nav-nosotros">NOSOTROS</a></li>
+<li class="nav-item"><a class="nav-link" href="#weddings" data-i18n="nav-bodas">BODAS</a></li>
+<li class="nav-item"><a class="nav-link" href="#services" data-i18n="nav-servicios">SERVICIOS</a></li>
+<li class="nav-item"><a class="nav-link" href="#products" data-i18n="nav-productos">PRODUCTOS</a></li>
+<li class="nav-item"><a class="nav-link" href="#gallery" data-i18n="nav-galeria">GALERÍA</a></li>
+<li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav-contacto">CONTACTO</a></li>
+          
         </ul>
       </div>
     </div>
@@ -727,28 +738,29 @@
   <section id="home">
     <div class="swiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" style="background-image:url('https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=1000')">
+        <div class="swiper-slide" style="background-image:url('inicio/ramopuertovallarta.JPEG')">
           <div class="hero-overlay"></div>
           <div class="hero-content">
-            <h1>FLORES PARA BODAS EN PUERTO VALLARTA</h1>
-            <p>Diseños exclusivos para tu wedding day. Bouquets, centros de mesa y decoración floral para bodas.</p>
-            <a href="#weddings" class="btn btn-outline-light">VER BODAS</a>
+<h1 data-i18n="hero-title-1">FLORES PARA BODAS EN PUERTO VALLARTA</h1>
+<p data-i18n="hero-desc-1">Diseños exclusivos para tu wedding day. Bouquets, centros de mesa y decoración floral para bodas.</p>
+<a href="#weddings" class="btn btn-outline-light" data-i18n="hero-btn-1">VER BODAS</a>
+
           </div>
         </div>
-        <div class="swiper-slide" style="background-image:url('https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c?q=80&w=1000')">
+        <div class="swiper-slide" style="background-image:url('inicio/propuesta\ de\ matrimonio\ puerto\ vallarta.jpg')">
           <div class="hero-overlay"></div>
           <div class="hero-content">
-            <h1>PROPUESTAS DE MATRIMONIO</h1>
-            <p>Arreglos florales especiales para pedidas de matrimonio inolvidables</p>
-            <a href="#products" class="btn btn-outline-light">VER DISEÑOS</a>
+<h1 data-i18n="hero-title-2">PROPUESTAS DE MATRIMONIO</h1>
+<p data-i18n="hero-desc-2">Arreglos florales especiales para pedidas de matrimonio inolvidables</p>
+<a href="#products" class="btn btn-outline-light" data-i18n="hero-btn-2">VER DISEÑOS</a>
           </div>
         </div>
-        <div class="swiper-slide" style="background-image:url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=1000')">
+        <div class="swiper-slide" style="background-image:url('inicio/floreria_puerto_vallarta.jpg')">
           <div class="hero-overlay"></div>
           <div class="hero-content">
-            <h1>FLORISTERÍA EN PUERTO VALLARTA</h1>
-            <p>Presentación impecable en cada entrega. Flores frescas para ocasiones especiales.</p>
-            <a href="#contact" class="btn btn-outline-light">CONTÁCTANOS</a>
+<h1 data-i18n="hero-title-3">FLORISTERÍA EN PUERTO VALLARTA</h1>
+<p data-i18n="hero-desc-3">Presentación impecable en cada entrega. Flores frescas para ocasiones especiales.</p>
+<a href="#contact" class="btn btn-outline-light" data-i18n="hero-btn-3">CONTÁCTANOS</a>
           </div>
         </div>
       </div>
@@ -760,22 +772,22 @@
   <section id="about" class="section-light">
     <div class="container">
       <div class="section-title">
-        <h2>Sobre Nosotros</h2>
-        <p class="section-subtitle">Florería especializada en bodas y eventos en Puerto Vallarta</p>
+      <h2 data-i18n="about-title">Sobre Nosotros</h2>
+       <p class="section-subtitle" data-i18n="about-subtitle">Florería especializada en bodas y eventos en Puerto Vallarta</p>
       </div>
       <div class="row align-items-center g-5">
         <div class="col-lg-6">
           <div class="pe-lg-5">
-            <p class="mb-4">Fundada en 2017 en Puerto Vallarta, nuestra floristería nació del deseo de crear diseños florales con un enfoque minimalista y elegante, especialmente para bodas y eventos especiales.</p>
-            <p class="mb-4">Nos hemos convertido en la opción preferida para parejas que buscan flores para su boda en Puerto Vallarta, ofreciendo desde bouquets para novias hasta decoración floral completa para recepciones.</p>
-            <p>Nuestro equipo de diseñadores florales especializados en weddings crea piezas únicas que reflejan el estilo y personalidad de cada pareja, haciendo de su día especial una experiencia inolvidable.</p>
+            <p class="mb-4" data-i18n="about-p1">Fundada en 2017 en Puerto Vallarta, nuestra floristería nació del deseo de crear diseños florales con un enfoque minimalista y elegante, especialmente para bodas y eventos especiales.</p>
+           <p class="mb-4" data-i18n="about-p2">>Nos hemos convertido en la opción preferida para parejas que buscan flores para su boda en Puerto Vallarta, ofreciendo desde bouquets para novias hasta decoración floral completa para recepciones.</p>
+          <p data-i18n="about-p3">Nuestro equipo de diseñadores florales especializados en weddings crea piezas únicas que reflejan el estilo y personalidad de cada pareja, haciendo de su día especial una experiencia inolvidable.</p>
           </div>
         </div>
         <div class="col-lg-6">
-          <div class="parallax" style="background-image: url('https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?q=80&w=1000');">
+          <div class="parallax" style="background-image: url('nosotros/floreriapuertovallarta.jpg');">
             <div class="parallax-content">
-              <h3>NUESTRA FILOSOFÍA</h3>
-              <p>Creemos que las flores para bodas deben ser tan únicas como el amor que celebran</p>
+             <h3 data-i18n="philosophy-title">NUESTRA FILOSOFÍA</h3>
+            <p data-i18n="philosophy-desc">Creemos que las flores para bodas deben ser tan únicas como el amor que celebran</p>
             </div>
           </div>
         </div>
@@ -784,300 +796,326 @@
   </section>
 
   <!-- WEDDING SECTION -->
-  <section id="weddings" class="section-gray">
-    <div class="container">
-      <div class="section-title">
-        <h2>Flores para Bodas en Puerto Vallarta</h2>
-        <p class="section-subtitle">Hacemos de tu wedding day algo inolvidable</p>
-      </div>
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6">
-          <h3>Diseño Floral para tu Boda</h3>
-          <p>En Obsequio Vallarta nos especializamos en crear arreglos florales únicos para bodas en Puerto Vallarta. Desde el bouquet de la novia hasta los centros de mesa, cada pieza es diseñada para complementar la estética de tu wedding day.</p>
-          <div class="row mt-4">
-            <div class="col-md-6">
-              <div class="wedding-feature">
-                <i class="fas fa-birthday-cake"></i>
-                <h4>Bouquets para Novia</h4>
-                <p>Diseños personalizados que complementan tu vestido y estilo.</p>
-              </div>
+<section id="weddings" class="section-gray">
+  <div class="container">
+    <div class="section-title">
+      <h2 data-i18n="weddings-title">Flores para Bodas en Puerto Vallarta</h2>
+      <p class="section-subtitle" data-i18n="weddings-subtitle">Hacemos de tu wedding day algo inolvidable</p>
+    </div>
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <h3 data-i18n="weddings-heading">Diseño Floral para tu Boda</h3>
+        <p data-i18n="weddings-p1">En Obsequio Vallarta nos especializamos en crear arreglos florales únicos para bodas en Puerto Vallarta. Desde el bouquet de la novia hasta los centros de mesa, cada pieza es diseñada para complementar la estética de tu wedding day.</p>
+        <div class="row mt-4">
+          <div class="col-md-6">
+            <div class="wedding-feature">
+              <i class="fas fa-birthday-cake"></i>
+              <h4 data-i18n="wedding-feature1-title">Bouquets para Novia</h4>
+              <p data-i18n="wedding-feature1-desc">Diseños personalizados que complementan tu vestido y estilo.</p>
             </div>
-            <div class="col-md-6">
-              <div class="wedding-feature">
-                <i class="fas fa-archway"></i>
-                <h4>Arcos Florales</h4>
-                <p>Para ceremonias inolvidables en playas y jardines de Puerto Vallarta.</p>
-              </div>
+          </div>
+          <div class="col-md-6">
+            <div class="wedding-feature">
+              <i class="fas fa-archway"></i>
+              <h4 data-i18n="wedding-feature2-title">Arcos Florales</h4>
+              <p data-i18n="wedding-feature2-desc">Para ceremonias inolvidables en playas y jardines de Puerto Vallarta.</p>
             </div>
-            <div class="col-md-6">
-              <div class="wedding-feature">
-                <i class="fas fa-wine-glass-alt"></i>
-                <h4>Centros de Mesa</h4>
-                <p>Diseños elegantes para tu recepción de boda.</p>
-              </div>
+          </div>
+          <div class="col-md-6">
+            <div class="wedding-feature">
+              <i class="fas fa-wine-glass-alt"></i>
+              <h4 data-i18n="wedding-feature3-title">Centros de Mesa</h4>
+              <p data-i18n="wedding-feature3-desc">Diseños elegantes para tu recepción de boda.</p>
             </div>
-            <div class="col-md-6">
-              <div class="wedding-feature">
-                <i class="fas fa-ring"></i>
-                <h4>Propuestas de Matrimonio</h4>
-                <p>Arreglos especiales para pedidas de matrimonio memorables.</p>
-              </div>
+          </div>
+          <div class="col-md-6">
+            <div class="wedding-feature">
+              <i class="fas fa-ring"></i>
+              <h4 data-i18n="wedding-feature4-title">Propuestas de Matrimonio</h4>
+              <p data-i18n="wedding-feature4-desc">Arreglos especiales para pedidas de matrimonio memorables.</p>
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
-          <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1000" alt="Decoración floral para bodas en Puerto Vallarta" class="img-fluid rounded">
-        </div>
+      </div>
+      <div class="col-lg-6">
+        <img src="boda/471689603_18051145043067910_2110496554136649083_n.jpg" alt="Decoración floral para bodas en Puerto Vallarta" class="img-fluid rounded">
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- SERVICES -->
   <section id="services" class="section-light">
-    <div class="container">
-      <div class="section-title">
-        <h2>Nuestros Servicios</h2>
-        <p class="section-subtitle">Soluciones florales para cada ocasión</p>
+  <div class="container">
+    <div class="section-title">
+      <h2 data-i18n="services-title">Nuestros Servicios</h2>
+      <p class="section-subtitle" data-i18n="services-subtitle">Soluciones florales para cada ocasión</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-pen-fancy"></i>
+          </div>
+          <h3 class="service-title" data-i18n="service1-title">Diseño para Bodas</h3>
+          <p class="service-desc" data-i18n="service1-desc">Servicio completo de diseño floral para weddings en Puerto Vallarta. Desde la consultoría inicial hasta la instalación el día del evento.</p>
+        </div>
       </div>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="service-card">
-            <div class="service-icon">
-              <i class="fas fa-pen-fancy"></i>
-            </div>
-            <h3 class="service-title">Diseño para Bodas</h3>
-            <p class="service-desc">Servicio completo de diseño floral para weddings en Puerto Vallarta. Desde la consultoría inicial hasta la instalación el día del evento.</p>
+      <div class="col-md-4">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-calendar-alt"></i>
           </div>
+          <h3 class="service-title" data-i18n="service2-title">Eventos Especiales</h3>
+          <p class="service-desc" data-i18n="service2-desc">Decoración floral para bodas, aniversarios y propuestas de matrimonio con un estilo contemporáneo que complementa cualquier espacio.</p>
         </div>
-        <div class="col-md-4">
-          <div class="service-card">
-            <div class="service-icon">
-              <i class="fas fa-calendar-alt"></i>
-            </div>
-            <h3 class="service-title">Eventos Especiales</h3>
-            <p class="service-desc">Decoración floral para bodas, aniversarios y propuestas de matrimonio con un estilo contemporáneo que complementa cualquier espacio.</p>
+      </div>
+      <div class="col-md-4">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-truck"></i>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="service-card">
-            <div class="service-icon">
-              <i class="fas fa-truck"></i>
-            </div>
-            <h3 class="service-title">Entrega Premium</h3>
-            <p class="service-desc">Servicio de entrega con presentación impecable en Puerto Vallarta, perfecto para propuestas de matrimonio sorpresa y regalos especiales.</p>
-          </div>
+          <h3 class="service-title" data-i18n="service3-title">Entrega Premium</h3>
+          <p class="service-desc" data-i18n="service3-desc">Servicio de entrega con presentación impecable en Puerto Vallarta, perfecto para propuestas de matrimonio sorpresa y regalos especiales.</p>
         </div>
       </div>
     </div>
-  </section>
-
+  </div>
+</section>
   <!-- PRODUCTOS -->
-  <section id="products" class="section-gray">
-    <div class="container">
-      <div class="section-title">
-        <h2>Nuestra Colección</h2>
-        <p class="section-subtitle">Selección de arreglos florales para bodas y eventos</p>
-      </div>
-      <div class="row g-4">
-        <!-- Producto 1 -->
-        <div class="col-md-4 col-sm-6">
-          <div class="product-card">
-            <div class="product-img">
-              <img src="https://images.unsplash.com/photo-1560743641-3914f2c45636?q=80&w=1000" alt="Bouquet para novias en Puerto Vallarta - Obsequio Vallarta">
-              <div class="product-badge">PARA BODAS</div>
-            </div>
-            <div class="product-info">
-              <h3>Bouquet para Novia</h3>
-              <p class="product-desc">Composición de rosas blancas y verdes estructurales perfecta para tu wedding day en Puerto Vallarta.</p>
-              <div class="product-footer">
-                <span class="price">$1,450</span>
-                <button class="add-to-cart">
-                  <i class="fas fa-plus me-1"></i> COTIZAR
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Producto 2 -->
-        <div class="col-md-4 col-sm-6">
-          <div class="product-card">
-            <div class="product-img">
-              <img src="https://images.unsplash.com/photo-1455659817273-f96807779a8a?q=80&w=1000" alt="Centro de mesa para bodas en Puerto Vallarta">
-              <div class="product-badge">RECOMENDADO</div>
-            </div>
-            <div class="product-info">
-              <h3>Centro de Mesa para Bodas</h3>
-              <p class="product-desc">Selección de flores en tonos crema y beige en recipiente de vidrio transparente para recepciones.</p>
-              <div class="product-footer">
-                <span class="price">$1,200</span>
-                <button class="add-to-cart">
-                  <i class="fas fa-plus me-1"></i> COTIZAR
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Producto 3 -->
-        <div class="col-md-4 col-sm-6">
-          <div class="product-card">
-            <div class="product-img">
-              <img src="https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?q=80&w=1000" alt="Arreglo para propuestas de matrimonio en Puerto Vallarta">
-              <div class="product-badge">PROPUESTAS</div>
-            </div>
-            <div class="product-info">
-              <h3>Arreglo para Propuesta</h3>
-              <p class="product-desc">Diseño especial para pedidas de matrimonio con flores frescas y presentación premium.</p>
-              <div class="product-footer">
-                <span class="price">$1,650</span>
-                <button class="add-to-cart">
-                  <i class="fas fa-plus me-1"></i> COTIZAR
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="text-center mt-5">
-        <a href="#gallery" class="btn btn-outline-dark">VER MÁS DISEÑOS PARA BODAS</a>
-      </div>
+<section id="products" class="section-gray">
+  <div class="container">
+    <div class="section-title">
+      <h2 data-i18n="products-title">Nuestra Colección</h2>
+      <p class="section-subtitle" data-i18n="products-subtitle">Selección de arreglos florales para bodas y eventos</p>
     </div>
-  </section>
-
-  <!-- GALLERY -->
-  <section id="gallery" class="section-light">
-    <div class="container">
-      <div class="section-title">
-        <h2>Galería de Bodas</h2>
-        <p class="section-subtitle">Nuestros trabajos para weddings en Puerto Vallarta</p>
-      </div>
-      <div class="row g-4">
-        <div class="col-sm-6 col-lg-3">
-          <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1560743641-3914f2c45636?q=80&w=1000" alt="Bouquet de novia en Puerto Vallarta - Obsequio Vallarta">
-            <div class="gallery-overlay">
-              <h4>BOUQUETS</h4>
-            </div>
+    <div class="row g-4">
+      <!-- Producto 1 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="product-card">
+          <div class="product-img">
+            <img src="productos/buquet_de_novia_puerto_vallarta.jpg" alt="Bouquet para novias en Puerto Vallarta - Obsequio Vallarta">
+            <div class="product-badge" data-i18n="product1-badge">PARA BODAS</div>
           </div>
-        </div>
-        <div class="col-sm-6 col-lg-3">
-          <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1455659817273-f96807779a8a?q=80&w=1000" alt="Centros de mesa para bodas en Puerto Vallarta">
-            <div class="gallery-overlay">
-              <h4>CENTROS DE MESA</h4>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-lg-3">
-          <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?q=80&w=1000" alt="Arreglos florales para bodas en Puerto Vallarta">
-            <div class="gallery-overlay">
-              <h4>DECORACIÓN</h4>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-lg-3">
-          <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1000" alt="Propuestas de matrimonio con flores en Puerto Vallarta">
-            <div class="gallery-overlay">
-              <h4>PROPUESTAS</h4>
+          <div class="product-info">
+            <h3 data-i18n="product1-title">Bouquet para Novia</h3>
+            <p class="product-desc" data-i18n="product1-desc">Composición de rosas blancas estructurales perfecta para tu wedding day en Puerto Vallarta.</p>
+            <div class="product-footer">
+              <button class="add-to-cart">
+                <i class="fas fa-plus me-1"></i> <span data-i18n="product-btn">COTIZAR</span>
+              </button>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- PARALLAX SECTION -->
-  <div class="parallax" style="background-image: url('https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1000');">
-    <div class="parallax-content">
-      <h3>BODAS EN PUERTO VALLARTA</h3>
-      <p>Diseños florales exclusivos para hacer de tu wedding day una experiencia inolvidable.</p>
-      <a href="#contact" class="btn btn-outline-light mt-3">CONSULTA PARA TU BODA</a>
+      
+      <!-- Producto 2 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="product-card">
+          <div class="product-img">
+            <img src="productos/ramo_rosas_blancas_puerto_vallarta.jpg" alt="Centro de mesa para bodas en Puerto Vallarta">
+            <div class="product-badge" data-i18n="product2-badge">RECOMENDADO</div>
+          </div>
+          <div class="product-info">
+            <h3 data-i18n="product2-title">Ramo de Rosas Blancas</h3>
+            <p class="product-desc" data-i18n="product2-desc">La promesa de un amor puro y eterno 🤍 Rosas Blancas y preciosas.</p>
+            <div class="product-footer">
+              <button class="add-to-cart">
+                <i class="fas fa-plus me-1"></i> <span data-i18n="product-btn">COTIZAR</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Producto 3 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="product-card">
+          <div class="product-img">
+            <img src="productos/ramo_rosas_puerto_vallarta.jpg" alt="Arreglo para propuestas de matrimonio en Puerto Vallarta">
+            <div class="product-badge" data-i18n="product3-badge">PROPUESTAS</div>
+          </div>
+          <div class="product-info">
+            <h3 data-i18n="product3-title">Ramo De Rosas Rojas</h3>
+            <p class="product-desc" data-i18n="product3-desc">El sentimiento al recibir flores, es simplemente indescriptible.</p>
+            <div class="product-footer">
+              <button class="add-to-cart">
+                <i class="fas fa-plus me-1"></i> <span data-i18n="product-btn">COTIZAR</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+</section>
+
+
+  <!-- GALLERY -->
+ <section id="gallery" class="section-light">
+  <div class="container">
+    <div class="section-title">
+      <h2 data-i18n="gallery-title">Galería</h2>
+      <p class="section-subtitle" data-i18n="gallery-subtitle">Nuestros trabajos para weddings en Puerto Vallarta</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-3">
+        <div class="gallery-item">
+          <img src="galeria/buquet_obsequio_vallarta.jpg" alt="Bouquet de novia en Puerto Vallarta - Obsequio Vallarta">
+          <div class="gallery-overlay">
+            <h4 data-i18n="gallery1-title">BOUQUETS</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="gallery-item">
+          <img src="galeria/floreriaobsequivallarta.jpg" alt="Centros de mesa para bodas en Puerto Vallarta">
+          <div class="gallery-overlay">
+            <h4 data-i18n="gallery2-title">CENTROS DE MESA</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="gallery-item">
+          <img src="galeria/decoraciones_obsequio_vallarta.jpg" alt="Arreglos florales para bodas en Puerto Vallarta">
+          <div class="gallery-overlay">
+            <h4 data-i18n="gallery3-title">DECORACIÓN</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="gallery-item">
+          <img src="galeria/propuestamatrimoniopuertovallarta.jpg" alt="Propuestas de matrimonio con flores en Puerto Vallarta">
+          <div class="gallery-overlay">
+            <h4 data-i18n="gallery4-title">PROPUESTAS</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="gallery-item">
+          <img src="galeria/prupuestaflorespuertovallarta.jpg" alt="Propuestas de matrimonio con flores en Puerto Vallarta">
+          <div class="gallery-overlay">
+            <h4 data-i18n="gallery5-title">PROPUESTAS</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="gallery-item">
+          <img src="galeria/obsequiovallarta.JPG" alt="Propuestas de matrimonio con flores en Puerto Vallarta">
+          <div class="gallery-overlay">
+            <h4 data-i18n="gallery6-title">PIROTECNIA</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="gallery-item">
+          <img src="galeria/LETREROfloreriapuerto_vallarta.jpg" alt="Propuestas de matrimonio con flores en Puerto Vallarta">
+          <div class="gallery-overlay">
+            <h4 data-i18n="gallery7-title">LETRERO DE BIENVENIDA</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="gallery-item">
+          <img src="galeria/DECORAcion.jpg" alt="Propuestas de matrimonio con flores en Puerto Vallarta">
+          <div class="gallery-overlay">
+            <h4 data-i18n="gallery8-title">DECORACIONES</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- PARALLAX SECTION -->
+<div class="parallax" style="background-image: url('https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1000');">
+  <div class="parallax-content">
+    <h3 data-i18n="parallax-title">BODAS EN PUERTO VALLARTA</h3>
+    <p data-i18n="parallax-desc">Diseños florales exclusivos para hacer de tu wedding day una experiencia inolvidable.</p>
+    <a href="#contact" class="btn btn-outline-light mt-3" data-i18n="parallax-btn">CONSULTA PARA TU BODA</a>
+  </div>
+</div>
 
   <!-- CONTACT -->
-  <section id="contact" class="section-light">
-    <div class="container">
-      <div class="section-title">
-        <h2>Contacto</h2>
-        <p class="section-subtitle">Estamos para ayudarte con tu boda o evento especial</p>
-      </div>
-      <div class="row">
-        <div class="col-lg-6 mx-auto text-center">
-          <p class="mb-5">Av. Vallarta 123, Puerto Vallarta, Jalisco<br>
-          Lunes a Sábado: 9am - 7pm<br>
-          Tel: (322) 123 4567<br>
-          hola@obsequiovallarta.com</p>
-          
-          <div class="social-icons justify-content-center">
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-          </div>
+
+<section id="contact" class="section-light">
+  <div class="container">
+    <div class="section-title">
+      <h2 data-i18n="contact-title">Contacto</h2>
+      <p class="section-subtitle" data-i18n="contact-subtitle">Estamos para ayudarte con tu boda o evento especial</p>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 mx-auto text-center">
+        <p class="mb-5" data-i18n="contact-info">David Alfaro Siqueiros 501-A Las Glorias, Puerto Vallarta, Mexico, 48333<br>
+        Lunes a Sábado: 9am - 7pm<br>
+        Tel: 322 147 3110<br>
+        obsequiovallarta@gmail.com</p>
+        
+        <div class="social-icons justify-content-center">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- FOOTER -->
-  <footer class="section-dark">
-    <div class="container">
-      <div class="row g-5">
-        <div class="col-lg-4">
-          <div class="footer-about">
-            <a href="#" class="footer-logo d-flex align-items-center">
-              <svg width="30" height="30" viewBox="0 0 100 100" fill="white" class="me-2">
-                <circle cx="50" cy="50" r="35"/>
-                <path d="M50 15 L58 40 L85 40 L62 58 L70 85 L50 68 L30 85 L38 58 L15 40 L42 40 Z"/>
-              </svg>
-              OBSEQUIO VALLARTA
-            </a>
-            <p>Florería especializada en bodas y eventos en Puerto Vallarta. Creando diseños florales únicos para weddings desde 2017.</p>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-4">
-          <div class="footer-links">
-            <h4>Enlaces</h4>
-            <ul>
-              <li><a href="#home">Inicio</a></li>
-              <li><a href="#about">Nosotros</a></li>
-              <li><a href="#weddings">Bodas</a></li>
-              <li><a href="#services">Servicios</a></li>
-              <li><a href="#contact">Contacto</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4">
-          <div class="footer-links">
-            <h4>Servicios para Bodas</h4>
-            <ul>
-              <li><a href="#weddings">Bouquets para Novia</a></li>
-              <li><a href="#weddings">Centros de Mesa</a></li>
-              <li><a href="#weddings">Arcos Florales</a></li>
-              <li><a href="#weddings">Propuestas de Matrimonio</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4">
-          <div class="footer-contact-info">
-            <h4>Contacto</h4>
-            <ul>
-              <li><i class="fas fa-map-marker-alt"></i> Av. Vallarta 123, Puerto Vallarta</li>
-              <li><i class="fas fa-phone"></i> (322) 123 4567</li>
-              <li><i class="fas fa-envelope"></i> hola@obsequiovallarta.com</li>
-              <li><i class="fas fa-clock"></i> Lunes a Sábado: 9am - 7pm</li>
-            </ul>
-          </div>
+ <footer class="section-dark">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <div class="footer-about">
+          <a href="#" class="footer-logo d-flex align-items-center">
+            <svg width="30" height="30" viewBox="0 0 100 100" fill="white" class="me-2">
+              <circle cx="50" cy="50" r="35"/>
+              <path d="M50 15 L58 40 L85 40 L62 58 L70 85 L50 68 L30 85 L38 58 L15 40 L42 40 Z"/>
+            </svg>
+            OBSEQUIO VALLARTA
+          </a>
+          <p data-i18n="footer-about">Florería especializada en bodas y eventos en Puerto Vallarta. Creando diseños florales únicos para weddings desde 2017.</p>
         </div>
       </div>
-      <div class="copyright">
-        <p>&copy; 2025 OBSEQUIO VALLARTA. Florería especializada en bodas en Puerto Vallarta. Todos los derechos reservados.</p>
+      <div class="col-lg-2 col-md-4">
+        <div class="footer-links">
+          <h4 data-i18n="footer-links1-title">Enlaces</h4>
+          <ul>
+            <li><a href="#home" data-i18n="footer-link1">Inicio</a></li>
+            <li><a href="#about" data-i18n="footer-link2">Nosotros</a></li>
+            <li><a href="#weddings" data-i18n="footer-link3">Bodas</a></li>
+            <li><a href="#services" data-i18n="footer-link4">Servicios</a></li>
+            <li><a href="#contact" data-i18n="footer-link5">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="footer-links">
+          <h4 data-i18n="footer-links2-title">Servicios para Bodas</h4>
+          <ul>
+            <li><a href="#weddings" data-i18n="footer-service1">Bouquets para Novia</a></li>
+            <li><a href="#weddings" data-i18n="footer-service2">Centros de Mesa</a></li>
+            <li><a href="#weddings" data-i18n="footer-service3">Arcos Florales</a></li>
+            <li><a href="#weddings" data-i18n="footer-service4">Propuestas de Matrimonio</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="footer-contact-info">
+          <h4 data-i18n="footer-contact-title">Contacto</h4>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i><span data-i18n="footer-address">David Alfaro Siqueiros 501-A Las Glorias, Puerto Vallarta, Mexico, 48333</span></li>
+            <li><i class="fas fa-phone"></i> <span data-i18n="footer-phone">322 147 3110</span></li>
+            <li><i class="fas fa-envelope"></i><span data-i18n="footer-email">obsequiovallarta@gmail.com</span></li>
+            <li><i class="fas fa-clock"></i> <span data-i18n="footer-hours">Lunes a Sábado: 9am - 7pm</span></li>
+          </ul>
+        </div>
       </div>
     </div>
-  </footer>
+    <div class="copyright">
+      <p data-i18n="footer-copyright">&copy; 2025 OBSEQUIO VALLARTA. Florería especializada en bodas en Puerto Vallarta. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -1186,6 +1224,7 @@
       }
     });
 
+
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
@@ -1213,6 +1252,285 @@
         }
       });
     });
+
+
+
+    // Textos traducidos
+const translations = {
+  es: {
+    // Navbar
+    "nav-inicio": "INICIO",
+    "nav-nosotros": "NOSOTROS", 
+    "nav-bodas": "BODAS",
+    "nav-servicios": "SERVICIOS",
+    "nav-productos": "PRODUCTOS",
+    "nav-galeria": "GALERÍA",
+    "nav-contacto": "CONTACTO",
+    
+    // Hero Slider
+    "hero-title-1": "FLORES PARA BODAS EN PUERTO VALLARTA",
+    "hero-desc-1": "Diseños exclusivos para tu wedding day. Bouquets, centros de mesa y decoración floral para bodas.",
+    "hero-btn-1": "VER BODAS",
+    "hero-title-2": "PROPUESTAS DE MATRIMONIO",
+    "hero-desc-2": "Arreglos florales especiales para pedidas de matrimonio inolvidables",
+    "hero-btn-2": "VER DISEÑOS",
+    "hero-title-3": "FLORISTERÍA EN PUERTO VALLARTA",
+    "hero-desc-3": "Presentación impecable en cada entrega. Flores frescas para ocasiones especiales.",
+    "hero-btn-3": "CONTÁCTANOS",
+    
+    // About
+    "about-title": "Sobre Nosotros",
+    "about-subtitle": "Florería especializada en bodas y eventos en Puerto Vallarta",
+    "about-p1": "Fundada en 2017 en Puerto Vallarta, nuestra floristería nació del deseo de crear diseños florales con un enfoque minimalista y elegante, especialmente para bodas y eventos especiales.",
+    "about-p2": "Nos hemos convertido en la opción preferida para parejas que buscan flores para su boda en Puerto Vallarta, ofreciendo desde bouquets para novias hasta decoración floral completa para recepciones.",
+    "about-p3": "Nuestro equipo de diseñadores florales especializados en weddings crea piezas únicas que reflejan el estilo y personalidad de cada pareja, haciendo de su día especial una experiencia inolvidable.",
+    "philosophy-title": "NUESTRA FILOSOFÍA",
+    "philosophy-desc": "Creemos que las flores para bodas deben ser tan únicas como el amor que celebran",
+    
+    // Resto de secciones...
+    "weddings-title": "Flores para Bodas en Puerto Vallarta",
+    "services-title": "Nuestros Servicios",
+    "products-title": "Nuestra Colección",
+    "gallery-title": "Galería",
+    "contact-title": "Contacto"
+  },
+  en: {
+    // Navbar
+    "nav-inicio": "HOME",
+    "nav-nosotros": "ABOUT",
+    "nav-bodas": "WEDDINGS", 
+    "nav-servicios": "SERVICES",
+    "nav-productos": "PRODUCTS",
+    "nav-galeria": "GALLERY",
+    "nav-contacto": "CONTACT",
+    
+    // Hero Slider
+    "hero-title-1": "WEDDING FLOWERS IN PUERTO VALLARTA",
+    "hero-desc-1": "Exclusive designs for your wedding day. Bouquets, centerpieces and floral decorations for weddings.",
+    "hero-btn-1": "VIEW WEDDINGS",
+    "hero-title-2": "MARRIAGE PROPOSALS",
+    "hero-desc-2": "Special floral arrangements for unforgettable marriage proposals",
+    "hero-btn-2": "VIEW DESIGNS",
+    "hero-title-3": "FLORIST IN PUERTO VALLARTA", 
+    "hero-desc-3": "Impeccable presentation in every delivery. Fresh flowers for special occasions.",
+    "hero-btn-3": "CONTACT US",
+    
+    // About
+    "about-title": "About Us",
+    "about-subtitle": "Florist specialized in weddings and events in Puerto Vallarta",
+    "about-p1": "Founded in 2017 in Puerto Vallarta, our florist was born from the desire to create floral designs with a minimalist and elegant approach, especially for weddings and special events.",
+    "about-p2": "We have become the preferred choice for couples looking for flowers for their wedding in Puerto Vallarta, offering from bridal bouquets to complete floral decoration for receptions.",
+    "about-p3": "Our team of floral designers specialized in weddings creates unique pieces that reflect the style and personality of each couple, making their special day an unforgettable experience.",
+    "philosophy-title": "OUR PHILOSOPHY",
+    "philosophy-desc": "We believe wedding flowers should be as unique as the love they celebrate",
+    
+     "weddings-title": "Flores para Bodas en Puerto Vallarta",
+      "weddings-subtitle": "Hacemos de tu wedding day algo inolvidable",
+      "weddings-heading": "Diseño Floral para tu Boda",
+      "weddings-p1": "En Obsequio Vallarta nos especializamos en crear arreglos florales únicos para bodas en Puerto Vallarta. Desde el bouquet de la novia hasta los centros de mesa, cada pieza es diseñada para complementar la estética de tu wedding day.",
+      "wedding-feature1-title": "Bouquets para Novia",
+      "wedding-feature1-desc": "Diseños personalizados que complementan tu vestido y estilo.",
+      "wedding-feature2-title": "Arcos Florales",
+      "wedding-feature2-desc": "Para ceremonias inolvidables en playas y jardines de Puerto Vallarta.",
+      "wedding-feature3-title": "Centros de Mesa",
+      "wedding-feature3-desc": "Diseños elegantes para tu recepción de boda.",
+      "wedding-feature4-title": "Propuestas de Matrimonio",
+      "wedding-feature4-desc": "Arreglos especiales para pedidas de matrimonio memorables.",
+      
+      // Services Section
+      "services-title": "Nuestros Servicios",
+      "services-subtitle": "Soluciones florales para cada ocasión",
+      "service1-title": "Diseño para Bodas",
+      "service1-desc": "Servicio completo de diseño floral para weddings en Puerto Vallarta. Desde la consultoría inicial hasta la instalación el día del evento.",
+      "service2-title": "Eventos Especiales",
+      "service2-desc": "Decoración floral para bodas, aniversarios y propuestas de matrimonio con un estilo contemporáneo que complementa cualquier espacio.",
+      "service3-title": "Entrega Premium",
+      "service3-desc": "Servicio de entrega con presentación impecable en Puerto Vallarta, perfecto para propuestas de matrimonio sorpresa y regalos especiales.",
+      
+      // Products Section
+      "products-title": "Nuestra Colección",
+      "products-subtitle": "Selección de arreglos florales para bodas y eventos",
+      "product1-title": "Bouquet para Novia",
+      "product1-desc": "Composición de rosas blancas estructurales perfecta para tu wedding day en Puerto Vallarta.",
+      "product1-badge": "PARA BODAS",
+      "product2-title": "Ramo de Rosas Blancas",
+      "product2-desc": "La promesa de un amor puro y eterno 🤍 Rosas Blancas y preciosas.",
+      "product2-badge": "RECOMENDADO",
+      "product3-title": "Ramo De Rosas Rojas",
+      "product3-desc": "El sentimiento al recibir flores, es simplemente indescriptible.",
+      "product3-badge": "PROPUESTAS",
+      "product-btn": "COTIZAR",
+      
+      // Gallery Section
+      "gallery-title": "Galería",
+      "gallery-subtitle": "Nuestros trabajos para weddings en Puerto Vallarta",
+      "gallery1-title": "BOUQUETS",
+      "gallery2-title": "CENTROS DE MESA",
+      "gallery3-title": "DECORACIÓN",
+      "gallery4-title": "PROPUESTAS",
+      "gallery5-title": "PROPUESTAS",
+      "gallery6-title": "PIROTECNIA",
+      "gallery7-title": "LETRERO DE BIENVENIDA",
+      "gallery8-title": "DECORACIONES",
+      
+      // Parallax Section
+      "parallax-title": "BODAS EN PUERTO VALLARTA",
+      "parallax-desc": "Diseños florales exclusivos para hacer de tu wedding day una experiencia inolvidable.",
+      "parallax-btn": "CONSULTA PARA TU BODA",
+      
+      // Contact Section
+      "contact-title": "Contacto",
+      "contact-subtitle": "Estamos para ayudarte con tu boda o evento especial",
+      "contact-info": "David Alfaro Siqueiros 501-A Las Glorias, Puerto Vallarta, Mexico, 48333<br>Lunes a Sábado: 9am - 7pm<br>Tel: 322 147 3110<br>obsequiovallarta@gmail.com",
+      
+      // Footer
+      "footer-about": "Florería especializada en bodas y eventos en Puerto Vallarta. Creando diseños florales únicos para weddings desde 2017.",
+      "footer-links1-title": "Enlaces",
+      "footer-link1": "Inicio",
+      "footer-link2": "Nosotros",
+      "footer-link3": "Bodas",
+      "footer-link4": "Servicios",
+      "footer-link5": "Contacto",
+      "footer-links2-title": "Servicios para Bodas",
+      "footer-service1": "Bouquets para Novia",
+      "footer-service2": "Centros de Mesa",
+      "footer-service3": "Arcos Florales",
+      "footer-service4": "Propuestas de Matrimonio",
+      "footer-contact-title": "Contacto",
+      "footer-address": "David Alfaro Siqueiros 501-A Las Glorias, Puerto Vallarta, Mexico, 48333",
+      "footer-phone": "322 147 3110",
+      "footer-email": "obsequiovallarta@gmail.com",
+      "footer-hours": "Lunes a Sábado: 9am - 7pm",
+      "footer-copyright": "&copy; 2025 OBSEQUIO VALLARTA. Florería especializada en bodas en Puerto Vallarta. Todos los derechos reservados."
+    },
+    en: {
+      // ... (las traducciones anteriores permanecen igual)
+      
+      // Wedding Section
+      "weddings-title": "Wedding Flowers in Puerto Vallarta",
+      "weddings-subtitle": "We make your wedding day unforgettable",
+      "weddings-heading": "Floral Design for Your Wedding",
+      "weddings-p1": "At Obsequio Vallarta we specialize in creating unique floral arrangements for weddings in Puerto Vallarta. From the bridal bouquet to centerpieces, each piece is designed to complement the aesthetic of your wedding day.",
+      "wedding-feature1-title": "Bridal Bouquets",
+      "wedding-feature1-desc": "Custom designs that complement your dress and style.",
+      "wedding-feature2-title": "Floral Arches",
+      "wedding-feature2-desc": "For unforgettable ceremonies on beaches and gardens in Puerto Vallarta.",
+      "wedding-feature3-title": "Centerpieces",
+      "wedding-feature3-desc": "Elegant designs for your wedding reception.",
+      "wedding-feature4-title": "Marriage Proposals",
+      "wedding-feature4-desc": "Special arrangements for memorable marriage proposals.",
+      
+      // Services Section
+      "services-title": "Our Services",
+      "services-subtitle": "Floral solutions for every occasion",
+      "service1-title": "Wedding Design",
+      "service1-desc": "Complete floral design service for weddings in Puerto Vallarta. From initial consultation to installation on the day of the event.",
+      "service2-title": "Special Events",
+      "service2-desc": "Floral decoration for weddings, anniversaries and marriage proposals with a contemporary style that complements any space.",
+      "service3-title": "Premium Delivery",
+      "service3-desc": "Delivery service with impeccable presentation in Puerto Vallarta, perfect for surprise marriage proposals and special gifts.",
+      
+      // Products Section
+      "products-title": "Our Collection",
+      "products-subtitle": "Selection of floral arrangements for weddings and events",
+      "product1-title": "Bridal Bouquet",
+      "product1-desc": "Structural white rose composition perfect for your wedding day in Puerto Vallarta.",
+      "product1-badge": "FOR WEDDINGS",
+      "product2-title": "White Roses Bouquet",
+      "product2-desc": "The promise of a pure and eternal love 🤍 Beautiful White Roses.",
+      "product2-badge": "RECOMMENDED",
+      "product3-title": "Red Roses Bouquet",
+      "product3-desc": "The feeling of receiving flowers is simply indescribable.",
+      "product3-badge": "PROPOSALS",
+      "product-btn": "GET QUOTE",
+      
+      // Gallery Section
+      "gallery-title": "Gallery",
+      "gallery-subtitle": "Our work for weddings in Puerto Vallarta",
+      "gallery1-title": "BOUQUETS",
+      "gallery2-title": "CENTERPIECES",
+      "gallery3-title": "DECORATION",
+      "gallery4-title": "PROPOSALS",
+      "gallery5-title": "PROPOSALS",
+      "gallery6-title": "PYROTECHNICS",
+      "gallery7-title": "WELCOME SIGN",
+      "gallery8-title": "DECORATIONS",
+      
+      // Parallax Section
+      "parallax-title": "WEDDINGS IN PUERTO VALLARTA",
+      "parallax-desc": "Exclusive floral designs to make your wedding day an unforgettable experience.",
+      "parallax-btn": "INQUIRE ABOUT YOUR WEDDING",
+      
+      // Contact Section
+      "contact-title": "Contact",
+      "contact-subtitle": "We're here to help with your wedding or special event",
+      "contact-info": "David Alfaro Siqueiros 501-A Las Glorias, Puerto Vallarta, Mexico 48333, Phone: 322 147 3110,  Correo: obsequiovallarta@gmail.com",
+      
+      // Footer
+      "footer-about": "Florist specialized in weddings and events in Puerto Vallarta. Creating unique floral designs for weddings since 2017.",
+      "footer-links1-title": "Links",
+      "footer-link1": "Home",
+      "footer-link2": "About",
+      "footer-link3": "Weddings",
+      "footer-link4": "Services",
+      "footer-link5": "Contact",
+      "footer-links2-title": "Wedding Services",
+      "footer-service1": "Bridal Bouquets",
+      "footer-service2": "Centerpieces",
+      "footer-service3": "Floral Arches",
+      "footer-service4": "Marriage Proposals",
+      "footer-contact-title": "Contact",
+      "footer-address": "David Alfaro Siqueiros 501-A Las Glorias, Puerto Vallarta, Mexico, 48333",
+      "footer-phone": "322 147 3110",
+      "footer-email": "obsequiovallarta@gmail.com",
+      "footer-hours": "Monday to Saturday: 9am - 7pm",
+      "footer-copyright": "&copy; 2025 OBSEQUIO VALLARTA. Wedding florist in Puerto Vallarta. All rights reserved."
+    }
+  };
+// Función para cambiar el idioma
+function changeLanguage(lang) {
+  // Cambiar texto en elementos con data-i18n
+  document.querySelectorAll('[data-i18n]').forEach(element => {
+    const key = element.getAttribute('data-i18n');
+    if (translations[lang][key]) {
+      element.textContent = translations[lang][key];
+    }
+  });
+  
+  // Cambiar texto en elementos con data-i18n-placeholder
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+    const key = element.getAttribute('data-i18n-placeholder');
+    if (translations[lang][key]) {
+      element.setAttribute('placeholder', translations[lang][key]);
+    }
+  });
+  
+  // Actualizar el botón de idioma
+  const langButton = document.querySelector('#languageDropdown');
+  if (lang === 'es') {
+    langButton.innerHTML = '<i class="fas fa-language me-1"></i> ES';
+  } else {
+    langButton.innerHTML = '<i class="fas fa-language me-1"></i> EN';
+  }
+  
+  // Guardar preferencia en localStorage
+  localStorage.setItem('preferredLanguage', lang);
+}
+
+// Event listeners para los botones de idioma
+document.querySelectorAll('.language-option').forEach(button => {
+  button.addEventListener('click', function(e) {
+    e.preventDefault();
+    const lang = this.getAttribute('data-lang');
+    changeLanguage(lang);
+  });
+});
+
+// Cargar idioma preferido al cargar la página
+document.addEventListener('DOMContentLoaded', function() {
+  const preferredLanguage = localStorage.getItem('preferredLanguage') || 'es';
+  changeLanguage(preferredLanguage);
+});
   </script>
 </body>
 </html>
