@@ -16,6 +16,7 @@
   <meta property="og:image" content="https://www.obsequiovallarta.com/images/social-share.jpg">
   <!-- Canonical URL -->
   <link rel="canonical" href="https://www.obsequiovallarta.com">
+  
   <!-- Schema Markup -->
   <script type="application/ld+json">
   {
@@ -111,7 +112,7 @@
     .navbar { 
       background: var(--white); 
       transition: var(--transition);
-      padding: 1.5rem 0;
+       padding: 1rem 0 !important;
       border-bottom: 1px solid rgba(0,0,0,0.05);
     }
     
@@ -122,16 +123,34 @@
       box-shadow: 0 5px 30px rgba(0,0,0,0.05);
     }
     
-    .navbar-brand { 
-      display:flex; 
-      align-items:center; 
-      font-size:1.4rem; 
-      font-weight:400; 
-      color: var(--black);
-      letter-spacing: 1px;
-      font-style: italic;
-      font-family: 'Playfair Display', serif;
-    }
+ 
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+  padding: 0.5rem 0 !important; /* Reducir padding vertical */
+  min-height: 80px; /* Altura mínima fija para el navbar */
+  display: flex;
+  align-items: center;
+}
+    
+.navbar-brand {
+  height: 80px; /* Igual que el navbar */
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin-right: 1rem;
+}
+
+.navbar-brand img.logo-img {
+  height: 150px; /* Tamaño aumentado */
+  width: auto;
+  max-width: 200px; /* Ancho máximo para control */
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
     
     .navbar-brand svg { 
       margin-right:.8rem; 
@@ -159,6 +178,7 @@
       background: var(--black);
       transition: var(--transition);
     }
+    
     
     .nav-link:hover::after {
       width: 100%;
@@ -698,15 +718,11 @@
 
   <!-- NAVBAR -->
    
-  <nav class="navbar navbar-expand-lg fixed-top py-3">
-    <div class="container">
-      <a class="navbar-brand" href="#">
-        <svg id="logo" width="30" height="30" viewBox="0 0 100 100" class="me-2">
-          <circle cx="50" cy="50" r="35"/>
-          <path d="M50 15 L58 40 L85 40 L62 58 L70 85 L50 68 L30 85 L38 58 L15 40 L42 40 Z"/>
-        </svg>
-        OBSEQUIO VALLARTA
-      </a>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="inicio/logo (1).png" alt="Obsequio Vallarta" class="logo-img me-2">
+    </a>
       <div class="ms-3 dropdown">
   <button class="btn btn-sm btn-outline-dark dropdown-toggle" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
     <i class="fas fa-language me-1"></i> ES
