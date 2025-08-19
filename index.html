@@ -59,6 +59,42 @@
     ]
   }
   </script>
+
+  <!-- Schema Reviews (Google) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ItemList",
+    "itemListElement":[
+      {
+        "@type":"Review",
+        "author":{"@type":"Person","name":"lcmarin25"},
+        "reviewBody":"Agradezco a Carla por la atención personalizada y excelente que me brindó. A pesar de contratar el servicio en una zona alejada del rango de servicio, hizo posible esta ocasión especial. La decoración quedó perfecta."
+      },
+      {
+        "@type":"Review",
+        "author":{"@type":"Person","name":"Daniel Posadas"},
+        "reviewBody":"Excelente Servicio !! La atención atenta, personalizada y cordial de su propietaria . Las sugerencias y entrega fue perfecto!! Les recomendaré - Gracias !!"
+      },
+      {
+        "@type":"Review",
+        "author":{"@type":"Person","name":Rodrigo flores"},
+        "reviewBody":"Excelente servicio, 100% recomendado, se contrató el servicio para una boda y siempre fueron muy atentos en todo momento. Nos ofrecieron tanto un servicio y producto de calidad. Nuevamente muchas gracias por sus servicios"
+      },
+      {
+        "@type":"Review",
+        "author":{"@type":"Person","name":"Ricardo Cano"},
+        "reviewBody":"Perfecto el servicio, superó mis expectativas, atención, amabilidad y calidad en todo. A pensar de contratar a distancia la seriedad y asesoría fue muy buena"
+      },
+      {
+        "@type":"Review",
+        "author":{"@type":"Person","name":"Kevin Corona"},
+        "reviewBody":"Excelente servicio y 100% super recomendado!!!! Necesitaba urgentemente enviar un detalle a una persona muy especial que estaba de viaje en Puerto Vallarta y yo estando en la Cd. de Puebla pude contactarme con \"Obsequio Vallarta\" para poder enviarle un arreglo floral el cual le encanto a esa persona y a pesar de la distancia el servicio y atención que me brindaron fue excelente. Super recomendado y además el servicio de entrega muy eficiente y rápido!! Gracias!!"
+      }
+    ]
+  }
+  </script>
+
   <!-- Fuentes -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
   <!-- Bootstrap 5 -->
@@ -69,714 +105,234 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Animate.css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-  <style>
-    :root {
-      --black: #000000;
-      --white: #ffffff;
-      --gray-light: #f8f8f8;
-      --gray-medium: #e0e0e0;
-      --gray-dark: #333333;
-      --accent: #e8e8e8;
-      --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    
-    * { 
-      box-sizing: border-box; 
-      margin:0; 
-      padding:0; 
-    }
-    
-    body { 
-      font-family:'Montserrat', sans-serif; 
-      color: var(--black); 
-      background: var(--white); 
-      overflow-x:hidden;
-      line-height: 1.6;
-    }
-    
-    h1,h2,h3,h4 { 
-      font-family:'Playfair Display', serif; 
-      font-weight: 500;
-      line-height: 1.3;
-      letter-spacing: 0.5px;
-    }
-    
-    /* SVG Logo */
-    #logo path, #logo circle {
-      fill: var(--black);
-      stroke: var(--black);
-      stroke-width: 1;
-    }
+<style>
+  :root {
+    --black: #000000;
+    --white: #ffffff;
+    --gray-light: #f8f8f8;
+    --gray-medium: #e0e0e0;
+    --gray-dark: #333333;
+    --accent: #e8e8e8;
+    --star: #f5c518;
+    --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Montserrat',sans-serif;color:var(--black);background:var(--white);overflow-x:hidden;line-height:1.6}
+  h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:500;line-height:1.3;letter-spacing:.5px}
+  .navbar{background:var(--white);transition:var(--transition);padding:1rem 0 !important;border-bottom:1px solid rgba(0,0,0,0.05);position:fixed;top:0;left:0;right:0;z-index:1030;min-height:80px;display:flex;align-items:center}
+  .navbar.scrolled{padding:1rem 0;backdrop-filter:blur(10px);background:rgba(255,255,255,0.9);box-shadow:0 5px 30px rgba(0,0,0,0.05)}
+  .navbar-brand{height:80px;display:flex;align-items:center;padding:0;margin-right:1rem}
+  .navbar-brand img.logo-img{height:150px;width:auto;max-width:200px;object-fit:contain;transition:.3s}
+  .nav-link{color:var(--gray-dark)!important;margin-left:1.5rem;font-weight:400;font-size:.85rem;letter-spacing:1.5px;position:relative;padding:.5rem 0;transition:var(--transition);text-transform:uppercase}
+  .nav-link::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--black);transition:var(--transition)}
+  .nav-link:hover::after,.nav-link.active::after{width:100%}
+  .navbar-toggler{border:none;padding:.5rem;font-size:1.25rem;color:var(--black)}
+  .navbar-toggler:focus{box-shadow:none}
 
-    /* Navbar */
-    .navbar { 
-      background: var(--white); 
-      transition: var(--transition);
-       padding: 1rem 0 !important;
-      border-bottom: 1px solid rgba(0,0,0,0.05);
-    }
-    
-    .navbar.scrolled { 
-      padding: 1rem 0;
-      backdrop-filter: blur(10px);
-      background: rgba(255,255,255,0.9);
-      box-shadow: 0 5px 30px rgba(0,0,0,0.05);
-    }
-    
- 
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1030;
-  padding: 0.5rem 0 !important; /* Reducir padding vertical */
-  min-height: 80px; /* Altura mínima fija para el navbar */
-  display: flex;
-  align-items: center;
+  .hero-swiper,.hero-swiper .swiper-slide{width:100%;height:100vh;min-height:600px}
+  .hero-swiper .swiper-slide{position:relative;background-size:cover;background-position:center;overflow:hidden}
+  .hero-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.2);z-index:1}
+  .hero-content{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;color:var(--white);z-index:2;opacity:0;width:90%;max-width:800px;padding:3rem;background:rgba(0,0,0,0.4);backdrop-filter:blur(3px)}
+  .hero-content h1{font-size:3.5rem;margin-bottom:1.5rem;font-weight:400;text-transform:uppercase;letter-spacing:3px}
+  .hero-content p{font-size:1.2rem;margin-bottom:2rem;font-weight:300;letter-spacing:1px}
+  .btn-outline-light{border:1px solid var(--white);color:var(--white);background:transparent;padding:.8rem 2.5rem;font-weight:400;letter-spacing:1px;text-transform:uppercase;transition:var(--transition);border-radius:0;font-size:.9rem}
+  .btn-outline-light:hover{background:var(--white);color:var(--black)}
+
+  section{padding:6rem 0;position:relative;overflow:hidden;scroll-margin-top:100px}
+  .section-dark{background:var(--black);color:var(--white)}
+  .section-light{background:var(--white)}
+  .section-gray{background:var(--gray-light)}
+  .section-title{text-align:center;margin-bottom:4rem;position:relative}
+  .section-title h2{font-size:2.5rem;position:relative;display:inline-block;font-weight:400}
+  .section-title h2::after{content:'';position:absolute;bottom:-15px;left:50%;transform:translateX(-50%);width:60px;height:1px;background:var(--black);display:block}
+  .section-dark .section-title h2::after{background:var(--white)}
+  .section-subtitle{max-width:700px;margin:0 auto 3rem;text-align:center;color:var(--gray-dark);font-size:1rem;font-weight:300;letter-spacing:1px}
+
+  .service-card{background:#fff;padding:2.5rem 2rem;text-align:center;transition:var(--transition);height:100%;border:1px solid var(--gray-medium)}
+  .service-card:hover{border-color:var(--black)}
+  .service-icon{width:70px;height:70px;margin:0 auto 1.5rem;display:flex;align-items:center;justify-content:center;font-size:1.8rem;color:var(--black);transition:var(--transition)}
+  .service-title{font-size:1.2rem;margin-bottom:1rem;font-weight:400}
+  .service-desc{color:var(--gray-dark);font-size:.9rem;line-height:1.6;font-weight:300}
+
+  .gallery-item{position:relative;overflow:hidden;margin-bottom:1.5rem;cursor:pointer}
+  .gallery-item img{width:100%;height:300px;object-fit:cover;transition:var(--transition)}
+  .gallery-item:hover img{transform:scale(1.05)}
+  .gallery-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;opacity:0;transition:var(--transition)}
+  .gallery-item:hover .gallery-overlay{opacity:1}
+  .gallery-overlay h4{color:#fff;font-size:1.2rem;letter-spacing:1px}
+
+  .modal-backdrop.show{opacity:.88!important;backdrop-filter:blur(2px)}
+  .modal-gallery .modal-dialog{max-width:min(1100px,92vw);max-height:none}
+  .modal-gallery .modal-content{background:transparent;border:none;box-shadow:none}
+  .modal-gallery .modal-body{padding:0;text-align:center;position:relative}
+  .modal-gallery .modal-body img{display:block;margin:0 auto;max-height:82vh;width:auto;max-width:100%;border-radius:8px;box-shadow:0 12px 40px rgba(0,0,0,.45)}
+  .modal-gallery .modal-header{border:none;position:absolute;top:12px;right:12px;z-index:3}
+  .modal-gallery .modal-header .btn-close{background-color:#fff;opacity:1;padding:.6rem;border-radius:50%}
+  .modal-gallery .modal-title{color:#fff;text-align:center;width:100%;margin-top:1rem;letter-spacing:.5px}
+  .modal-gallery .modal-nav{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border:none;background:rgba(255,255,255,.92);border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:3;transition:.2s ease}
+  .modal-gallery .modal-prev{left:10px}
+  .modal-gallery .modal-next{right:10px}
+  .modal-gallery .modal-nav i{font-size:18px;color:var(--black)}
+  .modal-gallery .modal-nav:hover{background:#fff;box-shadow:0 6px 20px rgba(0,0,0,.2)}
+
+  .parallax{background-attachment:fixed;background-size:cover;background-position:center;height:50vh;position:relative;overflow:hidden}
+  .parallax::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,0.3)}
+  .parallax-content{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:100%;padding:2rem;color:#fff;z-index:2;text-align:center}
+  .parallax-content h3{font-size:2rem;margin-bottom:1rem;font-weight:400;letter-spacing:2px}
+  .parallax-content p{font-size:1rem;max-width:600px;margin:0 auto;font-weight:300}
+
+  .product-card{background:#fff;overflow:hidden;transition:var(--transition);height:100%;display:flex;flex-direction:column;border:1px solid var(--gray-medium)}
+  .product-card:hover{border-color:var(--black)}
+  .product-img{height:250px;overflow:hidden;position:relative}
+  .product-img img{width:100%;height:100%;object-fit:cover;transition:var(--transition)}
+  .product-card:hover .product-img img{transform:scale(1.05)}
+  .product-badge{position:absolute;top:15px;right:15px;background:var(--black);color:#fff;padding:.25rem .75rem;font-size:.7rem;font-weight:400;letter-spacing:1px}
+  .product-info{padding:1.5rem;flex-grow:1;display:flex;flex-direction:column}
+  .product-info h3{margin-bottom:.75rem;font-size:1.1rem;font-weight:400}
+  .product-desc{color:var(--gray-dark);margin-bottom:1.25rem;flex-grow:1;font-size:.85rem;font-weight:300}
+  .product-footer{display:flex;justify-content:space-between;align-items:center;margin-top:auto}
+  .add-to-cart{background:var(--black);color:#fff;border:none;padding:.5rem 1rem;font-weight:400;font-size:.8rem;transition:var(--transition);letter-spacing:1px}
+  .add-to-cart:hover{background:var(--gray-dark)}
+
+  /* Reseñas */
+  .review-card{background:#fff;border:1px solid var(--gray-medium);padding:2rem;height:100%;display:flex;flex-direction:column;gap:1rem}
+  .review-stars i{color:var(--star);margin-right:2px}
+  .review-text{font-size:1rem;color:var(--gray-dark)}
+  .review-author{display:flex;flex-direction:column;gap:.25rem}
+  .testimonials-swiper{position:relative}
+  .testimonials-nav{position:absolute;top:-60px;right:0;display:flex;gap:.5rem}
+  .testimonials-prev,.testimonials-next{width:40px;height:40px;border:none;border-radius:50%;background:rgba(0,0,0,.06);display:flex;align-items:center;justify-content:center;transition:var(--transition)}
+  .testimonials-prev:hover,.testimonials-next:hover{background:rgba(0,0,0,.12)}
+  .testimonials-pagination{margin-top:1.25rem}
+
+  footer{background:var(--black);color:#fff;padding:5rem 0 2rem;position:relative}
+  .footer-logo-img{max-height:180px;width:auto;display:block}
+  .section-dark .footer-logo-img.use-invert{filter:brightness(0) invert(1)}
+  .footer-about p{opacity:.7;margin-bottom:1.5rem;font-weight:300;font-size:.9rem}
+  .footer-links h4{font-size:1.1rem;margin-bottom:1.5rem;font-weight:400;letter-spacing:1px}
+  .footer-links ul{list-style:none;padding-left:0}
+  .footer-links li{margin-bottom:.8rem}
+  .footer-links a{color:rgba(255,255,255,0.7);text-decoration:none;transition:var(--transition);font-size:.9rem;font-weight:300}
+  .footer-links a:hover{color:#fff}
+  .footer-contact-info li{margin-bottom:1rem;display:flex;align-items:flex-start;font-size:.9rem;font-weight:300}
+  .footer-contact-info i{margin-right:.75rem;color:#fff;margin-top:.2rem;opacity:.7}
+  .social-icons{display:flex;gap:1rem;margin-top:1.5rem}
+  .social-icons a{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.1);color:#fff;transition:var(--transition)}
+  .social-icons a:hover{background:#fff;color:var(--black)}
+  .copyright{margin-top:3rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.5);font-size:.8rem;text-align:center}
+
+  .modal-catalog .modal-dialog{max-width:min(1100px,95vw)}
+  .modal-catalog .modal-body{padding:0}
+  .catalog-frame{width:100%;height:80vh;border:0}
+
+  @media (max-width:1200px){.hero-content h1{font-size:3rem}}
+  @media (max-width:992px){
+    .hero-content h1{font-size:2.5rem}
+    .hero-content p{font-size:1.1rem}
+    section{padding:5rem 0}
+    .section-title h2{font-size:2.2rem}
+  }
+  @media (max-width:768px){
+    .hero-content h1{font-size:2rem}
+    .section-title h2{font-size:2rem}
+    .parallax{height:400px}
+    .modal-gallery .modal-dialog{max-width:95%}
+  }
+  @media (max-width:576px){
+    .navbar-brand{font-size:1.3rem}
+    .hero-content{padding:1.5rem}
+    .hero-content h1{font-size:1.8rem}
+    .hero-content p{font-size:1rem}
+    .section-title h2{font-size:1.8rem}
+    .gallery-item img{height:250px}
+    .modal-gallery .modal-dialog{max-width:95vw}
+    .modal-gallery .modal-nav{width:38px;height:38px}
+    .modal-gallery .modal-title{font-size:.95rem}
+    .testimonials-nav{top:-50px}
+  }
+  /* Que quepa "RESEÑAS" cuando el menú está expandido pero la pantalla no es enorme */
+@media (min-width: 1200px) and (max-width: 1399.98px){
+  .navbar .nav-link{
+    margin-left: 1rem;     /* antes 1.5rem */
+    letter-spacing: 1px;   /* antes 1.5px */
+    font-size: .82rem;     /* un pelín más compacto */
+  }
+  .navbar-brand img.logo-img{
+    height: 120px;         /* libera algo de ancho (antes 150px) */
+  }
 }
-    
-.navbar-brand {
-  height: 80px; /* Igual que el navbar */
-  display: flex;
-  align-items: center;
-  padding: 0;
-  margin-right: 1rem;
-}
 
-.navbar-brand img.logo-img {
-  height: 150px; /* Tamaño aumentado */
-  width: auto;
-  max-width: 200px; /* Ancho máximo para control */
-  object-fit: contain;
-  transition: all 0.3s ease;
-}
-    
-    .navbar-brand svg { 
-      margin-right:.8rem; 
-    }
-    
-    .nav-link { 
-      color: var(--gray-dark)!important; 
-      margin-left:1.5rem; 
-      font-weight:400;
-      font-size: 0.85rem;
-      letter-spacing: 1.5px;
-      position: relative;
-      padding: 0.5rem 0;
-      transition: var(--transition);
-      text-transform: uppercase;
-    }
-    
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 1px;
-      background: var(--black);
-      transition: var(--transition);
-    }
-    
-    
-    .nav-link:hover::after {
-      width: 100%;
-    }
-    
-    .nav-link.active::after {
-      width: 100%;
-    }
-    
-    .navbar-toggler {
-      border: none;
-      padding: 0.5rem;
-      font-size: 1.25rem;
-      color: var(--black);
-    }
-    
-    .navbar-toggler:focus {
-      box-shadow: none;
-    }
+</style>
 
-    /* Hero Slider */
-    .swiper, .swiper-slide { 
-      width:100%; 
-      height:100vh; 
-      min-height: 600px;
-    }
-    
-    .swiper-slide { 
-      position:relative; 
-      background-size:cover; 
-      background-position:center; 
-      overflow: hidden;
-    }
-    
-    .hero-overlay { 
-      position:absolute; 
-      inset:0; 
-      background: rgba(0,0,0,0.2); 
-      z-index: 1;
-    }
-    
-    .hero-content {
-      position:absolute; 
-      top:50%; 
-      left:50%;
-      transform:translate(-50%,-50%);
-      text-align:center; 
-      color: var(--white); 
-      z-index:2;
-      opacity:0;
-      width: 90%;
-      max-width: 800px;
-      padding: 3rem;
-      background: rgba(0,0,0,0.4);
-      backdrop-filter: blur(3px);
-    }
-    
-    .hero-content h1 { 
-      font-size:3.5rem; 
-      margin-bottom: 1.5rem;
-      font-weight: 400;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-    }
-    
-    .hero-content p { 
-      font-size:1.2rem; 
-      margin-bottom: 2rem;
-      font-weight: 300;
-      letter-spacing: 1px;
-    }
-    
-    .btn-outline-light {
-      border: 1px solid var(--white);
-      color: var(--white);
-      background: transparent;
-      padding: 0.8rem 2.5rem;
-      font-weight: 400;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      transition: var(--transition);
-      border-radius: 0;
-      font-size: 0.9rem;
-    }
-    
-    .btn-outline-light:hover {
-      background: var(--white);
-      color: var(--black);
-    }
-
-    /* Sections */
-    section { 
-      padding:6rem 0; 
-      position:relative; 
-      overflow: hidden;
-    }
-    
-    .section-dark { 
-      background: var(--black); 
-      color: var(--white); 
-    }
-    
-    .section-light {
-      background: var(--white);
-    }
-    
-    .section-gray {
-      background: var(--gray-light);
-    }
-    
-    .section-title { 
-      text-align:center; 
-      margin-bottom:4rem; 
-      position:relative; 
-    }
-    
-    .section-title h2 {
-      font-size: 2.5rem;
-      position: relative;
-      display: inline-block;
-      font-weight: 400;
-    }
-    
-    .section-title h2::after {
-      content: ''; 
-      position: absolute;
-      bottom: -15px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 60px; 
-      height:1px;
-      background: var(--black); 
-      display:block; 
-    }
-    
-    .section-dark .section-title h2::after { 
-      background: var(--white); 
-    }
-    
-    .section-subtitle {
-      max-width: 700px;
-      margin: 0 auto 3rem;
-      text-align: center;
-      color: var(--gray-dark);
-      font-size: 1rem;
-      font-weight: 300;
-      letter-spacing: 1px;
-    }
-    
-    /* Servicios */
-    .service-card {
-      background: var(--white);
-      padding: 2.5rem 2rem;
-      text-align: center;
-      transition: var(--transition);
-      height: 100%;
-      border: 1px solid var(--gray-medium);
-    }
-    
-    .service-card:hover {
-      border-color: var(--black);
-    }
-    
-    .service-icon {
-      width: 70px; 
-      height: 70px;
-      margin: 0 auto 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.8rem;
-      color: var(--black);
-      transition: var(--transition);
-    }
-    
-    .service-title {
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
-      font-weight: 400;
-    }
-    
-    .service-desc {
-      color: var(--gray-dark);
-      font-size: 0.9rem;
-      line-height: 1.6;
-      font-weight: 300;
-    }
-
-    /* Gallery */
-    .gallery-item {
-      position: relative;
-      overflow: hidden;
-      margin-bottom: 1.5rem;
-    }
-    
-    .gallery-item img { 
-      width:100%; 
-      height: 300px;
-      object-fit: cover;
-      transition: var(--transition);
-    }
-    
-    .gallery-item:hover img {
-      transform: scale(1.05);
-    }
-    
-    .gallery-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.5);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      transition: var(--transition);
-    }
-    
-    .gallery-item:hover .gallery-overlay {
-      opacity: 1;
-    }
-    
-    .gallery-overlay h4 {
-      color: white;
-      font-size: 1.2rem;
-      letter-spacing: 1px;
-    }
-
-    /* Parallax image */
-    .parallax {
-      background-attachment:fixed; 
-      background-size:cover;
-      background-position:center; 
-      height:50vh;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .parallax::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.3);
-    }
-    
-    .parallax-content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 100%;
-      padding: 2rem;
-      color: white;
-      z-index: 2;
-      text-align: center;
-    }
-    
-    .parallax-content h3 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      font-weight: 400;
-      letter-spacing: 2px;
-    }
-    
-    .parallax-content p {
-      font-size: 1rem;
-      max-width: 600px;
-      margin: 0 auto;
-      font-weight: 300;
-    }
-
-    /* Product Cards */
-    .product-card {
-      background: var(--white);
-      overflow: hidden;
-      transition: var(--transition);
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      border: 1px solid var(--gray-medium);
-    }
-
-    .product-card:hover {
-      border-color: var(--black);
-    }
-
-    .product-img {
-      height: 250px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .product-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: var(--transition);
-    }
-
-    .product-card:hover .product-img img {
-      transform: scale(1.05);
-    }
-
-    .product-badge {
-      position: absolute;
-      top: 15px;
-      right: 15px;
-      background: var(--black);
-      color: white;
-      padding: 0.25rem 0.75rem;
-      font-size: 0.7rem;
-      font-weight: 400;
-      letter-spacing: 1px;
-    }
-
-    .product-info {
-      padding: 1.5rem;
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .product-info h3 {
-      margin-bottom: 0.75rem;
-      font-size: 1.1rem;
-      font-weight: 400;
-    }
-
-    .product-desc {
-      color: var(--gray-dark);
-      margin-bottom: 1.25rem;
-      flex-grow: 1;
-      font-size: 0.85rem;
-      font-weight: 300;
-    }
-
-    .product-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: auto;
-    }
-
-    .price {
-      font-weight: 400;
-      font-size: 1.1rem;
-    }
-
-    .add-to-cart {
-      background: var(--black);
-      color: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      font-weight: 400;
-      font-size: 0.8rem;
-      transition: var(--transition);
-      letter-spacing: 1px;
-    }
-
-    .add-to-cart:hover {
-      background: var(--gray-dark);
-    }
-
-    /* Wedding Section */
-    .wedding-feature {
-      margin-bottom: 2rem;
-    }
-
-    .wedding-feature i {
-      font-size: 1.5rem;
-      color: var(--black);
-      margin-bottom: 1rem;
-      display: inline-block;
-    }
-
-    /* Footer */
-    footer { 
-      background: var(--black); 
-      color: var(--white); 
-      padding:5rem 0 2rem; 
-      position: relative;
-    }
-    
-    .footer-logo {
-      font-size: 1.5rem;
-      font-weight: 400;
-      color: white;
-      margin-bottom: 1.5rem;
-      display: inline-block;
-      letter-spacing: 1px;
-    }
-    
-    .footer-about p {
-      opacity: 0.7;
-      margin-bottom: 1.5rem;
-      font-weight: 300;
-      font-size: 0.9rem;
-    }
-    
-    .footer-links h4 {
-      font-size: 1.1rem;
-      margin-bottom: 1.5rem;
-      font-weight: 400;
-      letter-spacing: 1px;
-    }
-    
-    .footer-links ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    
-    .footer-links li {
-      margin-bottom: 0.8rem;
-    }
-    
-    .footer-links a {
-      color: rgba(255,255,255,0.7);
-      text-decoration: none;
-      transition: var(--transition);
-      font-size: 0.9rem;
-      font-weight: 300;
-    }
-    
-    .footer-links a:hover {
-      color: white;
-    }
-    
-    .footer-contact-info li {
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: flex-start;
-      font-size: 0.9rem;
-      font-weight: 300;
-    }
-    
-    .footer-contact-info i {
-      margin-right: 0.75rem;
-      color: white;
-      margin-top: 0.2rem;
-      opacity: 0.7;
-    }
-    
-    .social-icons {
-      display: flex;
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-    
-    .social-icons a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.1);
-      color: white;
-      transition: var(--transition);
-    }
-    
-    .social-icons a:hover {
-      background: white;
-      color: var(--black);
-    }
-    
-    .copyright {
-      margin-top: 3rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid rgba(255,255,255,0.1);
-      color: rgba(255,255,255,0.5);
-      font-size: 0.8rem;
-      text-align: center;
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 1200px) {
-      .hero-content h1 {
-        font-size: 3rem;
-      }
-    }
-    
-    @media (max-width: 992px) {
-      .hero-content h1 {
-        font-size: 2.5rem;
-      }
-      
-      .hero-content p {
-        font-size: 1.1rem;
-      }
-      
-      section {
-        padding: 5rem 0;
-      }
-      
-      .section-title h2 {
-        font-size: 2.2rem;
-      }
-    }
-    
-    @media (max-width: 768px) {
-      .hero-content h1 {
-        font-size: 2rem;
-      }
-      
-      .section-title h2 {
-        font-size: 2rem;
-      }
-      
-      .parallax {
-        height: 400px;
-      }
-    }
-    
-    @media (max-width: 576px) {
-      .navbar-brand {
-        font-size: 1.3rem;
-      }
-      
-      .hero-content {
-        padding: 1.5rem;
-      }
-      
-      .hero-content h1 {
-        font-size: 1.8rem;
-      }
-      
-      .hero-content p {
-        font-size: 1rem;
-      }
-      
-      .section-title h2 {
-        font-size: 1.8rem;
-      }
-    }
-  </style>
 </head>
 <body>
 
   <!-- NAVBAR -->
-   
-<nav class="navbar navbar-expand-lg fixed-top py-3">
+<nav class="navbar navbar-expand-xl fixed-top py-3">
+
   <div class="container">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="#home">
       <img src="inicio/logo (1).png" alt="Obsequio Vallarta" class="logo-img me-2">
     </a>
-      <div class="ms-3 dropdown">
-  <button class="btn btn-sm btn-outline-dark dropdown-toggle" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-    <i class="fas fa-language me-1"></i> ES
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-    <li><a class="dropdown-item language-option" href="#" data-lang="es">Español</a></li>
-    <li><a class="dropdown-item language-option" href="#" data-lang="en">English</a></li>
-  </ul>
-</div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-expanded="false">
-        <i class="fas fa-bars"></i>
+
+    <div class="ms-3 dropdown">
+      <button class="btn btn-sm btn-outline-dark dropdown-toggle" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fas fa-language me-1"></i> ES
       </button>
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto">
-<li class="nav-item"><a class="nav-link active" href="#home" data-i18n="nav-inicio">INICIO</a></li>
-<li class="nav-item"><a class="nav-link" href="#about" data-i18n="nav-nosotros">NOSOTROS</a></li>
-<li class="nav-item"><a class="nav-link" href="#weddings" data-i18n="nav-bodas">BODAS</a></li>
-<li class="nav-item"><a class="nav-link" href="#services" data-i18n="nav-servicios">SERVICIOS</a></li>
-<li class="nav-item"><a class="nav-link" href="#products" data-i18n="nav-productos">PRODUCTOS</a></li>
-<li class="nav-item"><a class="nav-link" href="#gallery" data-i18n="nav-galeria">GALERÍA</a></li>
-<li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav-contacto">CONTACTO</a></li>
-          
-        </ul>
-      </div>
+      <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+        <li><a class="dropdown-item language-option" href="#" data-lang="es">Español</a></li>
+        <li><a class="dropdown-item language-option" href="#" data-lang="en">English</a></li>
+      </ul>
     </div>
-  </nav>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-expanded="false">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-no-scroll data-bs-toggle="modal" data-bs-target="#catalogModal" data-i18n="nav-catalogo">CATÁLOGO</a>
+        </li>
+        <li class="nav-item"><a class="nav-link active" href="#home" data-i18n="nav-inicio">INICIO</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about" data-i18n="nav-nosotros">NOSOTROS</a></li>
+        <li class="nav-item"><a class="nav-link" href="#weddings" data-i18n="nav-bodas">BODAS</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services" data-i18n="nav-servicios">SERVICIOS</a></li>
+        <li class="nav-item"><a class="nav-link" href="#products" data-i18n="nav-productos">PRODUCTOS</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery" data-i18n="nav-galeria">GALERÍA</a></li>
+        <li class="nav-item"><a class="nav-link" href="#reviews" data-i18n="nav-resenas">RESEÑAS</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav-contacto">CONTACTO</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
   <!-- HERO SLIDER -->
   <section id="home">
-    <div class="swiper">
+    <div class="swiper hero-swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide" style="background-image:url('inicio/ramopuertovallarta.JPEG')">
           <div class="hero-overlay"></div>
           <div class="hero-content">
-<h1 data-i18n="hero-title-1">FLORES PARA BODAS EN PUERTO VALLARTA</h1>
-<p data-i18n="hero-desc-1">Diseños exclusivos para tu wedding day. Bouquets, centros de mesa y decoración floral para bodas.</p>
-<a href="#weddings" class="btn btn-outline-light" data-i18n="hero-btn-1">VER BODAS</a>
-
+            <h1 data-i18n="hero-title-1">FLORES PARA BODAS EN PUERTO VALLARTA</h1>
+            <p data-i18n="hero-desc-1">Diseños exclusivos para tu el dia de tu Boda. Bouquets, centros de mesa y decoración floral para bodas.</p>
+            <a href="#weddings" class="btn btn-outline-light" data-i18n="hero-btn-1">VER BODAS</a>
           </div>
         </div>
-        <div class="swiper-slide" style="background-image:url('inicio/propuesta\ de\ matrimonio\ puerto\ vallarta.jpg')">
+        <div class="swiper-slide" style="background-image:url('inicio/propuesta de matrimonio puerto vallarta.jpg')">
           <div class="hero-overlay"></div>
           <div class="hero-content">
-<h1 data-i18n="hero-title-2">PROPUESTAS DE MATRIMONIO</h1>
-<p data-i18n="hero-desc-2">Arreglos florales especiales para pedidas de matrimonio inolvidables</p>
-<a href="#products" class="btn btn-outline-light" data-i18n="hero-btn-2">VER DISEÑOS</a>
+            <h1 data-i18n="hero-title-2">PROPUESTAS DE MATRIMONIO</h1>
+            <p data-i18n="hero-desc-2">Arreglos florales especiales para pedidas de matrimonio inolvidables</p>
+            <a href="#products" class="btn btn-outline-light" data-i18n="hero-btn-2">VER DISEÑOS</a>
           </div>
         </div>
         <div class="swiper-slide" style="background-image:url('inicio/floreria_puerto_vallarta.jpg')">
           <div class="hero-overlay"></div>
           <div class="hero-content">
-<h1 data-i18n="hero-title-3">FLORISTERÍA EN PUERTO VALLARTA</h1>
-<p data-i18n="hero-desc-3">Presentación impecable en cada entrega. Flores frescas para ocasiones especiales.</p>
-<a href="#contact" class="btn btn-outline-light" data-i18n="hero-btn-3">CONTÁCTANOS</a>
+            <h1 data-i18n="hero-title-3">FLORISTERÍA EN PUERTO VALLARTA</h1>
+            <p data-i18n="hero-desc-3">Presentación impecable en cada entrega. Flores frescas para ocasiones especiales.</p>
+            <a href="#contact" class="btn btn-outline-light" data-i18n="hero-btn-3">CONTÁCTANOS</a>
           </div>
         </div>
       </div>
@@ -788,22 +344,22 @@
   <section id="about" class="section-light">
     <div class="container">
       <div class="section-title">
-      <h2 data-i18n="about-title">Sobre Nosotros</h2>
-       <p class="section-subtitle" data-i18n="about-subtitle">Florería especializada en bodas y eventos en Puerto Vallarta</p>
+        <h2 data-i18n="about-title">Sobre Nosotros</h2>
+        <p class="section-subtitle" data-i18n="about-subtitle">Florería especializada en bodas y eventos en Puerto Vallarta</p>
       </div>
       <div class="row align-items-center g-5">
         <div class="col-lg-6">
           <div class="pe-lg-5">
             <p class="mb-4" data-i18n="about-p1">Fundada en 2017 en Puerto Vallarta, nuestra floristería nació del deseo de crear diseños florales con un enfoque minimalista y elegante, especialmente para bodas y eventos especiales.</p>
-           <p class="mb-4" data-i18n="about-p2">>Nos hemos convertido en la opción preferida para parejas que buscan flores para su boda en Puerto Vallarta, ofreciendo desde bouquets para novias hasta decoración floral completa para recepciones.</p>
-          <p data-i18n="about-p3">Nuestro equipo de diseñadores florales especializados en weddings crea piezas únicas que reflejan el estilo y personalidad de cada pareja, haciendo de su día especial una experiencia inolvidable.</p>
+            <p class="mb-4" data-i18n="about-p2">Nos hemos convertido en la opción preferida para parejas que buscan flores para su boda en Puerto Vallarta, ofreciendo desde bouquets para novias hasta decoración floral completa para recepciones.</p>
+            <p data-i18n="about-p3">Nuestro equipo de diseñadores florales especializados en weddings crea piezas únicas que reflejan el estilo y personalidad de cada pareja, haciendo de su día especial una experiencia inolvidable.</p>
           </div>
         </div>
         <div class="col-lg-6">
           <div class="parallax" style="background-image: url('nosotros/floreriapuertovallarta.jpg');">
             <div class="parallax-content">
-             <h3 data-i18n="philosophy-title">NUESTRA FILOSOFÍA</h3>
-            <p data-i18n="philosophy-desc">Creemos que las flores para bodas deben ser tan únicas como el amor que celebran</p>
+              <h3 data-i18n="philosophy-title">NUESTRA FILOSOFÍA</h3>
+              <p data-i18n="philosophy-desc">Creemos que las flores para bodas deben ser tan únicas como el amor que celebran</p>
             </div>
           </div>
         </div>
@@ -812,720 +368,671 @@
   </section>
 
   <!-- WEDDING SECTION -->
-<section id="weddings" class="section-gray">
-  <div class="container">
-    <div class="section-title">
-      <h2 data-i18n="weddings-title">Flores para Bodas en Puerto Vallarta</h2>
-      <p class="section-subtitle" data-i18n="weddings-subtitle">Hacemos de tu wedding day algo inolvidable</p>
-    </div>
-    <div class="row align-items-center g-5">
-      <div class="col-lg-6">
-        <h3 data-i18n="weddings-heading">Diseño Floral para tu Boda</h3>
-        <p data-i18n="weddings-p1">En Obsequio Vallarta nos especializamos en crear arreglos florales únicos para bodas en Puerto Vallarta. Desde el bouquet de la novia hasta los centros de mesa, cada pieza es diseñada para complementar la estética de tu wedding day.</p>
-        <div class="row mt-4">
-          <div class="col-md-6">
-            <div class="wedding-feature">
-              <i class="fas fa-birthday-cake"></i>
-              <h4 data-i18n="wedding-feature1-title">Bouquets para Novia</h4>
-              <p data-i18n="wedding-feature1-desc">Diseños personalizados que complementan tu vestido y estilo.</p>
+  <section id="weddings" class="section-gray">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-i18n="weddings-title">Flores para Bodas en Puerto Vallarta</h2>
+        <p class="section-subtitle" data-i18n="weddings-subtitle">Hacemos de el dia de tu boda algo inolvidable</p>
+      </div>
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <h3 data-i18n="weddings-heading">Diseño Floral para tu Boda</h3>
+          <p data-i18n="weddings-p1">
+            En Obsequio Vallarta nos especializamos en crear arreglos florales únicos para bodas en Puerto Vallarta.
+            Desde el bouquet de la novia hasta los centros de mesa, cada pieza es diseñada para complementar la estética de el dia de tu boda.
+          </p>
+          <div class="row mt-4 g-4">
+            <div class="col-md-6">
+              <div class="wedding-feature text-center">
+                <img src="boda/bodaspv.jpg" alt="Bouquet para Novia" class="img-fluid rounded shadow-sm mb-3">
+                <h4 data-i18n="wedding-feature1-title">Bouquets para Novia</h4>
+                <p data-i18n="wedding-feature1-desc">Diseños personalizados que complementan tu vestido y estilo.</p>
+              </div>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="wedding-feature">
-              <i class="fas fa-archway"></i>
-              <h4 data-i18n="wedding-feature2-title">Arcos Florales</h4>
-              <p data-i18n="wedding-feature2-desc">Para ceremonias inolvidables en playas y jardines de Puerto Vallarta.</p>
+            <div class="col-md-6">
+              <div class="wedding-feature text-center">
+                <img src="boda/florespv.jpg" alt="Arcos Florales" class="img-fluid rounded shadow-sm mb-3">
+                <h4 data-i18n="wedding-feature2-title">Arcos Florales</h4>
+                <p data-i18n="wedding-feature2-desc">Para ceremonias inolvidables en playas y jardines de Puerto Vallarta.</p>
+              </div>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="wedding-feature">
-              <i class="fas fa-wine-glass-alt"></i>
-              <h4 data-i18n="wedding-feature3-title">Centros de Mesa</h4>
-              <p data-i18n="wedding-feature3-desc">Diseños elegantes para tu recepción de boda.</p>
+            <div class="col-md-6">
+              <div class="wedding-feature text-center">
+                <img src="boda/centromesa.jpg" alt="Centros de Mesa" class="img-fluid rounded shadow-sm mb-3">
+                <h4 data-i18n="wedding-feature3-title">Centros de Mesa</h4>
+                <p data-i18n="wedding-feature3-desc">Diseños elegantes para tu recepción de boda.</p>
+              </div>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="wedding-feature">
-              <i class="fas fa-ring"></i>
-              <h4 data-i18n="wedding-feature4-title">Propuestas de Matrimonio</h4>
-              <p data-i18n="wedding-feature4-desc">Arreglos especiales para pedidas de matrimonio memorables.</p>
+            <div class="col-md-6">
+              <div class="wedding-feature text-center">
+                <img src="boda/propuesta.jpg" alt="Propuestas de Matrimonio" class="img-fluid rounded shadow-sm mb-3">
+                <h4 data-i18n="wedding-feature4-title">Propuestas de Matrimonio</h4>
+                <p data-i18n="wedding-feature4-desc">Arreglos especiales para pedidas de matrimonio memorables.</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-lg-6">
-        <img src="boda/471689603_18051145043067910_2110496554136649083_n.jpg" alt="Decoración floral para bodas en Puerto Vallarta" class="img-fluid rounded">
+        <div class="col-lg-6">
+          <img src="boda/471689603_18051145043067910_2110496554136649083_n.jpg"
+               alt="Decoración floral para bodas en Puerto Vallarta"
+               class="img-fluid rounded shadow-lg">
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- SERVICES -->
   <section id="services" class="section-light">
-  <div class="container">
-    <div class="section-title">
-      <h2 data-i18n="services-title">Nuestros Servicios</h2>
-      <p class="section-subtitle" data-i18n="services-subtitle">Soluciones florales para cada ocasión</p>
-    </div>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="fas fa-pen-fancy"></i>
-          </div>
-          <h3 class="service-title" data-i18n="service1-title">Diseño para Bodas</h3>
-          <p class="service-desc" data-i18n="service1-desc">Servicio completo de diseño floral para weddings en Puerto Vallarta. Desde la consultoría inicial hasta la instalación el día del evento.</p>
-        </div>
+    <div class="container">
+      <div class="section-title">
+        <h2 data-i18n="services-title">Nuestros Servicios</h2>
+        <p class="section-subtitle" data-i18n="services-subtitle">Soluciones florales para cada ocasión</p>
       </div>
-      <div class="col-md-4">
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="fas fa-calendar-alt"></i>
-          </div>
-          <h3 class="service-title" data-i18n="service2-title">Eventos Especiales</h3>
-          <p class="service-desc" data-i18n="service2-desc">Decoración floral para bodas, aniversarios y propuestas de matrimonio con un estilo contemporáneo que complementa cualquier espacio.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="fas fa-truck"></i>
-          </div>
-          <h3 class="service-title" data-i18n="service3-title">Entrega Premium</h3>
-          <p class="service-desc" data-i18n="service3-desc">Servicio de entrega con presentación impecable en Puerto Vallarta, perfecto para propuestas de matrimonio sorpresa y regalos especiales.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-  <!-- PRODUCTOS -->
-<section id="products" class="section-gray">
-  <div class="container">
-    <div class="section-title">
-      <h2 data-i18n="products-title">Nuestra Colección</h2>
-      <p class="section-subtitle" data-i18n="products-subtitle">Selección de arreglos florales para bodas y eventos</p>
-    </div>
-    <div class="row g-4">
-      <!-- Producto 1 -->
-      <div class="col-md-4 col-sm-6">
-        <div class="product-card">
-          <div class="product-img">
-            <img src="productos/buquet_de_novia_puerto_vallarta.jpg" alt="Bouquet para novias en Puerto Vallarta - Obsequio Vallarta">
-            <div class="product-badge" data-i18n="product1-badge">PARA BODAS</div>
-          </div>
-          <div class="product-info">
-            <h3 data-i18n="product1-title">Bouquet para Novia</h3>
-            <p class="product-desc" data-i18n="product1-desc">Composición de rosas blancas estructurales perfecta para tu wedding day en Puerto Vallarta.</p>
-            <div class="product-footer">
-              <button class="add-to-cart">
-                <i class="fas fa-plus me-1"></i> <span data-i18n="product-btn">COTIZAR</span>
-              </button>
-            </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-pen-fancy"></i></div>
+            <h3 class="service-title" data-i18n="service1-title">Diseño para Bodas</h3>
+            <p class="service-desc" data-i18n="service1-desc">Servicio completo de diseño floral para weddings en Puerto Vallarta. Desde la consultoría inicial hasta la instalación el día del evento.</p>
           </div>
         </div>
-      </div>
-      
-      <!-- Producto 2 -->
-      <div class="col-md-4 col-sm-6">
-        <div class="product-card">
-          <div class="product-img">
-            <img src="productos/ramo_rosas_blancas_puerto_vallarta.jpg" alt="Centro de mesa para bodas en Puerto Vallarta">
-            <div class="product-badge" data-i18n="product2-badge">RECOMENDADO</div>
-          </div>
-          <div class="product-info">
-            <h3 data-i18n="product2-title">Ramo de Rosas Blancas</h3>
-            <p class="product-desc" data-i18n="product2-desc">La promesa de un amor puro y eterno 🤍 Rosas Blancas y preciosas.</p>
-            <div class="product-footer">
-              <button class="add-to-cart">
-                <i class="fas fa-plus me-1"></i> <span data-i18n="product-btn">COTIZAR</span>
-              </button>
-            </div>
+        <div class="col-md-4">
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-calendar-alt"></i></div>
+            <h3 class="service-title" data-i18n="service2-title">Eventos Especiales</h3>
+            <p class="service-desc" data-i18n="service2-desc">Decoración floral para bodas, aniversarios y propuestas de matrimonio con un estilo contemporáneo que complementa cualquier espacio.</p>
           </div>
         </div>
-      </div>
-      
-      <!-- Producto 3 -->
-      <div class="col-md-4 col-sm-6">
-        <div class="product-card">
-          <div class="product-img">
-            <img src="productos/ramo_rosas_puerto_vallarta.jpg" alt="Arreglo para propuestas de matrimonio en Puerto Vallarta">
-            <div class="product-badge" data-i18n="product3-badge">PROPUESTAS</div>
-          </div>
-          <div class="product-info">
-            <h3 data-i18n="product3-title">Ramo De Rosas Rojas</h3>
-            <p class="product-desc" data-i18n="product3-desc">El sentimiento al recibir flores, es simplemente indescriptible.</p>
-            <div class="product-footer">
-              <button class="add-to-cart">
-                <i class="fas fa-plus me-1"></i> <span data-i18n="product-btn">COTIZAR</span>
-              </button>
-            </div>
+        <div class="col-md-4">
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-truck"></i></div>
+            <h3 class="service-title" data-i18n="service3-title">Entrega Premium</h3>
+            <p class="service-desc" data-i18n="service3-desc">Servicio de entrega con presentación impecable en Puerto Vallarta, perfecto para propuestas de matrimonio sorpresa y regalos especiales.</p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- PRODUCTOS -->
+  <section id="products" class="section-gray">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-i18n="products-title">Nuestra Colección</h2>
+        <p class="section-subtitle" data-i18n="products-subtitle">Selección de arreglos florales para bodas y eventos</p>
+      </div>
+      <div class="row g-4">
+        <!-- Productos (igual que antes) -->
+        <div class="col-md-4 col-sm-6">
+          <div class="product-card">
+            <div class="product-img">
+              <img src="productos/ramo cascada.JPEG" alt="Bouquet para novias en Puerto Vallarta - Obsequio Vallarta">
+              <div class="product-badge" data-i18n="product1-badge">PARA BODAS</div>
+            </div>
+            <div class="product-info">
+              <h3 data-i18n="product1-title">Bouquet para Novia</h3>
+              <p class="product-desc" data-i18n="product1-desc">Composición de rosas blancas estructurales perfecta para el dia de tu boda en Puerto Vallarta.</p>
+              <div class="product-footer">
+                <button class="add-to-cart"><i class="fas fa-plus me-1"></i> <span data-i18n="product-btn">COTIZAR</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="product-card">
+            <div class="product-img">
+              <img src="productos/ramo_rosas_blancas_puerto_vallarta.jpg" alt="Centro de mesa para bodas en Puerto Vallarta">
+              <div class="product-badge" data-i18n="product2-badge">RECOMENDADO</div>
+            </div>
+            <div class="product-info">
+              <h3 data-i18n="product2-title">Ramo de Rosas Blancas</h3>
+              <p class="product-desc" data-i18n="product2-desc">La promesa de un amor puro y eterno 🤍 Rosas Blancas y preciosas.</p>
+              <div class="product-footer">
+                <button class="add-to-cart"><i class="fas fa-plus me-1"></i> <span data-i18n="product-btn">COTIZAR</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="product-card">
+            <div class="product-img">
+              <img src="productos/ramo_rosas_puerto_vallarta.jpg" alt="Arreglo para propuestas de matrimonio en Puerto Vallarta">
+              <div class="product-badge" data-i18n="product3-badge">PROPUESTAS</div>
+            </div>
+            <div class="product-info">
+              <h3 data-i18n="product3-title">Ramo De Rosas Rojas</h3>
+              <p class="product-desc" data-i18n="product3-desc">El sentimiento al recibir flores, es simplemente indescriptible.</p>
+              <div class="product-footer">
+                <button class="add-to-cart"><i class="fas fa-plus me-1"></i> <span data-i18n="product-btn">COTIZAR</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- GALLERY -->
- <section id="gallery" class="section-light">
-  <div class="container">
-    <div class="section-title">
-      <h2 data-i18n="gallery-title">Galería</h2>
-      <p class="section-subtitle" data-i18n="gallery-subtitle">Nuestros trabajos para weddings en Puerto Vallarta</p>
+  <section id="gallery" class="section-light">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-i18n="gallery-title">Galería</h2>
+        <p class="section-subtitle" data-i18n="gallery-subtitle">Nuestros trabajos para weddings en Puerto Vallarta</p>
+      </div>
+      <div class="row g-4">
+        <!-- Galería (igual que antes) -->
+        <div class="col-sm-6 col-lg-3">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" onclick="openModal('galeria/buquet_obsequio_vallarta.jpg', 'BOUQUETS')">
+            <img src="galeria/buquet_obsequio_vallarta.jpg" alt="Bouquet de novia en Puerto Vallarta - Obsequio Vallarta">
+            <div class="gallery-overlay"><h4 data-i18n="gallery1-title">BOUQUETS</h4></div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" onclick="openModal('galeria/floreriaobsequivallarta.jpg', 'CENTROS DE MESA')">
+            <img src="galeria/floreriaobsequivallarta.jpg" alt="Centros de mesa para bodas en Puerto Vallarta">
+            <div class="gallery-overlay"><h4 data-i18n="gallery2-title">CENTROS DE MESA</h4></div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" onclick="openModal('galeria/decoraciones_obsequio_vallarta.jpg', 'DECORACIÓN')">
+            <img src="galeria/decoraciones_obsequio_vallarta.jpg" alt="Arreglos florales para bodas en Puerto Vallarta">
+            <div class="gallery-overlay"><h4 data-i18n="gallery3-title">DECORACIÓN</h4></div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" onclick="openModal('galeria/propuestamatrimoniopuertovallarta.jpg', 'PROPUESTAS')">
+            <img src="galeria/propuestamatrimoniopuertovallarta.jpg" alt="Propuestas de matrimonio con flores en Puerto Vallarta">
+            <div class="gallery-overlay"><h4 data-i18n="gallery4-title">PROPUESTAS</h4></div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" onclick="openModal('galeria/prupuestaflorespuertovallarta.jpg', 'PROPUESTAS')">
+            <img src="galeria/prupuestaflorespuertovallarta.jpg" alt="Propuestas de matrimonio con flores en Puerto Vallarta">
+            <div class="gallery-overlay"><h4 data-i18n="gallery5-title">PROPUESTAS</h4></div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" onclick="openModal('galeria/obsequiovallarta.JPG', 'PIROTECNIA')">
+            <img src="galeria/obsequiovallarta.JPG" alt="Propuestas de matrimonio con flores en Puerto Vallarta">
+            <div class="gallery-overlay"><h4 data-i18n="gallery6-title">PIROTECNIA</h4></div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" onclick="openModal('galeria/LETREROfloreriapuerto_vallarta.jpg', 'LETRERO DE BIENVENIDA')">
+            <img src="galeria/LETREROfloreriapuerto_vallarta.jpg" alt="Propuestas de matrimonio con flores en Puerto Vallarta">
+            <div class="gallery-overlay"><h4 data-i18n="gallery7-title">LETRERO DE BIENVENIDA</h4></div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" onclick="openModal('galeria/DECORAcion.jpg', 'DECORACIONES')">
+            <img src="galeria/DECORAcion.jpg" alt="Propuestas de matrimonio con flores en Puerto Vallarta">
+            <div class="gallery-overlay"><h4 data-i18n="gallery8-title">DECORACIONES</h4></div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="row g-4">
-      <div class="col-sm-6 col-lg-3">
-        <div class="gallery-item">
-          <img src="galeria/buquet_obsequio_vallarta.jpg" alt="Bouquet de novia en Puerto Vallarta - Obsequio Vallarta">
-          <div class="gallery-overlay">
-            <h4 data-i18n="gallery1-title">BOUQUETS</h4>
-          </div>
+  </section>
+
+  <!-- Modal Gallery -->
+  <div class="modal fade modal-gallery" id="galleryModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-lg-down">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body position-relative">
+          <button class="modal-nav modal-prev" id="modalPrev" type="button" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+          <button class="modal-nav modal-next" id="modalNext" type="button" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+          <img id="expandedGalleryImage" src="" alt="" class="img-fluid">
+          <h4 class="modal-title mt-3" id="modalImageTitle"></h4>
         </div>
       </div>
-      <div class="col-sm-6 col-lg-3">
-        <div class="gallery-item">
-          <img src="galeria/floreriaobsequivallarta.jpg" alt="Centros de mesa para bodas en Puerto Vallarta">
-          <div class="gallery-overlay">
-            <h4 data-i18n="gallery2-title">CENTROS DE MESA</h4>
-          </div>
+    </div>
+  </div>
+
+  <!-- Modal Catálogo PDF -->
+  <div class="modal fade modal-catalog" id="catalogModal" tabindex="-1" aria-hidden="true" aria-labelledby="catalogTitle">
+    <div class="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-md-down">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="catalogTitle" data-i18n="catalog-title">Catálogo</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
         </div>
-      </div>
-      <div class="col-sm-6 col-lg-3">
-        <div class="gallery-item">
-          <img src="galeria/decoraciones_obsequio_vallarta.jpg" alt="Arreglos florales para bodas en Puerto Vallarta">
-          <div class="gallery-overlay">
-            <h4 data-i18n="gallery3-title">DECORACIÓN</h4>
-          </div>
+        <div class="modal-body">
+          <iframe class="catalog-frame" src="catalogo/Cátalogo.pdf" title="Catálogo Obsequio Vallarta" loading="lazy" allowfullscreen></iframe>
         </div>
-      </div>
-      <div class="col-sm-6 col-lg-3">
-        <div class="gallery-item">
-          <img src="galeria/propuestamatrimoniopuertovallarta.jpg" alt="Propuestas de matrimonio con flores en Puerto Vallarta">
-          <div class="gallery-overlay">
-            <h4 data-i18n="gallery4-title">PROPUESTAS</h4>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-3">
-        <div class="gallery-item">
-          <img src="galeria/prupuestaflorespuertovallarta.jpg" alt="Propuestas de matrimonio con flores en Puerto Vallarta">
-          <div class="gallery-overlay">
-            <h4 data-i18n="gallery5-title">PROPUESTAS</h4>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-3">
-        <div class="gallery-item">
-          <img src="galeria/obsequiovallarta.JPG" alt="Propuestas de matrimonio con flores en Puerto Vallarta">
-          <div class="gallery-overlay">
-            <h4 data-i18n="gallery6-title">PIROTECNIA</h4>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-3">
-        <div class="gallery-item">
-          <img src="galeria/LETREROfloreriapuerto_vallarta.jpg" alt="Propuestas de matrimonio con flores en Puerto Vallarta">
-          <div class="gallery-overlay">
-            <h4 data-i18n="gallery7-title">LETRERO DE BIENVENIDA</h4>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-3">
-        <div class="gallery-item">
-          <img src="galeria/DECORAcion.jpg" alt="Propuestas de matrimonio con flores en Puerto Vallarta">
-          <div class="gallery-overlay">
-            <h4 data-i18n="gallery8-title">DECORACIONES</h4>
+        <div class="modal-footer d-flex justify-content-between flex-wrap">
+          <small class="text-muted mb-2 mb-sm-0" data-i18n="catalog-fallback">Si el catálogo no carga, usa los botones de abajo.</small>
+          <div class="ms-sm-auto">
+            <a class="btn btn-outline-secondary me-2" href="catalogo/Cátalogo.pdf" target="_blank" rel="noopener" data-i18n="catalog-open">Abrir en pestaña nueva</a>
+            <a class="btn btn-dark" href="catalogo/Cátalogo.pdf" download data-i18n="catalog-download">Descargar PDF</a>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
-  <!-- PARALLAX SECTION -->
-<div class="parallax" style="background-image: url('https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1000');">
-  <div class="parallax-content">
-    <h3 data-i18n="parallax-title">BODAS EN PUERTO VALLARTA</h3>
-    <p data-i18n="parallax-desc">Diseños florales exclusivos para hacer de tu wedding day una experiencia inolvidable.</p>
-    <a href="#contact" class="btn btn-outline-light mt-3" data-i18n="parallax-btn">CONSULTA PARA TU BODA</a>
+
+  <!-- REVIEWS (Google) -->
+  <section id="reviews" class="section-light">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-i18n="reviews-title">Lo que dicen nuestros clientes</h2>
+        <p class="section-subtitle" data-i18n="reviews-subtitle">Reseñas reales sobre nuestra calidad y servicio</p>
+      </div>
+
+      <div class="swiper testimonials-swiper">
+        <div class="swiper-wrapper">
+
+          <!-- lcmarin25 -->
+          <div class="swiper-slide">
+            <article class="review-card">
+              <div class="review-stars" aria-label="Google review">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="review-text" data-i18n="review1-text">
+                Agradezco a Carla por la atención personalizada y excelente que me brindó. A pesar de contratar el servicio en una zona alejada del rango de servicio, hizo posible esta ocasión especial. La decoración quedó perfecta.
+              </p>
+              <div class="review-author">
+                <strong data-i18n="review1-name">lcmarin25</strong>
+                <span class="text-muted" data-i18n="review1-extra">1 opinión · 3 fotos · Hace 10 meses</span>
+              </div>
+            </article>
+          </div>
+
+          <!-- Daniel Posadas -->
+          <div class="swiper-slide">
+            <article class="review-card">
+              <div class="review-stars" aria-label="Google review">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="review-text" data-i18n="review2-text">
+                Excelente Servicio !! La atención atenta, personalizada y cordial de su propietaria . Las sugerencias y entrega fue perfecto!! Les recomendaré - Gracias !!
+              </p>
+              <div class="review-author">
+                <strong data-i18n="review2-name">Daniel Posadas</strong>
+                <span class="text-muted" data-i18n="review2-extra">7 opiniones · Hace 2 meses</span>
+              </div>
+            </article>
+          </div>
+
+          <!-- odrigo flores -->
+          <div class="swiper-slide">
+            <article class="review-card">
+              <div class="review-stars" aria-label="Google review">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="review-text" data-i18n="review3-text">
+                Excelente servicio, 100% recomendado, se contrató el servicio para una boda y siempre fueron muy atentos en todo momento
+                Nos ofrecieron tanto un servicio y producto de calidad
+                Nuevamente muchas gracias por sus servicios
+              </p>
+              <div class="review-author">
+                <strong data-i18n="review3-name">Rodrigo flores</strong>
+                <span class="text-muted" data-i18n="review3-extra">1 opinión · 2 fotos · Hace 2 años</span>
+              </div>
+            </article>
+          </div>
+
+          <!-- Ricardo Cano -->
+          <div class="swiper-slide">
+            <article class="review-card">
+              <div class="review-stars" aria-label="Google review">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="review-text" data-i18n="review4-text">
+                Perfecto el servicio, superó mis expectativas, atención, amabilidad y calidad en todo. A pensar de contratar a distancia la seriedad y asesoría fue muy buena
+              </p>
+              <div class="review-author">
+                <strong data-i18n="review4-name">Ricardo Cano</strong>
+                <span class="text-muted" data-i18n="review4-extra">Local Guide · 87 opiniones · 13 fotos · Hace 4 años</span>
+              </div>
+            </article>
+          </div>
+
+          <!-- Kevin Corona -->
+          <div class="swiper-slide">
+            <article class="review-card">
+              <div class="review-stars" aria-label="Google review">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="review-text" data-i18n="review5-text">
+                Excelente servicio y 100% super recomendado!!!! Necesitaba urgentemente enviar un detalle a una persona muy especial que estaba de viaje en Puerto Vallarta y yo estando en la Cd. de Puebla pude contactarme con "Obsequio Vallarta" para poder enviarle un arreglo floral el cual le encanto a esa persona y a pesar de la distancia el servicio y atención que me brindaron fue excelente. Super recomendado y además el servicio de entrega muy eficiente y rápido!! Gracias!!
+              </p>
+              <div class="review-author">
+                <strong data-i18n="review5-name">Kevin Corona</strong>
+                <span class="text-muted" data-i18n="review5-extra">2 opiniones · Hace 11 meses</span>
+              </div>
+            </article>
+          </div>
+
+        </div>
+
+        <div class="testimonials-pagination"></div>
+        <div class="testimonials-nav">
+          <button class="testimonials-prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+          <button class="testimonials-next" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARALLAX -->
+  <div class="parallax" style="background-image: url('https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1000');">
+    <div class="parallax-content">
+      <h3 data-i18n="parallax-title">BODAS EN PUERTO VALLARTA</h3>
+      <p data-i18n="parallax-desc">Diseños florales exclusivos para hacer del dia de tu boda una experiencia inolvidable.</p>
+      <a href="#contact" class="btn btn-outline-light mt-3" data-i18n="parallax-btn">CONSULTA PARA TU BODA</a>
+    </div>
   </div>
-</div>
 
   <!-- CONTACT -->
-
-<section id="contact" class="section-light">
-  <div class="container">
-    <div class="section-title">
-      <h2 data-i18n="contact-title">Contacto</h2>
-      <p class="section-subtitle" data-i18n="contact-subtitle">Estamos para ayudarte con tu boda o evento especial</p>
-    </div>
-    <div class="row">
-      <div class="col-lg-6 mx-auto text-center">
-        <p class="mb-5" data-i18n="contact-info">David Alfaro Siqueiros 501-A Las Glorias, Puerto Vallarta, Mexico, 48333<br>
-        Lunes a Sábado: 9am - 7pm<br>
-        Tel: 322 147 3110<br>
-        obsequiovallarta@gmail.com</p>
-        
-        <div class="social-icons justify-content-center">
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  <section id="contact" class="section-light">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-i18n="contact-title">Contacto</h2>
+        <p class="section-subtitle" data-i18n="contact-subtitle">Estamos para ayudarte con tu boda o evento especial</p>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 mx-auto text-center">
+          <p class="mb-5" data-i18n="contact-info">David Alfaro Siqueiros 501-A Las Glorias, Puerto Vallarta, Mexico, 48333<br>
+          Lunes a Sábado: 9am - 7pm<br>
+          Tel: 322 147 3110<br>
+          obsequiovallarta@gmail.com</p>
+          
+          <div class="social-icons justify-content-center">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- FOOTER -->
- <footer class="section-dark">
-  <div class="container">
-    <div class="row g-5">
-      <div class="col-lg-4">
-        <div class="footer-about">
-          <a href="#" class="footer-logo d-flex align-items-center">
-            <svg width="30" height="30" viewBox="0 0 100 100" fill="white" class="me-2">
-              <circle cx="50" cy="50" r="35"/>
-              <path d="M50 15 L58 40 L85 40 L62 58 L70 85 L50 68 L30 85 L38 58 L15 40 L42 40 Z"/>
-            </svg>
-            OBSEQUIO VALLARTA
-          </a>
-          <p data-i18n="footer-about">Florería especializada en bodas y eventos en Puerto Vallarta. Creando diseños florales únicos para weddings desde 2017.</p>
+  <footer class="section-dark">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <div class="footer-about">
+            <a href="#home" class="footer-logo d-flex align-items-center">
+              <img src="inicio/obsequio vallarta agua blanco.png" alt="Obsequio Vallarta" class="footer-logo-img me-2" loading="lazy" decoding="async" srcset="inicio/logo (1).png 1x, inicio/logo (1)@2x.png 2x">
+              <span class="visually-hidden">Obsequio Vallarta</span>
+            </a>
+            <p data-i18n="footer-about">Florería especializada en bodas y eventos en Puerto Vallarta. Creando diseños florales únicos para weddings desde 2017.</p>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4">
+          <div class="footer-links">
+            <h4 data-i18n="footer-links1-title">Enlaces</h4>
+            <ul>
+              <li><a href="#home" data-i18n="footer-link1">Inicio</a></li>
+              <li><a href="#about" data-i18n="footer-link2">Nosotros</a></li>
+              <li><a href="#weddings" data-i18n="footer-link3">Bodas</a></li>
+              <li><a href="#services" data-i18n="footer-link4">Servicios</a></li>
+              <li><a href="#contact" data-i18n="footer-link5">Contacto</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <div class="footer-links">
+            <h4 data-i18n="footer-links2-title">Servicios para Bodas</h4>
+            <ul>
+              <li><a href="#weddings" data-i18n="footer-service1">Bouquets para Novia</a></li>
+              <li><a href="#weddings" data-i18n="footer-service2">Centros de Mesa</a></li>
+              <li><a href="#weddings" data-i18n="footer-service3">Arcos Florales</a></li>
+              <li><a href="#weddings" data-i18n="footer-service4">Propuestas de Matrimonio</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <div class="footer-contact-info">
+            <h4 data-i18n="footer-contact-title">Contacto</h4>
+            <ul>
+              <li><i class="fas fa-map-marker-alt"></i><span data-i18n="footer-address">David Alfaro Siqueiros 501-A Las Glorias, Puerto Vallarta, Mexico, 48333</span></li>
+              <li><i class="fas fa-phone"></i> <span data-i18n="footer-phone">322 147 3110</span></li>
+              <li><i class="fas fa-envelope"></i><span data-i18n="footer-email">obsequiovallarta@gmail.com</span></li>
+              <li><i class="fas fa-clock"></i> <span data-i18n="footer-hours">Lunes a Sábado: 9am - 7pm</span></li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="col-lg-2 col-md-4">
-        <div class="footer-links">
-          <h4 data-i18n="footer-links1-title">Enlaces</h4>
-          <ul>
-            <li><a href="#home" data-i18n="footer-link1">Inicio</a></li>
-            <li><a href="#about" data-i18n="footer-link2">Nosotros</a></li>
-            <li><a href="#weddings" data-i18n="footer-link3">Bodas</a></li>
-            <li><a href="#services" data-i18n="footer-link4">Servicios</a></li>
-            <li><a href="#contact" data-i18n="footer-link5">Contacto</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4">
-        <div class="footer-links">
-          <h4 data-i18n="footer-links2-title">Servicios para Bodas</h4>
-          <ul>
-            <li><a href="#weddings" data-i18n="footer-service1">Bouquets para Novia</a></li>
-            <li><a href="#weddings" data-i18n="footer-service2">Centros de Mesa</a></li>
-            <li><a href="#weddings" data-i18n="footer-service3">Arcos Florales</a></li>
-            <li><a href="#weddings" data-i18n="footer-service4">Propuestas de Matrimonio</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4">
-        <div class="footer-contact-info">
-          <h4 data-i18n="footer-contact-title">Contacto</h4>
-          <ul>
-            <li><i class="fas fa-map-marker-alt"></i><span data-i18n="footer-address">David Alfaro Siqueiros 501-A Las Glorias, Puerto Vallarta, Mexico, 48333</span></li>
-            <li><i class="fas fa-phone"></i> <span data-i18n="footer-phone">322 147 3110</span></li>
-            <li><i class="fas fa-envelope"></i><span data-i18n="footer-email">obsequiovallarta@gmail.com</span></li>
-            <li><i class="fas fa-clock"></i> <span data-i18n="footer-hours">Lunes a Sábado: 9am - 7pm</span></li>
-          </ul>
-        </div>
+      <div class="copyright">
+        <p data-i18n="footer-copyright">&copy; 2025 OBSEQUIO VALLARTA. Florería especializada en bodas en Puerto Vallarta. Todos los derechos reservados.</p>
       </div>
     </div>
-    <div class="copyright">
-      <p data-i18n="footer-copyright">&copy; 2025 OBSEQUIO VALLARTA. Florería especializada en bodas en Puerto Vallarta. Todos los derechos reservados.</p>
-    </div>
-  </div>
-</footer>
+  </footer>
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
-  <script>
-    // Navbar shadow and color change
-    window.addEventListener('scroll', () => {
-      const navbar = document.querySelector('.navbar');
-      navbar.classList.toggle('scrolled', window.scrollY > 50);
-      
-      // Active nav link based on scroll position
-      document.querySelectorAll('section').forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        const sectionHeight = section.offsetHeight;
-        const sectionId = section.getAttribute('id');
-        
-        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-          document.querySelectorAll('.nav-link').forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${sectionId}`) {
-              link.classList.add('active');
-            }
-          });
-        }
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js"></script>
+<script>
+if (window.gsap) { try { gsap.registerPlugin(ScrollTrigger, ScrollToPlugin); } catch(e) {} }
+
+window.addEventListener('scroll', () => {
+  const navbar = document.querySelector('.navbar');
+  navbar.classList.toggle('scrolled', window.scrollY > 50);
+
+  document.querySelectorAll('section').forEach(section => {
+    const sectionTop = section.offsetTop - 100;
+    const sectionHeight = section.offsetHeight;
+    const sectionId = section.getAttribute('id');
+    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${sectionId}`) link.classList.add('active');
       });
+    }
+  });
+});
+
+gsap.utils.toArray('.hero-content').forEach((content, i) => {
+  gsap.from(content, { opacity: 0, y: 50, duration: 1, delay: i * 0.2, ease: 'power3.out' });
+});
+gsap.utils.toArray('section').forEach((sec) => {
+  gsap.from(sec, { opacity: 0, y: 50, duration: 1, scrollTrigger: { trigger: sec, start: 'top 80%', toggleActions: 'play none none none' } });
+});
+
+document.querySelectorAll('.gallery-item').forEach(item => {
+  item.addEventListener('mouseenter', () => gsap.to(item.querySelector('img'), { scale: 1.05, duration: 0.5 }));
+  item.addEventListener('mouseleave', () => gsap.to(item.querySelector('img'), { scale: 1, duration: 0.5 }));
+});
+
+const mainSwiper = new Swiper('.hero-swiper', {
+  loop: true, speed: 1000, effect: 'fade', fadeEffect: { crossFade: true },
+  pagination: { el: '.swiper-pagination', clickable: true },
+  autoplay: { delay: 5000, disableOnInteraction: false },
+  on: {
+    init: function() {
+      gsap.fromTo(this.slides[this.activeIndex].querySelector('.hero-content'), { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 1, ease: 'power3.out' });
+    },
+    slideChangeTransitionStart: function() {
+      gsap.to(this.slides[this.previousIndex].querySelector('.hero-content'), { opacity: 0, y: -50, duration: 0.5, ease: 'power3.in' });
+    },
+    slideChangeTransitionEnd: function() {
+      gsap.fromTo(this.slides[this.activeIndex].querySelector('.hero-content'), { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 1, ease: 'power3.out' });
+    }
+  }
+});
+
+const reviewsSwiper = new Swiper('.testimonials-swiper', {
+  loop: true,
+  speed: 700,
+  spaceBetween: 24,
+  autoplay: { delay: 6000, disableOnInteraction: false },
+  pagination: { el: '.testimonials-pagination', clickable: true },
+  navigation: { nextEl: '.testimonials-next', prevEl: '.testimonials-prev' },
+  slidesPerView: 1,
+  breakpoints: { 768: { slidesPerView: 2 }, 992: { slidesPerView: 3 } }
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    if (this.hasAttribute('data-bs-toggle') || this.hasAttribute('data-no-scroll')) return;
+    const targetId = this.getAttribute('href');
+    if (!targetId || targetId === '#') return;
+    const targetEl = document.querySelector(targetId);
+    if (!targetEl) return;
+
+    e.preventDefault();
+    const OFFSET = 90;
+
+    if (gsap && gsap.plugins && gsap.plugins.ScrollToPlugin) {
+      gsap.to(window, { duration: 1, scrollTo: { y: targetEl, offsetY: OFFSET, autoKill: true }, ease: 'power3.inOut' });
+    } else {
+      const y = targetEl.getBoundingClientRect().top + window.pageYOffset - OFFSET;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+
+    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+    if (this.classList.contains('nav-link')) this.classList.add('active');
+
+    const nav = document.getElementById('navMenu');
+    if (nav && nav.classList.contains('show')) {
+      const bsCollapse = bootstrap.Collapse.getOrCreateInstance(nav); bsCollapse.hide();
+    }
+  });
+});
+
+(function initGalleryLightbox(){
+  const galleryModal = document.getElementById('galleryModal');
+  if (!galleryModal) return;
+
+  const modalImg   = document.getElementById('expandedGalleryImage');
+  const modalTitle = document.getElementById('modalImageTitle');
+  const btnPrev    = document.getElementById('modalPrev');
+  const btnNext    = document.getElementById('modalNext');
+
+  const galleryItems = [...document.querySelectorAll('#gallery .gallery-item')];
+  const galleryImgs  = galleryItems.map(it => it.querySelector('img'));
+  let currentIndex   = 0;
+
+  function showByIndex(idx){
+    const total = galleryImgs.length; if (!total) return;
+    currentIndex = (idx + total) % total;
+    const imgEl = galleryImgs[currentIndex];
+    const src   = imgEl.getAttribute('src');
+    const titleEl = galleryItems[currentIndex].querySelector('.gallery-overlay h4');
+    modalImg.src  = src;
+    modalImg.alt  = titleEl ? titleEl.textContent.trim() : '';
+    modalTitle.textContent = modalImg.alt || '';
+  }
+
+  function indexFromSrc(src){
+    const file = (src || '').split('/').pop();
+    const i = galleryImgs.findIndex(im => (im.getAttribute('src')||'').split('/').pop() === file);
+    return i >= 0 ? i : 0;
+  }
+
+  window.openModal = function(imageSrc, title){
+    currentIndex = indexFromSrc(imageSrc); showByIndex(currentIndex);
+    bootstrap.Modal.getOrCreateInstance(galleryModal, { backdrop: true, keyboard: true }).show();
+  };
+
+  if (btnPrev) btnPrev.addEventListener('click', (e) => { e.stopPropagation(); showByIndex(currentIndex - 1); });
+  if (btnNext) btnNext.addEventListener('click', (e) => { e.stopPropagation(); showByIndex(currentIndex + 1); });
+
+  document.addEventListener('keydown', (e) => {
+    if (!galleryModal.classList.contains('show')) return;
+    if (e.key === 'ArrowLeft')  showByIndex(currentIndex - 1);
+    if (e.key === 'ArrowRight') showByIndex(currentIndex + 1);
+  });
+
+  const area = galleryModal.querySelector('.modal-body');
+  if (area) {
+    let startX = 0, startY = 0;
+    area.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; startY = e.touches[0].clientY; }, {passive:true});
+    area.addEventListener('touchend', (e) => {
+      const dx = e.changedTouches[0].clientX - startX;
+      const dy = e.changedTouches[0].clientY - startY;
+      if (Math.abs(dx) > 50 && Math.abs(dy) < 45) { dx < 0 ? showByIndex(currentIndex + 1) : showByIndex(currentIndex - 1); }
     });
+  }
 
-    // Hero content animation
-    gsap.utils.toArray('.hero-content').forEach((content, i) => {
-      gsap.from(content, {
-        opacity: 0,
-        y: 50,
-        duration: 1,
-        delay: i * 0.2,
-        ease: 'power3.out'
-      });
-    });
+  galleryModal.addEventListener('hidden.bs.modal', () => { modalImg.removeAttribute('src'); modalTitle.textContent = ''; });
+})();
 
-    // Scroll reveals
-    gsap.utils.toArray('section').forEach((sec, i) => {
-      gsap.from(sec, {
-        opacity: 0,
-        y: 50,
-        duration: 1,
-        scrollTrigger: {
-          trigger: sec,
-          start: 'top 80%',
-          toggleActions: 'play none none none'
-        }
-      });
-    });
-
-    // Gallery hover effect
-    document.querySelectorAll('.gallery-item').forEach(item => {
-      item.addEventListener('mouseenter', () => {
-        gsap.to(item.querySelector('img'), {
-          scale: 1.05,
-          duration: 0.5
-        });
-      });
-      
-      item.addEventListener('mouseleave', () => {
-        gsap.to(item.querySelector('img'), {
-          scale: 1,
-          duration: 0.5
-        });
-      });
-    });
-
-    // Main Swiper
-    const mainSwiper = new Swiper('.swiper', {
-      loop: true,
-      speed: 1000,
-      effect: 'fade',
-      fadeEffect: {
-        crossFade: true
-      },
-      pagination: { 
-        el: '.swiper-pagination', 
-        clickable: true
-      },
-      autoplay: { 
-        delay: 5000,
-        disableOnInteraction: false
-      },
-      on: {
-        init: function() {
-          gsap.fromTo(this.slides[this.activeIndex].querySelector('.hero-content'), 
-            { opacity: 0, y: 50 },
-            { opacity: 1, y: 0, duration: 1, ease: 'power3.out' }
-          );
-        },
-        slideChangeTransitionStart: function() {
-          gsap.to(this.slides[this.previousIndex].querySelector('.hero-content'), 
-            { opacity: 0, y: -50, duration: 0.5, ease: 'power3.in' }
-          );
-        },
-        slideChangeTransitionEnd: function() {
-          gsap.fromTo(this.slides[this.activeIndex].querySelector('.hero-content'), 
-            { opacity: 0, y: 50 },
-            { opacity: 1, y: 0, duration: 1, ease: 'power3.out' }
-          );
-        }
-      }
-    });
-
-
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
-        
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-          gsap.to(window, {
-            scrollTo: {
-              y: targetElement,
-              offsetY: 80
-            },
-            duration: 1,
-            ease: 'power3.inOut'
-          });
-          
-          // Update active nav link
-          document.querySelectorAll('.nav-link').forEach(link => {
-            link.classList.remove('active');
-          });
-          this.classList.add('active');
-        }
-      });
-    });
-
-
-
-    // Textos traducidos
-// Textos traducidos - Estructura corregida
+// ===================== i18n =====================
 const translations = {
   es: {
-    // Navbar
-    "nav-inicio": "INICIO",
-    "nav-nosotros": "NOSOTROS", 
-    "nav-bodas": "BODAS",
-    "nav-servicios": "SERVICIOS",
-    "nav-productos": "PRODUCTOS",
-    "nav-galeria": "GALERÍA",
-    "nav-contacto": "CONTACTO",
-    
-    // Hero Slider
-    "hero-title-1": "FLORES PARA BODAS EN PUERTO VALLARTA",
-    "hero-desc-1": "Diseños exclusivos para tu wedding day. Bouquets, centros de mesa y decoración floral para bodas.",
-    "hero-btn-1": "VER BODAS",
-    "hero-title-2": "PROPUESTAS DE MATRIMONIO",
-    "hero-desc-2": "Arreglos florales especiales para pedidas de matrimonio inolvidables",
-    "hero-btn-2": "VER DISEÑOS",
-    "hero-title-3": "FLORISTERÍA EN PUERTO VALLARTA",
-    "hero-desc-3": "Presentación impecable en cada entrega. Flores frescas para ocasiones especiales.",
-    "hero-btn-3": "CONTÁCTANOS",
-    
-    // About
-    "about-title": "Sobre Nosotros",
-    "about-subtitle": "Florería especializada en bodas y eventos en Puerto Vallarta",
-    "about-p1": "Fundada en 2017 en Puerto Vallarta, nuestra floristería nació del deseo de crear diseños florales con un enfoque minimalista y elegante, especialmente para bodas y eventos especiales.",
-    "about-p2": "Nos hemos convertido en la opción preferida para parejas que buscan flores para su boda en Puerto Vallarta, ofreciendo desde bouquets para novias hasta decoración floral completa para recepciones.",
-    "about-p3": "Nuestro equipo de diseñadores florales especializados en weddings crea piezas únicas que reflejan el estilo y personalidad de cada pareja, haciendo de su día especial una experiencia inolvidable.",
-    "philosophy-title": "NUESTRA FILOSOFÍA",
-    "philosophy-desc": "Creemos que las flores para bodas deben ser tan únicas como el amor que celebran",
-    
-    // Wedding Section
-    "weddings-title": "Flores para Bodas en Puerto Vallarta",
-    "weddings-subtitle": "Hacemos de tu wedding day algo inolvidable",
-    "weddings-heading": "Diseño Floral para tu Boda",
-    "weddings-p1": "En Obsequio Vallarta nos especializamos en crear arreglos florales únicos para bodas en Puerto Vallarta. Desde el bouquet de la novia hasta los centros de mesa, cada pieza es diseñada para complementar la estética de tu wedding day.",
-    "wedding-feature1-title": "Bouquets para Novia",
-    "wedding-feature1-desc": "Diseños personalizados que complementan tu vestido y estilo.",
-    "wedding-feature2-title": "Arcos Florales",
-    "wedding-feature2-desc": "Para ceremonias inolvidables en playas y jardines de Puerto Vallarta.",
-    "wedding-feature3-title": "Centros de Mesa",
-    "wedding-feature3-desc": "Diseños elegantes para tu recepción de boda.",
-    "wedding-feature4-title": "Propuestas de Matrimonio",
-    "wedding-feature4-desc": "Arreglos especiales para pedidas de matrimonio memorables.",
-    
-    // Services Section
-    "services-title": "Nuestros Servicios",
-    "services-subtitle": "Soluciones florales para cada ocasión",
-    "service1-title": "Diseño para Bodas",
-    "service1-desc": "Servicio completo de diseño floral para weddings en Puerto Vallarta. Desde la consultoría inicial hasta la instalación el día del evento.",
-    "service2-title": "Eventos Especiales",
-    "service2-desc": "Decoración floral para bodas, aniversarios y propuestas de matrimonio con un estilo contemporáneo que complementa cualquier espacio.",
-    "service3-title": "Entrega Premium",
-    "service3-desc": "Servicio de entrega con presentación impecable en Puerto Vallarta, perfecto para propuestas de matrimonio sorpresa y regalos especiales.",
-    
-    // Products Section
-    "products-title": "Nuestra Colección",
-    "products-subtitle": "Selección de arreglos florales para bodas y eventos",
-    "product1-title": "Bouquet para Novia",
-    "product1-desc": "Composición de rosas blancas estructurales perfecta para tu wedding day en Puerto Vallarta.",
-    "product1-badge": "PARA BODAS",
-    "product2-title": "Ramo de Rosas Blancas",
-    "product2-desc": "La promesa de un amor puro y eterno 🤍 Rosas Blancas y preciosas.",
-    "product2-badge": "RECOMENDADO",
-    "product3-title": "Ramo De Rosas Rojas",
-    "product3-desc": "El sentimiento al recibir flores, es simplemente indescriptible.",
-    "product3-badge": "PROPUESTAS",
-    "product-btn": "COTIZAR",
-    
-    // Gallery Section
-    "gallery-title": "Galería",
-    "gallery-subtitle": "Nuestros trabajos para weddings en Puerto Vallarta",
-    "gallery1-title": "BOUQUETS",
-    "gallery2-title": "CENTROS DE MESA",
-    "gallery3-title": "DECORACIÓN",
-    "gallery4-title": "PROPUESTAS",
-    "gallery5-title": "PROPUESTAS",
-    "gallery6-title": "PIROTECNIA",
-    "gallery7-title": "LETRERO DE BIENVENIDA",
-    "gallery8-title": "DECORACIONES",
-    
-    // Parallax Section
-    "parallax-title": "BODAS EN PUERTO VALLARTA",
-    "parallax-desc": "Diseños florales exclusivos para hacer de tu wedding day una experiencia inolvidable.",
-    "parallax-btn": "CONSULTA PARA TU BODA",
-    
-    // Contact Section
-    "contact-title": "Contacto",
-    "contact-subtitle": "Estamos para ayudarte con tu boda o evento especial",
-    "contact-info": "David Alfaro Siqueiros 501-A Las Glorias, Puerto Vallarta, Mexico, 48333 Lunes a Sábado: 9am - 7pm Tel: 322 147 3110 obsequiovallarta@gmail.com",
-    
-    // Footer
-    "footer-about": "Florería especializada en bodas y eventos en Puerto Vallarta. Creando diseños florales únicos para weddings desde 2017.",
-    "footer-links1-title": "Enlaces",
-    "footer-link1": "Inicio",
-    "footer-link2": "Nosotros",
-    "footer-link3": "Bodas",
-    "footer-link4": "Servicios",
-    "footer-link5": "Contacto",
-    "footer-links2-title": "Servicios para Bodas",
-    "footer-service1": "Bouquets para Novia",
-    "footer-service2": "Centros de Mesa",
-    "footer-service3": "Arcos Florales",
-    "footer-service4": "Propuestas de Matrimonio",
-    "footer-contact-title": "Contacto",
-    "footer-address": "David Alfaro Siqueiros 501-A Las Glorias, Puerto Vallarta, Mexico, 48333",
-    "footer-phone": "322 147 3110",
-    "footer-email": "obsequiovallarta@gmail.com",
-    "footer-hours": "Lunes a Sábado: 9am - 7pm",
-    "footer-copyright": "&copy; 2025 OBSEQUIO VALLARTA. Florería especializada en bodas en Puerto Vallarta. Todos los derechos reservados."
+    "nav-catalogo":"CATÁLOGO","nav-inicio":"INICIO","nav-nosotros":"NOSOTROS","nav-bodas":"BODAS","nav-servicios":"SERVICIOS","nav-productos":"PRODUCTOS","nav-galeria":"GALERÍA","nav-resenas":"RESEÑAS","nav-contacto":"CONTACTO",
+    "catalog-title":"Catálogo","catalog-open":"Abrir en pestaña nueva","catalog-download":"Descargar PDF","catalog-fallback":"Si el catálogo no carga, usa los botones de abajo.",
+    "hero-title-1":"FLORES PARA BODAS EN PUERTO VALLARTA","hero-desc-1":"Diseños exclusivos para el dia de tu boda. Bouquets, centros de mesa y decoración floral para bodas.","hero-btn-1":"VER BODAS",
+    "hero-title-2":"PROPUESTAS DE MATRIMONIO","hero-desc-2":"Arreglos florales especiales para pedidas de matrimonio inolvidables","hero-btn-2":"VER DISEÑOS",
+    "hero-title-3":"FLORISTERÍA EN PUERTO VALLARTA","hero-desc-3":"Presentación impecable en cada entrega. Flores frescas para ocasiones especiales.","hero-btn-3":"CONTÁCTANOS",
+    "about-title":"Sobre Nosotros","about-subtitle":"Florería especializada en bodas y eventos en Puerto Vallarta","about-p1":"Fundada en 2017 en Puerto Vallarta, nuestra floristería nació del deseo de crear diseños florales con un enfoque minimalista y elegante, especialmente para bodas y eventos especiales.","about-p2":"Nos hemos convertido en la opción preferida para parejas que buscan flores para su boda en Puerto Vallarta, ofreciendo desde bouquets para novias hasta decoración floral completa para recepciones.","about-p3":"Nuestro equipo de diseñadores florales especializados en weddings crea piezas únicas que reflejan el estilo y personalidad de cada pareja, haciendo de su día especial una experiencia inolvidable.","philosophy-title":"NUESTRA FILOSOFÍA","philosophy-desc":"Creemos que las flores para bodas deben ser tan únicas como el amor que celebran",
+    "weddings-title":"Flores para Bodas en Puerto Vallarta","weddings-subtitle":"Hacemos del dia de tu boda algo inolvidable","weddings-heading":"Diseño Floral para tu Boda","weddings-p1":"En Obsequio Vallarta nos especializamos en crear arreglos florales únicos para bodas en Puerto Vallarta. Desde el bouquet de la novia hasta los centros de mesa, cada pieza es diseñada para complementar la estética de tu wedding day.","wedding-feature1-title":"Bouquets para Novia","wedding-feature1-desc":"Diseños personalizados que complementan tu vestido y estilo.","wedding-feature2-title":"Arcos Florales","wedding-feature2-desc":"Para ceremonias inolvidables en playas y jardines de Puerto Vallarta.","wedding-feature3-title":"Centros de Mesa","wedding-feature3-desc":"Diseños elegantes para tu recepción de boda.","wedding-feature4-title":"Propuestas de Matrimonio","wedding-feature4-desc":"Arreglos especiales para pedidas de matrimonio memorables.",
+    "services-title":"Nuestros Servicios","services-subtitle":"Soluciones florales para cada ocasión","service1-title":"Diseño para Bodas","service1-desc":"Servicio completo de diseño floral para weddings en Puerto Vallarta. Desde la consultoría inicial hasta la instalación el día del evento.","service2-title":"Eventos Especiales","service2-desc":"Decoración floral para bodas, aniversarios y propuestas de matrimonio con un estilo contemporáneo que complementa cualquier espacio.","service3-title":"Entrega Premium","service3-desc":"Servicio de entrega con presentación impecable en Puerto Vallarta, perfecto para propuestas de matrimonio sorpresa y regalos especiales.",
+    "products-title":"Nuestra Colección","products-subtitle":"Selección de arreglos florales para bodas y eventos","product1-title":"Bouquet para Novia","product1-desc":"Composición de rosas blancas estructurales perfecta para tu wedding day en Puerto Vallarta.","product1-badge":"PARA BODAS","product2-title":"Ramo de Rosas Blancas","product2-desc":"La promesa de un amor puro y eterno 🤍 Rosas Blancas y preciosas.","product2-badge":"RECOMENDADO","product3-title":"Ramo De Rosas Rojas","product3-desc":"El sentimiento al recibir flores, es simplemente indescriptible.","product3-badge":"PROPUESTAS","product-btn":"COTIZAR",
+    "gallery-title":"Galería","gallery-subtitle":"Nuestros trabajos para weddings en Puerto Vallarta","gallery1-title":"BOUQUETS","gallery2-title":"CENTROS DE MESA","gallery3-title":"DECORACIÓN","gallery4-title":"PROPUESTAS","gallery5-title":"PROPUESTAS","gallery6-title":"PIROTECNIA","gallery7-title":"LETRERO DE BIENVENIDA","gallery8-title":"DECORACIONES",
+    "reviews-title":"Lo que dicen nuestros clientes","reviews-subtitle":"Reseñas reales sobre nuestra calidad y servicio",
+    "review1-text":"Agradezco a Carla por la atención personalizada y excelente que me brindó. A pesar de contratar el servicio en una zona alejada del rango de servicio, hizo posible esta ocasión especial. La decoración quedó perfecta.",
+    "review1-name":"lcmarin25","review1-extra":"1 opinión · 3 fotos · Hace 10 meses",
+    "review2-text":"Excelente Servicio !! La atención atenta, personalizada y cordial de su propietaria . Las sugerencias y entrega fue perfecto!! Les recomendaré - Gracias !!",
+    "review2-name":"Daniel Posadas","review2-extra":"7 opiniones · Hace 2 meses",
+    "review3-text":"Excelente servicio, 100% recomendado, se contrató el servicio para una boda y siempre fueron muy atentos en todo momento\nNos ofrecieron tanto un servicio y producto de calidad\nNuevamente muchas gracias por sus servicios",
+    "review3-name":"Rodrigo flores","review3-extra":"1 opinión · 2 fotos · Hace 2 años",
+    "review4-text":"Perfecto el servicio, superó mis expectativas, atención, amabilidad y calidad en todo. A pensar de contratar a distancia la seriedad y asesoría fue muy buena",
+    "review4-name":"Ricardo Cano","review4-extra":"Local Guide · 87 opiniones · 13 fotos · Hace 4 años",
+    "review5-text":"Excelente servicio y 100% super recomendado!!!! Necesitaba urgentemente enviar un detalle a una persona muy especial que estaba de viaje en Puerto Vallarta y yo estando en la Cd. de Puebla pude contactarme con \"Obsequio Vallarta\" para poder enviarle un arreglo floral el cual le encanto a esa persona y a pesar de la distancia el servicio y atención que me brindaron fue excelente. Super recomendado y además el servicio de entrega muy eficiente y rápido!! Gracias!!",
+    "review5-name":"Kevin Corona","review5-extra":"2 opiniones · Hace 11 meses",
+    "parallax-title":"BODAS EN PUERTO VALLARTA","parallax-desc":"Diseños florales exclusivos para hacer del dia de tu boda una experiencia inolvidable.","parallax-btn":"CONSULTA PARA TU BODA",
+    "contact-title":"Contacto","contact-subtitle":"Estamos para ayudarte con tu boda o evento especial","contact-info":"David Alfaro Siqueiros 501-A Las Glorias, Puerto Vallarta, Mexico, 48333 Lunes a Sábado: 9am - 7pm Tel: 322 147 3110 obsequiovallarta@gmail.com",
+    "footer-about":"Florería especializada en bodas y eventos en Puerto Vallarta. Creando diseños florales únicos para weddings desde 2017.","footer-links1-title":"Enlaces","footer-link1":"Inicio","footer-link2":"Nosotros","footer-link3":"Bodas","footer-link4":"Servicios","footer-link5":"Contacto","footer-links2-title":"Servicios para Bodas","footer-service1":"Bouquets para Novia","footer-service2":"Centros de Mesa","footer-service3":"Arcos Florales","footer-service4":"Propuestas de Matrimonio","footer-contact-title":"Contacto","footer-address":"David Alfaro Siqueiros 501-A Las Glorias, Puerto Vallarta, Mexico, 48333","footer-phone":"322 147 3110","footer-email":"obsequiovallarta@gmail.com","footer-hours":"Lunes a Sábado: 9am - 7pm","footer-copyright":"&copy; 2025 OBSEQUIO VALLARTA. Florería especializada en bodas en Puerto Vallarta. Todos los derechos reservados."
   },
   en: {
-    // Navbar
-    "nav-inicio": "HOME",
-    "nav-nosotros": "ABOUT",
-    "nav-bodas": "WEDDINGS", 
-    "nav-servicios": "SERVICES",
-    "nav-productos": "PRODUCTS",
-    "nav-galeria": "GALLERY",
-    "nav-contacto": "CONTACT",
-    
-    // Hero Slider
-    "hero-title-1": "WEDDING FLOWERS IN PUERTO VALLARTA",
-    "hero-desc-1": "Exclusive designs for your wedding day. Bouquets, centerpieces and floral decorations for weddings.",
-    "hero-btn-1": "VIEW WEDDINGS",
-    "hero-title-2": "MARRIAGE PROPOSALS",
-    "hero-desc-2": "Special floral arrangements for unforgettable marriage proposals",
-    "hero-btn-2": "VIEW DESIGNS",
-    "hero-title-3": "FLORIST IN PUERTO VALLARTA", 
-    "hero-desc-3": "Impeccable presentation in every delivery. Fresh flowers for special occasions.",
-    "hero-btn-3": "CONTACT US",
-    
-    // About
-    "about-title": "About Us",
-    "about-subtitle": "Florist specialized in weddings and events in Puerto Vallarta",
-    "about-p1": "Founded in 2017 in Puerto Vallarta, our florist was born from the desire to create floral designs with a minimalist and elegant approach, especially for weddings and special events.",
-    "about-p2": "We have become the preferred choice for couples looking for flowers for their wedding in Puerto Vallarta, offering from bridal bouquets to complete floral decoration for receptions.",
-    "about-p3": "Our team of floral designers specialized in weddings creates unique pieces that reflect the style and personality of each couple, making their special day an unforgettable experience.",
-    "philosophy-title": "OUR PHILOSOPHY",
-    "philosophy-desc": "We believe wedding flowers should be as unique as the love they celebrate",
-    
-    // Wedding Section
-    "weddings-title": "Wedding Flowers in Puerto Vallarta",
-    "weddings-subtitle": "We make your wedding day unforgettable",
-    "weddings-heading": "Floral Design for Your Wedding",
-    "weddings-p1": "At Obsequio Vallarta we specialize in creating unique floral arrangements for weddings in Puerto Vallarta. From the bridal bouquet to centerpieces, each piece is designed to complement the aesthetic of your wedding day.",
-    "wedding-feature1-title": "Bridal Bouquets",
-    "wedding-feature1-desc": "Custom designs that complement your dress and style.",
-    "wedding-feature2-title": "Floral Arches",
-    "wedding-feature2-desc": "For unforgettable ceremonies on beaches and gardens in Puerto Vallarta.",
-    "wedding-feature3-title": "Centerpieces",
-    "wedding-feature3-desc": "Elegant designs for your wedding reception.",
-    "wedding-feature4-title": "Marriage Proposals",
-    "wedding-feature4-desc": "Special arrangements for memorable marriage proposals.",
-    
-    // Services Section
-    "services-title": "Our Services",
-    "services-subtitle": "Floral solutions for every occasion",
-    "service1-title": "Wedding Design",
-    "service1-desc": "Complete floral design service for weddings in Puerto Vallarta. From initial consultation to installation on the day of the event.",
-    "service2-title": "Special Events",
-    "service2-desc": "Floral decoration for weddings, anniversaries and marriage proposals with a contemporary style that complements any space.",
-    "service3-title": "Premium Delivery",
-    "service3-desc": "Delivery service with impeccable presentation in Puerto Vallarta, perfect for surprise marriage proposals and special gifts.",
-    
-    // Products Section
-    "products-title": "Our Collection",
-    "products-subtitle": "Selection of floral arrangements for weddings and events",
-    "product1-title": "Bridal Bouquet",
-    "product1-desc": "Structural white rose composition perfect for your wedding day in Puerto Vallarta.",
-    "product1-badge": "FOR WEDDINGS",
-    "product2-title": "White Roses Bouquet",
-    "product2-desc": "The promise of a pure and eternal love 🤍 Beautiful White Roses.",
-    "product2-badge": "RECOMMENDED",
-    "product3-title": "Red Roses Bouquet",
-    "product3-desc": "The feeling of receiving flowers is simply indescribable.",
-    "product3-badge": "PROPOSALS",
-    "product-btn": "GET QUOTE",
-    
-    // Gallery Section
-    "gallery-title": "Gallery",
-    "gallery-subtitle": "Our work for weddings in Puerto Vallarta",
-    "gallery1-title": "BOUQUETS",
-    "gallery2-title": "CENTERPIECES",
-    "gallery3-title": "DECORATION",
-    "gallery4-title": "PROPOSALS",
-    "gallery5-title": "PROPOSALS",
-    "gallery6-title": "PYROTECHNICS",
-    "gallery7-title": "WELCOME SIGN",
-    "gallery8-title": "DECORATIONS",
-    
-    // Parallax Section
-    "parallax-title": "WEDDINGS IN PUERTO VALLARTA",
-    "parallax-desc": "Exclusive floral designs to make your wedding day an unforgettable experience.",
-    "parallax-btn": "INQUIRE ABOUT YOUR WEDDING",
-    
-    // Contact Section
-    "contact-title": "Contact",
-    "contact-subtitle": "We're here to help with your wedding or special event",
-    "contact-info": "David Alfaro Siqueiros 501-A Las Glorias, Puerto Vallarta, Mexico 48333 Monday to Saturday: 9am - 7pm Phone: 322 147 3110 Email: obsequiovallarta@gmail.com",
-    
-    // Footer
-    "footer-about": "Florist specialized in weddings and events in Puerto Vallarta. Creating unique floral designs for weddings since 2017.",
-    "footer-links1-title": "Links",
-    "footer-link1": "Home",
-    "footer-link2": "About",
-    "footer-link3": "Weddings",
-    "footer-link4": "Services",
-    "footer-link5": "Contact",
-    "footer-links2-title": "Wedding Services",
-    "footer-service1": "Bridal Bouquets",
-    "footer-service2": "Centerpieces",
-    "footer-service3": "Floral Arches",
-    "footer-service4": "Marriage Proposals",
-    "footer-contact-title": "Contact",
-    "footer-address": "David Alfaro Siqueiros 501-A Las Glorias, Puerto Vallarta, Mexico, 48333",
-    "footer-phone": "322 147 3110",
-    "footer-email": "obsequiovallarta@gmail.com",
-    "footer-hours": "Monday to Saturday: 9am - 7pm",
-    "footer-copyright": "&copy; 2025 OBSEQUIO VALLARTA. Wedding florist in Puerto Vallarta. All rights reserved."
+    /* Mantengo las reseñas en español por ser citas textuales de Google */
+    "nav-catalogo":"CATALOG","nav-inicio":"HOME","nav-nosotros":"ABOUT","nav-bodas":"WEDDINGS","nav-servicios":"SERVICES","nav-productos":"PRODUCTS","nav-galeria":"GALLERY","nav-resenas":"REVIEWS","nav-contacto":"CONTACT",
+    "catalog-title":"Catalog","catalog-open":"Open in new tab","catalog-download":"Download PDF","catalog-fallback":"If the catalog doesn't load, use the buttons below.",
+    "hero-title-1":"WEDDING FLOWERS IN PUERTO VALLARTA","hero-desc-1":"Exclusive designs for your wedding day. Bouquets, centerpieces and floral decorations for weddings.","hero-btn-1":"VIEW WEDDINGS",
+    "hero-title-2":"MARRIAGE PROPOSALS","hero-desc-2":"Special floral arrangements for unforgettable marriage proposals","hero-btn-2":"VIEW DESIGNS",
+    "hero-title-3":"FLORIST IN PUERTO VALLARTA","hero-desc-3":"Impeccable presentation in every delivery. Fresh flowers for special occasions.","hero-btn-3":"CONTACT US",
+    "about-title":"About Us","about-subtitle":"Florist specialized in weddings and events in Puerto Vallarta","about-p1":"Founded in 2017 in Puerto Vallarta, our florist was born from the desire to create floral designs with a minimalist and elegant approach, especially for weddings and special events.","about-p2":"We have become the preferred choice for couples looking for flowers for their wedding in Puerto Vallarta, offering from bridal bouquets to complete floral decoration for receptions.","about-p3":"Our team of floral designers specialized in weddings creates unique pieces that reflect the style and personality of each couple, making their special day an unforgettable experience.","philosophy-title":"OUR PHILOSOPHY","philosophy-desc":"We believe wedding flowers should be as unique as the love they celebrate",
+    "weddings-title":"Wedding Flowers in Puerto Vallarta","weddings-subtitle":"We make your wedding day unforgettable","weddings-heading":"Floral Design for Your Wedding","weddings-p1":"At Obsequio Vallarta we specialize in creating unique floral arrangements for weddings in Puerto Vallarta. From the bridal bouquet to centerpieces, each piece is designed to complement the aesthetic of your wedding day.","wedding-feature1-title":"Bridal Bouquets","wedding-feature1-desc":"Custom designs that complement your dress and style.","wedding-feature2-title":"Floral Arches","wedding-feature2-desc":"For unforgettable ceremonies on beaches and gardens in Puerto Vallarta.","wedding-feature3-title":"Centerpieces","wedding-feature3-desc":"Elegant designs for your wedding reception.","wedding-feature4-title":"Marriage Proposals","wedding-feature4-desc":"Special arrangements for memorable marriage proposals.",
+    "services-title":"Our Services","services-subtitle":"Floral solutions for every occasion","service1-title":"Wedding Design","service1-desc":"Complete floral design service for weddings in Puerto Vallarta. From initial consultation to installation on the day of the event.","service2-title":"Special Events","service2-desc":"Floral decoration for weddings, anniversaries and marriage proposals with a contemporary style that complements any space.","service3-title":"Premium Delivery","service3-desc":"Delivery service with impeccable presentation in Puerto Vallarta, perfect for surprise marriage proposals and special gifts.",
+    "products-title":"Our Collection","products-subtitle":"Selection of floral arrangements for weddings and events","product1-title":"Bridal Bouquet","product1-desc":"Structural white rose composition perfect for your wedding day in Puerto Vallarta.","product1-badge":"FOR WEDDINGS","product2-title":"White Roses Bouquet","product2-desc":"The promise of a pure and eternal love 🤍 Beautiful White Roses.","product2-badge":"RECOMMENDED","product3-title":"Red Roses Bouquet","product3-desc":"The feeling of receiving flowers is simply indescriptible.","product3-badge":"PROPOSALS","product-btn":"GET QUOTE",
+    "gallery-title":"Gallery","gallery-subtitle":"Our work for weddings in Puerto Vallarta","gallery1-title":"BOUQUETS","gallery2-title":"CENTERPIECES","gallery3-title":"DECORATION","gallery4-title":"PROPOSALS","gallery5-title":"PROPOSALS","gallery6-title":"PYROTECHNICS","gallery7-title":"WELCOME SIGN","gallery8-title":"DECORATIONS",
+    "reviews-title":"What Our Clients Say","reviews-subtitle":"Real feedback about our quality and service",
+    "review1-text":"Agradezco a Carla por la atención personalizada y excelente que me brindó. A pesar de contratar el servicio en una zona alejada del rango de servicio, hizo posible esta ocasión especial. La decoración quedó perfecta.","review1-name":"lcmarin25","review1-extra":"1 opinión · 3 fotos · Hace 10 meses",
+    "review2-text":"Excelente Servicio !! La atención atenta, personalizada y cordial de su propietaria . Las sugerencias y entrega fue perfecto!! Les recomendaré - Gracias !!","review2-name":"Daniel Posadas","review2-extra":"7 opiniones · Hace 2 meses",
+    "review3-text":"Excelente servicio, 100% recomendado, se contrató el servicio para una boda y siempre fueron muy atentos en todo momento\nNos ofrecieron tanto un servicio y producto de calidad\nNuevamente muchas gracias por sus servicios","review3-name":"odrigo flores","review3-extra":"1 opinión · 2 fotos · Hace 2 años",
+    "review4-text":"Perfecto el servicio, superó mis expectativas, atención, amabilidad y calidad en todo. A pensar de contratar a distancia la seriedad y asesoría fue muy buena","review4-name":"Ricardo Cano","review4-extra":"Local Guide · 87 opiniones · 13 fotos · Hace 4 años",
+    "review5-text":"Excelente servicio y 100% super recomendado!!!! Necesitaba urgentemente enviar un detalle a una persona muy especial que estaba de viaje en Puerto Vallarta y yo estando en la Cd. de Puebla pude contactarme con \"Obsequio Vallarta\" para poder enviarle un arreglo floral el cual le encanto a esa persona y a pesar de la distancia el servicio y atención que me brindaron fue excelente. Super recomendado y además el servicio de entrega muy eficiente y rápido!! Gracias!!","review5-name":"Kevin Corona","review5-extra":"2 opiniones · Hace 11 meses",
+    "parallax-title":"WEDDINGS IN PUERTO VALLARTA","parallax-desc":"Exclusive floral designs to make your wedding day an unforgettable experience.","parallax-btn":"INQUIRE ABOUT YOUR WEDDING",
+    "contact-title":"Contact","contact-subtitle":"We're here to help with your wedding or special event","contact-info":"David Alfaro Siqueiros 501-A Las Glorias, Puerto Vallarta, Mexico 48333 Monday to Saturday: 9am - 7pm Phone: 322 147 3110 Email: obsequiovallarta@gmail.com",
+    "footer-about":"Florist specialized in weddings and events in Puerto Vallarta. Creating unique floral designs for weddings since 2017.","footer-links1-title":"Links","footer-link1":"Home","footer-link2":"About","footer-link3":"Weddings","footer-link4":"Services","footer-link5":"Contact","footer-links2-title":"Wedding Services","footer-service1":"Bridal Bouquets","footer-service2":"Centerpieces","footer-service3":"Floral Arches","footer-service4":"Marriage Proposals","footer-contact-title":"Contact","footer-address":"David Alfaro Siqueiros 501-A Las Glorias, Puerto Vallarta, Mexico, 48333","footer-phone":"322 147 3110","footer-email":"obsequiovallarta@gmail.com","footer-hours":"Monday to Saturday: 9am - 7pm","footer-copyright":"&copy; 2025 OBSEQUIO VALLARTA. Wedding florist in Puerto Vallarta. All rights reserved."
   }
 };
-// Función para cambiar el idioma
+
 function changeLanguage(lang) {
-  // Cambiar texto en elementos con data-i18n
-  document.querySelectorAll('[data-i18n]').forEach(element => {
-    const key = element.getAttribute('data-i18n');
-    if (translations[lang][key]) {
-      element.textContent = translations[lang][key];
-    }
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (translations[lang][key]) el.textContent = translations[lang][key];
   });
-  
-  // Cambiar texto en elementos con data-i18n-placeholder
-  document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
-    const key = element.getAttribute('data-i18n-placeholder');
-    if (translations[lang][key]) {
-      element.setAttribute('placeholder', translations[lang][key]);
-    }
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (translations[lang][key]) el.setAttribute('placeholder', translations[lang][key]);
   });
-  
-  // Actualizar el botón de idioma
   const langButton = document.querySelector('#languageDropdown');
-  if (lang === 'es') {
-    langButton.innerHTML = '<i class="fas fa-language me-1"></i> ES';
-  } else {
-    langButton.innerHTML = '<i class="fas fa-language me-1"></i> EN';
-  }
-  
-  // Guardar preferencia en localStorage
+  langButton.innerHTML = lang === 'es'
+    ? '<i class="fas fa-language me-1"></i> ES'
+    : '<i class="fas fa-language me-1"></i> EN';
   localStorage.setItem('preferredLanguage', lang);
 }
 
-// Event listeners para los botones de idioma
 document.querySelectorAll('.language-option').forEach(button => {
   button.addEventListener('click', function(e) {
     e.preventDefault();
@@ -1534,11 +1041,11 @@ document.querySelectorAll('.language-option').forEach(button => {
   });
 });
 
-// Cargar idioma preferido al cargar la página
 document.addEventListener('DOMContentLoaded', function() {
   const preferredLanguage = localStorage.getItem('preferredLanguage') || 'es';
   changeLanguage(preferredLanguage);
 });
-  </script>
+</script>
+
 </body>
 </html>
