@@ -26,7 +26,7 @@
     "image": "https://www.obsequiovallarta.com/images/logo.jpg",
     "@id": "https://www.obsequiovallarta.com",
     "url": "https://www.obsequiovallarta.com",
-    "telephone": "+523221234567",
+    "telephone": "+523221473110",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Av. Vallarta 123",
@@ -66,31 +66,11 @@
     "@context":"https://schema.org",
     "@type":"ItemList",
     "itemListElement":[
-      {
-        "@type":"Review",
-        "author":{"@type":"Person","name":"lcmarin25"},
-        "reviewBody":"Agradezco a Carla por la atención personalizada y excelente que me brindó. A pesar de contratar el servicio en una zona alejada del rango de servicio, hizo posible esta ocasión especial. La decoración quedó perfecta."
-      },
-      {
-        "@type":"Review",
-        "author":{"@type":"Person","name":"Daniel Posadas"},
-        "reviewBody":"Excelente Servicio !! La atención atenta, personalizada y cordial de su propietaria . Las sugerencias y entrega fue perfecto!! Les recomendaré - Gracias !!"
-      },
-      {
-        "@type":"Review",
-        "author":{"@type":"Person","name":Rodrigo flores"},
-        "reviewBody":"Excelente servicio, 100% recomendado, se contrató el servicio para una boda y siempre fueron muy atentos en todo momento. Nos ofrecieron tanto un servicio y producto de calidad. Nuevamente muchas gracias por sus servicios"
-      },
-      {
-        "@type":"Review",
-        "author":{"@type":"Person","name":"Ricardo Cano"},
-        "reviewBody":"Perfecto el servicio, superó mis expectativas, atención, amabilidad y calidad en todo. A pensar de contratar a distancia la seriedad y asesoría fue muy buena"
-      },
-      {
-        "@type":"Review",
-        "author":{"@type":"Person","name":"Kevin Corona"},
-        "reviewBody":"Excelente servicio y 100% super recomendado!!!! Necesitaba urgentemente enviar un detalle a una persona muy especial que estaba de viaje en Puerto Vallarta y yo estando en la Cd. de Puebla pude contactarme con \"Obsequio Vallarta\" para poder enviarle un arreglo floral el cual le encanto a esa persona y a pesar de la distancia el servicio y atención que me brindaron fue excelente. Super recomendado y además el servicio de entrega muy eficiente y rápido!! Gracias!!"
-      }
+      {"@type":"Review","author":{"@type":"Person","name":"lcmarin25"},"reviewBody":"Agradezco a Carla por la atención personalizada y excelente que me brindó. A pesar de contratar el servicio en una zona alejada del rango de servicio, hizo posible esta ocasión especial. La decoración quedó perfecta."},
+      {"@type":"Review","author":{"@type":"Person","name":"Daniel Posadas"},"reviewBody":"Excelente Servicio !! La atención atenta, personalizada y cordial de su propietaria . Las sugerencias y entrega fue perfecto!! Les recomendaré - Gracias !!"},
+      {"@type":"Review","author":{"@type":"Person","name":"Rodrigo Flores"},"reviewBody":"Excelente servicio, 100% recomendado, se contrató el servicio para una boda y siempre fueron muy atentos en todo momento. Nos ofrecieron tanto un servicio y producto de calidad. Nuevamente muchas gracias por sus servicios"},
+      {"@type":"Review","author":{"@type":"Person","name":"Ricardo Cano"},"reviewBody":"Perfecto el servicio, superó mis expectativas, atención, amabilidad y calidad en todo. A pensar de contratar a distancia la seriedad y asesoría fue muy buena"},
+      {"@type":"Review","author":{"@type":"Person","name":"Kevin Corona"},"reviewBody":"Excelente servicio y 100% super recomendado!!!! Necesitaba urgentemente enviar un detalle a una persona muy especial que estaba de viaje en Puerto Vallarta y yo estando en la Cd. de Puebla pude contactarme con \"Obsequio Vallarta\" para poder enviarle un arreglo floral el cual le encanto a esa persona y a pesar de la distancia el servicio y atención que me brindaron fue excelente. Super recomendado y además el servicio de entrega muy eficiente y rápido!! Gracias!!"}
     ]
   }
   </script>
@@ -225,6 +205,32 @@
   .modal-catalog .modal-body{padding:0}
   .catalog-frame{width:100%;height:80vh;border:0}
 
+  /* Floating contact buttons */
+  .floating-buttons{
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 1060;
+  }
+  .floating-buttons .fab-link{
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    display:flex; align-items:center; justify-content:center;
+    color:#fff; text-decoration:none;
+    box-shadow: 0 8px 20px rgba(0,0,0,.2);
+    transition: transform .2s ease, box-shadow .2s ease, opacity .2s ease;
+  }
+  .floating-buttons .fab-link:hover{ transform: translateY(-2px); box-shadow:0 12px 28px rgba(0,0,0,.25); }
+  .fab-whatsapp{ background:#25D366; }
+  .fab-facebook{ background:#1877F2; }
+  .fab-link i{ font-size: 24px; line-height: 1; }
+
+  /* Evita saltos de línea dentro del número/elementos marcados */
+  .nowrap{ white-space: nowrap; }
+
   @media (max-width:1200px){.hero-content h1{font-size:3rem}}
   @media (max-width:992px){
     .hero-content h1{font-size:2.5rem}
@@ -251,17 +257,10 @@
     .testimonials-nav{top:-50px}
   }
   /* Que quepa "RESEÑAS" cuando el menú está expandido pero la pantalla no es enorme */
-@media (min-width: 1200px) and (max-width: 1399.98px){
-  .navbar .nav-link{
-    margin-left: 1rem;     /* antes 1.5rem */
-    letter-spacing: 1px;   /* antes 1.5px */
-    font-size: .82rem;     /* un pelín más compacto */
+  @media (min-width: 1200px) and (max-width: 1399.98px){
+    .navbar .nav-link{ margin-left:1rem; letter-spacing:1px; font-size:.82rem; }
+    .navbar-brand img.logo-img{ height:120px; }
   }
-  .navbar-brand img.logo-img{
-    height: 120px;         /* libera algo de ancho (antes 150px) */
-  }
-}
-
 </style>
 
 </head>
@@ -269,7 +268,6 @@
 
   <!-- NAVBAR -->
 <nav class="navbar navbar-expand-xl fixed-top py-3">
-
   <div class="container">
     <a class="navbar-brand" href="#home">
       <img src="inicio/logo (1).png" alt="Obsequio Vallarta" class="logo-img me-2">
@@ -462,7 +460,7 @@
         <p class="section-subtitle" data-i18n="products-subtitle">Selección de arreglos florales para bodas y eventos</p>
       </div>
       <div class="row g-4">
-        <!-- Productos (igual que antes) -->
+        <!-- Producto 1 -->
         <div class="col-md-4 col-sm-6">
           <div class="product-card">
             <div class="product-img">
@@ -478,6 +476,7 @@
             </div>
           </div>
         </div>
+        <!-- Producto 2 -->
         <div class="col-md-4 col-sm-6">
           <div class="product-card">
             <div class="product-img">
@@ -493,6 +492,7 @@
             </div>
           </div>
         </div>
+        <!-- Producto 3 -->
         <div class="col-md-4 col-sm-6">
           <div class="product-card">
             <div class="product-img">
@@ -520,7 +520,7 @@
         <p class="section-subtitle" data-i18n="gallery-subtitle">Nuestros trabajos para weddings en Puerto Vallarta</p>
       </div>
       <div class="row g-4">
-        <!-- Galería (igual que antes) -->
+        <!-- Galería -->
         <div class="col-sm-6 col-lg-3">
           <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" onclick="openModal('galeria/buquet_obsequio_vallarta.jpg', 'BOUQUETS')">
             <img src="galeria/buquet_obsequio_vallarta.jpg" alt="Bouquet de novia en Puerto Vallarta - Obsequio Vallarta">
@@ -659,7 +659,7 @@
             </article>
           </div>
 
-          <!-- odrigo flores -->
+          <!-- Rodrigo Flores -->
           <div class="swiper-slide">
             <article class="review-card">
               <div class="review-stars" aria-label="Google review">
@@ -744,15 +744,18 @@
       </div>
       <div class="row">
         <div class="col-lg-6 mx-auto text-center">
-          <p class="mb-5" data-i18n="contact-info">David Alfaro Siqueiros 501-A Las Glorias, Puerto Vallarta, Mexico, 48333<br>
-          Lunes a Sábado: 9am - 7pm<br>
-          Tel: 322 147 3110<br>
-          obsequiovallarta@gmail.com</p>
+          <!-- IMPORTANTE: usa data-i18n-html para conservar los <br> y los enlaces -->
+          <p class="mb-5" data-i18n="contact-info" data-i18n-html>
+            David Alfaro Siqueiros 501-A Las Glorias, Puerto Vallarta, Mexico, 48333<br>
+            Lunes a Sábado: 9am - 7pm<br>
+            <span class="nowrap">Tel: <a href="tel:+523221473110">322&nbsp;147&nbsp;3110</a></span><br>
+            <a class="nowrap" href="mailto:obsequiovallarta@gmail.com">obsequiovallarta@gmail.com</a>
+          </p>
           
           <div class="social-icons justify-content-center">
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.facebook.com/obsequiovallarta" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/obsequiovallarta" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/523221473110?text=Hola%2C%20me%20gustar%C3%ADa%20una%20cotizaci%C3%B3n" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
           </div>
         </div>
       </div>
@@ -812,6 +815,18 @@
       </div>
     </div>
   </footer>
+
+  <!-- Floating WhatsApp & Facebook -->
+  <div class="floating-buttons" aria-label="Contact quick actions">
+    <a class="fab-link fab-whatsapp" href="https://wa.me/523221473110?text=Hola%2C%20me%20gustar%C3%ADa%20una%20cotizaci%C3%B3n" target="_blank" rel="noopener" title="WhatsApp">
+      <i class="fab fa-whatsapp" aria-hidden="true"></i>
+      <span class="visually-hidden">WhatsApp</span>
+    </a>
+    <a class="fab-link fab-facebook" href="https://www.facebook.com/obsequiovallarta" target="_blank" rel="noopener" title="Facebook">
+      <i class="fab fa-facebook-f" aria-hidden="true"></i>
+      <span class="visually-hidden">Facebook</span>
+    </a>
+  </div>
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -965,6 +980,27 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   galleryModal.addEventListener('hidden.bs.modal', () => { modalImg.removeAttribute('src'); modalTitle.textContent = ''; });
 })();
 
+/* ===== Botones "COTIZAR" -> WhatsApp ===== */
+(function initQuoteButtons(){
+  const phone = '523221473110'; // +52 322 147 3110 en formato internacional
+  const baseMsgEs = 'Hola, me interesa este producto:';
+  const baseMsgEn = "Hi, I'm interested in this product:";
+
+  document.querySelectorAll('.add-to-cart').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const card  = btn.closest('.product-card');
+      const title = card?.querySelector('.product-info h3')?.textContent.trim() || 'Producto';
+      const lang  = localStorage.getItem('preferredLanguage') || 'es';
+      const base  = (lang === 'en') ? baseMsgEn : baseMsgEs;
+      const page  = window.location.href.split('#')[0];
+
+      const text = encodeURIComponent(`${base} ${title}\nURL: ${page}`);
+      const url  = `https://wa.me/${phone}?text=${text}`;
+      window.open(url, '_blank', 'noopener');
+    }, {passive:true});
+  });
+})();
+
 // ===================== i18n =====================
 const translations = {
   es: {
@@ -990,11 +1026,11 @@ const translations = {
     "review5-text":"Excelente servicio y 100% super recomendado!!!! Necesitaba urgentemente enviar un detalle a una persona muy especial que estaba de viaje en Puerto Vallarta y yo estando en la Cd. de Puebla pude contactarme con \"Obsequio Vallarta\" para poder enviarle un arreglo floral el cual le encanto a esa persona y a pesar de la distancia el servicio y atención que me brindaron fue excelente. Super recomendado y además el servicio de entrega muy eficiente y rápido!! Gracias!!",
     "review5-name":"Kevin Corona","review5-extra":"2 opiniones · Hace 11 meses",
     "parallax-title":"BODAS EN PUERTO VALLARTA","parallax-desc":"Diseños florales exclusivos para hacer del dia de tu boda una experiencia inolvidable.","parallax-btn":"CONSULTA PARA TU BODA",
-    "contact-title":"Contacto","contact-subtitle":"Estamos para ayudarte con tu boda o evento especial","contact-info":"David Alfaro Siqueiros 501-A Las Glorias, Puerto Vallarta, Mexico, 48333 Lunes a Sábado: 9am - 7pm Tel: 322 147 3110 obsequiovallarta@gmail.com",
+    "contact-title":"Contacto","contact-subtitle":"Estamos para ayudarte con tu boda o evento especial",
+    "contact-info":"David Alfaro Siqueiros 501-A Las Glorias, Puerto Vallarta, Mexico, 48333<br>Lunes a Sábado: 9am - 7pm<br><span class=\\\"nowrap\\\">Tel: <a href=\\\"tel:+523221473110\\\">322&nbsp;147&nbsp;3110</a></span><br><a class=\\\"nowrap\\\" href=\\\"mailto:obsequiovallarta@gmail.com\\\">obsequiovallarta@gmail.com</a>",
     "footer-about":"Florería especializada en bodas y eventos en Puerto Vallarta. Creando diseños florales únicos para weddings desde 2017.","footer-links1-title":"Enlaces","footer-link1":"Inicio","footer-link2":"Nosotros","footer-link3":"Bodas","footer-link4":"Servicios","footer-link5":"Contacto","footer-links2-title":"Servicios para Bodas","footer-service1":"Bouquets para Novia","footer-service2":"Centros de Mesa","footer-service3":"Arcos Florales","footer-service4":"Propuestas de Matrimonio","footer-contact-title":"Contacto","footer-address":"David Alfaro Siqueiros 501-A Las Glorias, Puerto Vallarta, Mexico, 48333","footer-phone":"322 147 3110","footer-email":"obsequiovallarta@gmail.com","footer-hours":"Lunes a Sábado: 9am - 7pm","footer-copyright":"&copy; 2025 OBSEQUIO VALLARTA. Florería especializada en bodas en Puerto Vallarta. Todos los derechos reservados."
   },
   en: {
-    /* Mantengo las reseñas en español por ser citas textuales de Google */
     "nav-catalogo":"CATALOG","nav-inicio":"HOME","nav-nosotros":"ABOUT","nav-bodas":"WEDDINGS","nav-servicios":"SERVICES","nav-productos":"PRODUCTS","nav-galeria":"GALLERY","nav-resenas":"REVIEWS","nav-contacto":"CONTACT",
     "catalog-title":"Catalog","catalog-open":"Open in new tab","catalog-download":"Download PDF","catalog-fallback":"If the catalog doesn't load, use the buttons below.",
     "hero-title-1":"WEDDING FLOWERS IN PUERTO VALLARTA","hero-desc-1":"Exclusive designs for your wedding day. Bouquets, centerpieces and floral decorations for weddings.","hero-btn-1":"VIEW WEDDINGS",
@@ -1008,28 +1044,41 @@ const translations = {
     "reviews-title":"What Our Clients Say","reviews-subtitle":"Real feedback about our quality and service",
     "review1-text":"Agradezco a Carla por la atención personalizada y excelente que me brindó. A pesar de contratar el servicio en una zona alejada del rango de servicio, hizo posible esta ocasión especial. La decoración quedó perfecta.","review1-name":"lcmarin25","review1-extra":"1 opinión · 3 fotos · Hace 10 meses",
     "review2-text":"Excelente Servicio !! La atención atenta, personalizada y cordial de su propietaria . Las sugerencias y entrega fue perfecto!! Les recomendaré - Gracias !!","review2-name":"Daniel Posadas","review2-extra":"7 opiniones · Hace 2 meses",
-    "review3-text":"Excelente servicio, 100% recomendado, se contrató el servicio para una boda y siempre fueron muy atentos en todo momento\nNos ofrecieron tanto un servicio y producto de calidad\nNuevamente muchas gracias por sus servicios","review3-name":"odrigo flores","review3-extra":"1 opinión · 2 fotos · Hace 2 años",
+    "review3-text":"Excelente servicio, 100% recomendado, se contrató el servicio para una boda y siempre fueron muy atentos en todo momento\nNos ofrecieron tanto un servicio y producto de calidad\nNuevamente muchas gracias por sus servicios","review3-name":"Rodrigo Flores","review3-extra":"1 opinión · 2 fotos · Hace 2 años",
     "review4-text":"Perfecto el servicio, superó mis expectativas, atención, amabilidad y calidad en todo. A pensar de contratar a distancia la seriedad y asesoría fue muy buena","review4-name":"Ricardo Cano","review4-extra":"Local Guide · 87 opiniones · 13 fotos · Hace 4 años",
     "review5-text":"Excelente servicio y 100% super recomendado!!!! Necesitaba urgentemente enviar un detalle a una persona muy especial que estaba de viaje en Puerto Vallarta y yo estando en la Cd. de Puebla pude contactarme con \"Obsequio Vallarta\" para poder enviarle un arreglo floral el cual le encanto a esa persona y a pesar de la distancia el servicio y atención que me brindaron fue excelente. Super recomendado y además el servicio de entrega muy eficiente y rápido!! Gracias!!","review5-name":"Kevin Corona","review5-extra":"2 opiniones · Hace 11 meses",
     "parallax-title":"WEDDINGS IN PUERTO VALLARTA","parallax-desc":"Exclusive floral designs to make your wedding day an unforgettable experience.","parallax-btn":"INQUIRE ABOUT YOUR WEDDING",
-    "contact-title":"Contact","contact-subtitle":"We're here to help with your wedding or special event","contact-info":"David Alfaro Siqueiros 501-A Las Glorias, Puerto Vallarta, Mexico 48333 Monday to Saturday: 9am - 7pm Phone: 322 147 3110 Email: obsequiovallarta@gmail.com",
+    "contact-title":"Contact","contact-subtitle":"We're here to help with your wedding or special event",
+    "contact-info":"David Alfaro Siqueiros 501-A Las Glorias, Puerto Vallarta, Mexico 48333<br>Monday to Saturday: 9am - 7pm<br><span class=\\\"nowrap\\\">Phone: <a href=\\\"tel:+523221473110\\\">322&nbsp;147&nbsp;3110</a></span><br><a class=\\\"nowrap\\\" href=\\\"mailto:obsequiovallarta@gmail.com\\\">obsequiovallarta@gmail.com</a>",
     "footer-about":"Florist specialized in weddings and events in Puerto Vallarta. Creating unique floral designs for weddings since 2017.","footer-links1-title":"Links","footer-link1":"Home","footer-link2":"About","footer-link3":"Weddings","footer-link4":"Services","footer-link5":"Contact","footer-links2-title":"Wedding Services","footer-service1":"Bridal Bouquets","footer-service2":"Centerpieces","footer-service3":"Floral Arches","footer-service4":"Marriage Proposals","footer-contact-title":"Contact","footer-address":"David Alfaro Siqueiros 501-A Las Glorias, Puerto Vallarta, Mexico, 48333","footer-phone":"322 147 3110","footer-email":"obsequiovallarta@gmail.com","footer-hours":"Monday to Saturday: 9am - 7pm","footer-copyright":"&copy; 2025 OBSEQUIO VALLARTA. Wedding florist in Puerto Vallarta. All rights reserved."
   }
 };
 
+// Soporte para textos con HTML (data-i18n-html)
 function changeLanguage(lang) {
-  document.querySelectorAll('[data-i18n]').forEach(el => {
+  // Elementos que aceptan HTML (con <br>, enlaces, etc.)
+  document.querySelectorAll('[data-i18n][data-i18n-html]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (translations[lang][key]) el.innerHTML = translations[lang][key];
+  });
+
+  // Elementos de solo texto
+  document.querySelectorAll('[data-i18n]:not([data-i18n-html])').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (translations[lang][key]) el.textContent = translations[lang][key];
   });
+
+  // Placeholders
   document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
     const key = el.getAttribute('data-i18n-placeholder');
     if (translations[lang][key]) el.setAttribute('placeholder', translations[lang][key]);
   });
+
   const langButton = document.querySelector('#languageDropdown');
   langButton.innerHTML = lang === 'es'
     ? '<i class="fas fa-language me-1"></i> ES'
     : '<i class="fas fa-language me-1"></i> EN';
+
   localStorage.setItem('preferredLanguage', lang);
 }
 
